@@ -5,8 +5,7 @@
 
 [class*="col-"] {
   display: inline-block;
-  float: left;
-  padding: 15px; }
+  float: left; }
 
 /* For large desktop: */
 @media (min-width: 1024px) {
@@ -14,7 +13,7 @@
     width: 8.33333333%; }
 
   .col-lg-2 {
-    width: 16.6666667%; }
+    width: 16.6666666667%; }
 
   .col-lg-3 {
     width: 25%; }
