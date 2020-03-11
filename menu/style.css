@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+.section1 {
+  display: block;
+  overflow: hidden;
+  background-color: #6C4D3B;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/04_2018/menu-PSD-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.container {
+  overflow: hidden;
+  position: relative;
+}
+.content-container1 {
+  color: #faebd7;
+}
+.content-container1 h1 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #faebd7;
+}
+.img1 {
+  text-align: center;
+  float: right;
+}
+.content1 {
+  padding-left: 180px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#khamphathem1 {
+  border: solid 1px #faebd7;
+  color: #faebd7;
+  max-width: 250px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  margin: 30px 0;
+}
+#khamphathem1:hover {
+  background-color: #b22830;
+  color: #fff;
+  border: solid 1px #b22830;  
+  transition: all 0.3s linear;
+}
+.content-container1 h1 {
+  font-size: 46px;
+}
+.content-container1 p {
+  line-height: 1.8;
+}
+.content2 {
+  padding-right: 180px;
+  text-align: right; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+/* section 2 */
+.section2 {
+  display: block;
+  overflow: hidden;
+  background-color: #D0F0FB;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/04_2018/menu-FREEZE.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img2 {
+  text-align: center;
+  float: left;
+}
+.div-img img {
+  margin-bottom: -6px;
+}
+.content-container2 h1 {
+  font-size: 46px;
+}
+.content-container2 p {
+  line-height: 1.8;
+}
+.content-container2 {
+  color: #006400;
+}
+.content-container2 h1 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #006400;
+}
+#khamphathem2 {
+  border: solid 1px #006400;
+  color: #006400;
+  max-width: 250px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  margin: 30px 0;
+}
+#khamphathem2:hover {
+  background-color: #b22830;
+  color: #fff;
+  border: solid 1px #b22830;
+  transition: all 0.3s linear;
+}
+
+/* section 3 */
+.section3 {
+  display: block;
+  overflow: hidden;
+  background-color: #7EB841;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/04_2018/menu-TEA-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img3 {
+  text-align: center;
+  float: right;
+}
+.content-container3 h1 {
+  font-size: 46px;
+}
+.content-container3 p {
+  line-height: 1.8;
+}
+.content-container3 {
+  color: #fff;
+}
+.content-container3 h1 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+.khamphathem3 {
+  border: solid 1px #fff;
+  color: #fff;
+  max-width: 250px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  margin: 30px 0;
+}
+.khamphathem3:hover {
+  background-color: #b22830;
+  color: #fff;
+  border: solid 1px #b22830;
+  transition: all 0.3s linear;
+}
+.content3 {
+  padding-left: 180px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section4 {
+  display: block;
+  overflow: hidden;
+  background-color: #3D2013;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-BANHMI-bg_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content4 {
+  padding-right: 180px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.img4 {
+  text-align: center;
+  padding-left: 180px;
+}
+.img4 img {
+  width: 100%;
+}
+.container4 {
+  padding: 50px 0;
+}
+
+
+
+/* chung */
+.content-container h1 a:hover {
+  color: #b22830;
+  transition: all .3s linear;
+}
+.content-container a {
+  display: block;
+}

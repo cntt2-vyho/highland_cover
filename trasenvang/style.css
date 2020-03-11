@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;}
+.content {
+  overflow: hidden;
+}
+.main-title {
+  font-size: 34px;
+  color: #53382c;
+  text-transform: uppercase;
+  padding: 15px 0;
+  display: block;
+}
+.details-img img {
+  width: 100%;
+}
+.details-container {
+  overflow: hidden;
+}
+.details-img {
+  border: solid .1px #ccc;
+}
+.details-content {
+  padding-left: 15px;
+}
+.details {
+  position: fixed;
+  padding-left: 180px;
+  top: 0;
+}
+.size-item {
+  list-style: none;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid .1px #ccc;
+  position: relative;
+  transition: all .3s linear;
+}
+.size-item a {
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.size-item:hover{
+  border: solid .1px #bb2222;
+  transition: all .3s linear;
+  cursor: pointer;
+}
+.div-size {
+  position: relative;
+  padding: 30px 0;
+}
+.div-size span {
+  display: inline-block;
+  text-transform: capitalize;
+}
+.div-size ul {
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  height: 30px;
+  top: 50%;
+    left: 15%;
+    transform: translate(0%, -50%);
+}
+.price {
+  text-transform: capitalize;
+}
+.lists ul {
+  padding: 0;
+}
+.lists {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  float: right;
+}
+.lists-item {
+  list-style: none;
+  text-align: center;
+}
+.lists-item img {
+  max-width: 250px;
+  border: solid .1px #ccc;
+}
+.lists-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #53382c;
+  transition: all .3s linear;
+}
+.lists-item a:hover {
+  color: #f14a50;
+  transition: all .3s linear;
+}
+.lists-item strong {
+  color: #53382c;
+}
+.lists-content {
+  padding: 15px 0 30px;
+}
+
+/* #b22830; */
