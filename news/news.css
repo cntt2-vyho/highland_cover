@@ -35,7 +35,7 @@
   backface-visibility: hidden;
 }
 .div-img:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .div-title {
   padding: 10px 0;
@@ -74,4 +74,7 @@
 }
 .div-calendar span {
   padding-left: 20px;
+}
+.news-item {
+  padding: 15px;
 }

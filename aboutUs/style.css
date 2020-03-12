@@ -158,7 +158,7 @@ p {
   background-color: transparent;
   text-transform: uppercase;
   padding: 8px 15px;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
@@ -168,22 +168,26 @@ p {
   margin-top: 20px;
 }
 .btn-1:hover {
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 .btn-1 {
   color: #b22830;
   border: solid 1px #b22830;
+  transition: all 0.3s linear;
   
 }
 .btn-1:hover {
   background-color: #b22830;
   color: #ffffff;
+  transition: all 0.3s linear;
 }
 .btn-2 {
   color: #fff;
   border: solid 1px #fff;
+  transition: all 0.3s linear;
 }
 .btn-2:hover {
   background-color: #fff;
   color: #b22830;
+  transition: all 0.3s linear;
 }
