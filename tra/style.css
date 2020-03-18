@@ -12,6 +12,7 @@ body {
   display: block;
 }
 .main-title {
+  display: block;
   font-size: 40px;
   margin: 0;
   padding-bottom: 20px;
@@ -21,10 +22,20 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
-#xemsanpham {
+.xemsanpham {
   background-color: transparent;
   color: #b22830;
   border: solid 1px #b22830;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
   text-transform: uppercase;
   padding: 8px 15px;
   transition: all 0.3s linear;
@@ -34,8 +45,9 @@ body {
   font-size: 16px;
   width: 250px;
   outline: none;
+  text-align: center;
 }
-#xemsanpham:hover {
+.xemsanpham:hover {
   border: solid 1px #b22830;
   background-color: #b22830;
   color: #ffffff;
@@ -43,6 +55,13 @@ body {
 }
 .main-tain a {
   outline: none;
+}
+.main-tain img {
+  width: 100%;
+
+}
+.main-tain, .vertical-list {
+  padding: 0;
 }
 .vertical-list {
   overflow: hidden;

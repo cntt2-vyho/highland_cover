@@ -4,16 +4,19 @@
   padding: 0;
 }
 .news-container {
-  margin: 0 180px;
+  margin: 45px 10%;
 }
 .news-content {
   overflow: hidden;
+}
+.news-title {
+  overflow: hidden;
+  display: block;
 }
 .news-title h1 {
   text-transform: uppercase;
   color: #53382c;
   font-size: 45px;
-  margin-left: 15px;
 }
 .div-title a {
   text-decoration: none;
@@ -42,6 +45,8 @@
 }
 .view-more {
   text-align: center;
+  display: block;
+  padding: 30px 0;
 }
 .view-more-btn {
   color: #b22830;

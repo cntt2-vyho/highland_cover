@@ -15,6 +15,7 @@ p {
   background-color: #ffffff;
   display: block;
   overflow: hidden;
+  position: relative;
 }
 .div-img {
   display: inline-block;
@@ -24,9 +25,11 @@ p {
 }
 .div-img-1 {
     float: right;
+    padding: 0;
 }
 .div-img img {
   width: 100%;
+  margin-bottom: -6px;
   
 }
 .background1 {
@@ -52,12 +55,11 @@ p {
     z-index: 9999;
 }
 .div-content {
-  width: 50%;
+  width: 40%;
 }
-.div-content-container-1 {
-  margin-left: 180px;
+.div-content-container-1 h1 {
+  margin-top: 0;
 }
-
 .div-content-container-1 h1 a {
   font-size: 46px;
   color: #53382c;
@@ -72,21 +74,31 @@ p {
 .div-content-container p {
   word-break: break-word;
 }
-
+.div-content-1 {
+  padding: 0;
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10%;
+}
 
 
 .section-2 {
   background-color: #bd945d;
   overflow: hidden;
+  position: relative;
 }
 .div-content-2 {
   float: right;
-  width: 50%;
-  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
 }
 .div-content-container-2 {
-  margin-right: 180px;
-  margin-top: 50px;
+  /* margin-right: 10%;
+  margin-top: 50px; */
 }
 .div-img-2 {
   float: left;
@@ -113,6 +125,7 @@ p {
 .section-3 {
     background-color: #8e5a2d;
     overflow: hidden;
+    position: relative;
 }
 .background3 {
     position: absolute;
@@ -130,9 +143,11 @@ p {
 }
 .div-content-3 {
     float: left;
-}
-.div-content-container-3 {
-    margin: 50px 0 0 180px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 40%;
+    transform: translateY(-50%);
 }
 .div-content-container-3 h1 a {
     font-size: 46px;
