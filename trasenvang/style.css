@@ -5,6 +5,7 @@
   line-height: 1.5;}
 .content {
   overflow: hidden;
+  padding: 45px 10%;
 }
 .main-title {
   font-size: 34px;

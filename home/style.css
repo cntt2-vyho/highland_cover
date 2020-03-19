@@ -50,7 +50,7 @@ header {
   right: 0;
   left: 0;
   padding: 0 10%;
-  margin-top: 11px;
+  margin-top: 10px;
   background-color: #53382c;
   z-index: 9999;
 }
@@ -321,6 +321,7 @@ header {
   position: relative;
 }
 .cnth {
+  position: absolute;
   color: #f1bc7a;
   text-transform: uppercase;
   border: solid 1px #f1bc7a;
@@ -336,42 +337,23 @@ header {
   color: #000;
   transition: all .5s ease-in-out;
 }
-
-
-
-.slideshow-container {
-position: relative;
-overflow: hidden;
+#owl-demo {
+  position: relative;
 }
-.mySlides {
-display: none;
-text-align: center;
+.clickable {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-/* The dot/bullet/indicator container */
-.dot-container {
-position: absolute;
-text-align: center;
-/* padding: 20px; */
-bottom: 20px;
-left: 50%;
-  transform: translateX(-25%);
+.owl-item .item img {
+  margin-bottom: -9px;
 }
-
-/* The dots/bullets/indicators */
-.dot {
-cursor: pointer;
-height: 10px;
-width: 10px;
-margin: 0 5px;
-background-color: #bbb;
-border-radius: 50%;
-display: inline-block;
-transition: background-color 0.6s ease;
+.owl-page span {
+  background-color: #fff !important;
 }
-
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-background-color: #fff;
+.item-position {
+  position: relative;
 }
 
 
@@ -433,6 +415,7 @@ background-color: #fff;
 .newstore {
   display: inline-block;
   position: relative;
+  width: 50%;
 }
 .okla {
   display: block;
@@ -442,20 +425,13 @@ background-color: #fff;
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
-.newstore::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+.okla-container {
+  padding: 0 10%;
 }
-.okla a {
+.okla-container a, .okla-container h3, .okla-container p {
   text-decoration: none;
   color: #fff;
+  text-transform: uppercase;
 }
 .img_near_footer {
   display: block;
@@ -465,18 +441,13 @@ background-color: #fff;
   color: #fff;
   text-transform: uppercase;
 }
-.slides {
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1.8;
-}
 .fa-angle-right {
   position: absolute;
   font-weight: bold;
   right: -15%;
   top: 7%;
 }
-.slides h3:hover, .slides p:hover, .slides a span:hover, .slides a i:hover {
+.okla-container h3:hover, .okla-container p:hover, .okla-container a span:hover, .okla-container a i:hover {
   color: #f1bc7a;
 }
 .news-content {
@@ -486,6 +457,8 @@ background-color: #fff;
   width: 100%;
   height: 100%;
 }
+
+
 .listnews li {
   display: block;
   overflow: hidden;
@@ -552,6 +525,14 @@ background-color: #fff;
   height: 36px;
   padding-left: 15px;
   width: calc(100% - 145px);
+  outline: none;
+  font-style: italic;
+  border: none;
+  border-bottom: solid 1px #e4e4e4;
+  background-color: #f5f5f5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 /* footer */
@@ -635,7 +616,7 @@ background-color: #fff;
 #back-to-top-btn:hover {
   background-color: #b22830;
   bottom: 5px;
-  transition: all .5`s linear;
+  transition: all .5s linear;
 }
 
 #back-to-top-btn {
