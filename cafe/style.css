@@ -10,11 +10,12 @@
   font-size: 46px;
   color: #53382c;
   text-transform: uppercase;
+  padding: 15px 0;
 }
 .div-content {
   display: block;
   overflow: hidden;
-  margin-left: -10px !important;
+  margin-left: -5px !important;
 }
 select {
   -moz-appearance: none;
@@ -24,7 +25,7 @@ select {
     height: 40px;
     border: none;
     border-bottom: solid 1px #e4e4e4;
-    background-color: #f5f5f5;
+    background-color: #f2f2f2;
     padding: 0 15px;
     font-size: 13px;
     line-height: 21px;
@@ -37,7 +38,7 @@ select {
 }
 .select-div {
   position: relative;
-  padding-left: 10px;
+  padding: 0 5px !important;
 }
 .fa-caret-down {
   position: absolute;
@@ -49,8 +50,8 @@ select {
   width: 100%;
     height: 40px;
     border: none;
-    border-bottom: solid 1px #e4e4e4;
-    background-color: #f5f5f5;
+    border-bottom: solid 1px #f2f2f2;
+    background-color: #e6e6e6;
     padding: 0 15px;
     font-size: 13px;
     line-height: 21px;
@@ -75,6 +76,7 @@ select {
   background-color: #53382c;
   transition: all .3s linear;
   text-transform: uppercase;
+  font-size: 12px;
 }
 .btn-search:hover {
   background-color: #b22830;
@@ -93,9 +95,9 @@ select:focus  {
   min-height: 500px;
 }
 .list {
-  border: solid .5px #ccc;
-  overflow: scroll;
+  background-color: #e6e6e6;
   max-height: 500px;
+  padding: 0 !important;
 }
 .map-iframe {
   width: 100%;
@@ -153,14 +155,20 @@ select:focus  {
   color: #000;
 }
 #map {
-  border: solid .5px #ccc;
+  padding: 0;
 }
 .result {
   display: block;
-  padding: 10px;
+  padding: 15px;
     color: #555;
     text-transform: uppercase;
     font-style: italic;
-    background-color: #f2f2f2;
-    border: solid .1px #ccc;
+    background-color: #e6e6e6;
+}
+.list ul {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 445px;
+  background-color: #fff;
+  margin: 0 0 15px 15px;
 }

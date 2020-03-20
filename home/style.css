@@ -355,6 +355,31 @@ header {
 .item-position {
   position: relative;
 }
+.owl-theme .owl-controls .active {
+  border: solid 1px #fff;
+  border-radius: 50%;
+  width: 20px;
+    height: 20px;
+  
+
+}
+.owl-theme .owl-controls .owl-page span {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px 5px !important;
+}
+.owl-page {
+  margin: 0 2px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -414,21 +439,28 @@ header {
 
 .newstore {
   display: inline-block;
-  position: relative;
   width: 50%;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/weblink/homepage-STORE_1.jpg');
+  background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .okla {
   display: block;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   z-index: 9999;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 .okla-container {
+  padding: 13.9% 10%;
+  
+}
+.okla-container-small {
   padding: 0 10%;
 }
-.okla-container a, .okla-container h3, .okla-container p {
+.okla-container-small a, .okla-container-small h3, .okla-container-small p {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
@@ -444,20 +476,44 @@ header {
 .fa-angle-right {
   position: absolute;
   font-weight: bold;
-  right: -15%;
-  top: 7%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.okla-container h3:hover, .okla-container p:hover, .okla-container a span:hover, .okla-container a i:hover {
+.okla-container-small h3:hover, .okla-container-small p:hover, .okla-container-small a span:hover, .okla-container-small a i:hover {
   color: #f1bc7a;
 }
-.news-content {
+.news {
+  width: 50%;
+  background-image: url("https://www.highlandscoffee.com.vn/vnt_upload/weblink/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+.find {
+  padding-right: 15px;
+}
+.news-content .title{
+  display: block;
+  position: relative;
+}
+.title-h2 {
+  text-transform: uppercase;
+  color: #000;
+}
+.news-content div .title a {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  color: #53382c;
+  font-weight: bold;
+  transition: all .3s linear;
+  
 }
-
+.news-content div .title a:hover {
+  color: #b22830;
+  transition: all .3s linear;
+}
 
 .listnews li {
   display: block;
@@ -489,16 +545,12 @@ header {
 .listnews ul {
   padding: 0;
   margin: 0;
-  margin: 10px 0;
 }
-/* .calendar {
-  position: relative;
+.listnews ul li .div-img img {
+  width: 100%;
+    margin-left: -15px;
 }
-.icon-calendar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-} */
+
 .formEmail {
   padding: 10px 0;
 }
@@ -534,7 +586,11 @@ header {
   white-space: nowrap;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-
+.input-Email:focus  {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
 /* footer */
 .footer {
   display: block;

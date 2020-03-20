@@ -69,8 +69,13 @@
     left: 15%;
     transform: translate(0%, -50%);
 }
-.div-title {
-  margin: 0 10%;
+hr {
+  margin: 15px 0;
+}
+.list-related {
+  overflow: hidden;
+  padding: 0;
+  margin: 0 -15px;
 }
 .price {
   text-transform: capitalize;
@@ -88,10 +93,13 @@
   list-style: none;
   text-align: center;
   display: inline-block;
+  padding: 0 15px;
 }
-.lists-item img {
-  max-width: 250px;
+.lists-item .div-img {
   border: solid .1px #ccc;
+}
+.lists-item .div-img img {
+  width: 100%;
 }
 .lists-item a {
   text-decoration: none;
@@ -109,45 +117,55 @@
 .lists-content {
   padding: 15px 0 30px;
 }
-
+.details {
+  padding: 0;
+}
 
 /* checkout overview */
 .checkout-overview {
-  border: #bb2222 solid .1px;
   overflow: hidden;
   display: inline-block;
+  padding: 0;
 }
 .checkout-title {
-  color: #000;
+  color: #fff;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  padding: 10px;
 }
 .checkout-detail ul {
   padding: 0;
   margin: 0;
+  background-color: #fff;
 }
 .checkout-li {
   border-bottom: .1px solid #bb2222;
   display: block;
   list-style: none;
   overflow: hidden;
+  padding: 10px 0;
+}
+.checkout-li:last-child {
+  border-bottom: none;
 }
 .div-checkout-title {
-  margin: 0 10px;
   border-bottom: solid .1px #bb2222;
+  padding: 15px;
 }
 .checkout-detail {
   overflow: hidden;
-  margin: 0 10px;
+  padding: 0 15px 15px;
 }
-.checkout-detail ul {
-  overflow: hidden;
+
+.checkout-div-img {
+  padding: 0;
 }
-.checkout-div-detail {
-  margin-top: 10px;
+.checkout-div-detail, .checkout-price {
+  padding: 0;
 }
+
+
+
 
 
 .wrapper-inner-tab-backgrounds-second{
@@ -192,16 +210,8 @@
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
 	-webkit-transform: scale(0.1, 1);
   transform: scale(0.1, 1);
-  
-  
-	/* border-top-color: #bb2222;
-	border-bottom-color: #bb2222; */
 	
 }
 .sim-button:hover span{
@@ -232,4 +242,32 @@
 	opacity: 0;	
 	-webkit-transform: scale(0.1, 1);
 	transform: scale(0.1, 1);
+}
+.checkout-overview-container {
+  margin: 0 15px;
+  background-color: #bb2222;
+}
+.scrollbar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #bb2222;
+}
+.checkout-detail ul {
+  padding: 0 15px;
 }

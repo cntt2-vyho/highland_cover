@@ -52,6 +52,11 @@ body {
   height: 40px;
   outline: none;
 }
+.form-group input:focus  {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
 .form-group {
   display: block;
   position: relative;
@@ -119,7 +124,7 @@ body {
   border-bottom: solid .1px #ccc;
 }
 .cart-detail ul {
-  max-height: 370px;
+  max-height: 450px;
   
 }
 .ship {
@@ -218,9 +223,6 @@ body {
   overflow-y: scroll;
 }
 
-.force-overflow {
-	min-height: 450px;
-}
 
 #style-2::-webkit-scrollbar {
 	width: 12px;
