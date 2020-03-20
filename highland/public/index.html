@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/style/grid.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/style/owl.carousel.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/style/owl.theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+
+    <script src="%PUBLIC_URL%/style/owl.carousel.min.js"></script>
+    <script src="%PUBLIC_URL%/style/jquery-1.9.1.min.js"></script>
+</head>
+
+<body style="box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+<script>
+    $(document).ready(function () {
+
+        $("#owl-demo").owlCarousel({
+
+            navigation: false, // Show next and prev buttons
+            pagination: true,
+            slideSpeed: 300,
+            singleItem: true
+
+        });
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#owl-demo-seconds").owlCarousel({
+
+            navigation: false,
+            pagination: false,
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true
+        });
+
+    });
+</script>
+
+</html>
