@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-.content-origin {
+.content {
   display: block;
   overflow: hidden;
 }
@@ -78,4 +78,8 @@ body {
 }
 .div-content-container-related ul li a img {
   width: 100%;
+}
+.dvkh-link {
+  text-decoration: none;
+  color: #b22222;
 }

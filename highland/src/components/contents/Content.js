@@ -23,7 +23,7 @@ export default class Content extends Component {
 
         return (
             <div className="content">
-                <div className="section1">
+                <div className="section1-content">
                     <Slider {...settings1}>
                         <div className="item">
                             <a href="https://www.youtube.com/watch?v=MRxa1wTZEDs">
@@ -43,7 +43,7 @@ export default class Content extends Component {
                     </Slider>
 
                 </div>
-                <div className="section2">
+                <div className="section2-content">
                     <div className="img">
                         <a href="https://www.highlandscoffee.com.vn/vn/freeze.html">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/Product_banner_confirmed.jpg" style={{ width: '100%' }} />
@@ -55,7 +55,7 @@ export default class Content extends Component {
                 </div>
 
 
-                <div className="section3">
+                <div className="section3-content">
                     <div className="img">
                         <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639_1.png" style={{ width: '100%' }} />
@@ -66,7 +66,7 @@ export default class Content extends Component {
                     </div>
                 </div>
 
-                <div className="section4">
+                <div className="section4-content">
                     <div className="newstore col-lg-6 col-md-12 col-sm-12 col-12" style={{ float: 'left', padding: '0 ' }}>
                         <div className="okla">
 

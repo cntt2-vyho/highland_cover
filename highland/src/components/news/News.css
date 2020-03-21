@@ -42,6 +42,7 @@
   text-align: center;
   display: block;
   padding: 30px 0;
+  overflow: hidden;
 }
 .view-more-btn {
   color: #b22830;

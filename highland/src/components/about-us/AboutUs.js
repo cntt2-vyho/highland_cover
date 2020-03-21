@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './AboutUs.css'
+import { NavLink } from 'react-router-dom';
 
 export default class AboutUs extends Component {
     render() {
@@ -22,9 +23,12 @@ export default class AboutUs extends Component {
                                 lịch sự với mức giá hợp lý.
           <br /> Những ly cà phê của chúng tôi không chỉ đơn thuần là thức uống quen thuộc mà còn
           mang trên mình một sứ mệnh văn hóa phản ánh một phần nếp sống hiện đại của người Việt Nam.</p>
-                                <button className="btn-abu btn-1-abu">
+                                <div className="btn-abu-container">
+                                <NavLink className="btn-abu btn-1-abu" to="/about/origin">
                                     xem chi tiết
-        </button>
+        </NavLink>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,9 +44,12 @@ export default class AboutUs extends Component {
                                 <p>Chúng tôi mong muốn mang đến cho bạn những trải nghiệm đáng nhớ mỗi lần đến Highlands Coffee®.
                                 Hãy chia sẻ với chúng tôi để chúng tôi có thể mang đến cho bạn những trải nghiệm tuyệt vời hơn
           thế.</p>
-                                <button className="btn-abu btn-2-abu">
+          <div className="btn-abu-container">
+              <NavLink to="/about/customer-service" className="btn-abu btn-2-abu">
                                     xem chi tiết
-        </button>
+        </NavLink>
+          </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -56,9 +63,12 @@ export default class AboutUs extends Component {
                                 <h1><a href="#">nghề nghiệp</a></h1>
                                 <h4>Hãy khởi đầu sự nghiệp cùng với Highlands Coffee®</h4>
                                 <p>Với sứ mệnh trở thành thương hiệu cà phê Việt Nam dẫn đầu, Highlands Coffee® luôn tìm kiếm những ứng cử viên tiềm năng có chung niềm đam mê và nỗ lực cùng chúng tôi vươn tới thành công. Chúng tôi luôn chào đón các bạn gia nhập vào đội ngũ chuyên nghiệp của gia đình Highlands Coffee®.</p>
-                                <button className="btn-abu btn-2-abu">
+                                <div className="btn-abu-container">
+                                    <NavLink to="/about/career" className="btn-abu btn-2-abu">
                                     xem chi tiết
-        </button>
+        </NavLink>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>

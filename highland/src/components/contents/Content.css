@@ -4,10 +4,10 @@
 .content {
   display: block;
   overflow: hidden;
-  margin-top: 99px;
+  margin-top: 101.4px;
 }
 
-.section1 {
+.section1-content {
   display: block;
   position: relative;
 }
@@ -40,7 +40,7 @@
 
 
 /* section 2 */
-.section2 {
+.section2-content {
   display: block;
   position: relative;
 }
@@ -67,7 +67,7 @@
 
 
 
-.section3 {
+.section3-content {
   display: block;
   overflow: hidden;
   position: relative;

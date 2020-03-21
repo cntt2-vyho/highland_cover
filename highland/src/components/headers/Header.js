@@ -8,9 +8,9 @@ export default class Header extends Component {
       <header>
   <div className="header-container">
     <div className="header-logo col-lg-3 col-md-3 col-sm-12 col-12">
-      <a href="./home.html">
+      <NavLink to="/">
         <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/logo.svg" alt="Highland Coffee" />
-      </a>
+      </NavLink>
     </div>
     <div className="header-menu col-lg-9 col-md-9 col-sm-12 col-12">
       <div className="header-tool">
@@ -50,7 +50,7 @@ export default class Header extends Component {
           <a href="../cafe/cafe.html">quán cà phê</a>
         </li>
         <li className="menu-li">
-          <NavLink to="/menu">thực đơn</NavLink>
+          <NavLink to="/categories">thực đơn</NavLink>
           <div className="menu-li-content">
             <ul className="menu-li-content-ul">
               <li className="cafe hover-item col-lg-2">
