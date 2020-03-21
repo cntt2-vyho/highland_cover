@@ -4,7 +4,7 @@
 .content {
   display: block;
   overflow: hidden;
-  margin-top: 107px;
+  margin-top: 99px;
 }
 
 .section1 {
@@ -21,50 +21,14 @@
   padding: 10px 50px;
   transition: all .5s ease-in-out;
   top: 73%;
-  left: 55%;
+    left: 52%;
+    transform: translate(-50%, -50%);
 }
 .cnth:hover {
   background-color: #f1bc7a;
   color: #000;
   transition: all .5s ease-in-out;
 }
-#owl-demo {
-  position: relative;
-}
-.clickable {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.owl-item .item img {
-  margin-bottom: -9px;
-}
-.owl-page span {
-  background-color: #fff !important;
-}
-.item-position {
-  position: relative;
-}
-.owl-theme .owl-controls .active {
-  border: solid 1px #fff;
-  border-radius: 50%;
-  width: 20px;
-    height: 20px;
-  
-
-}
-.owl-theme .owl-controls .owl-page span {
-  width: 10px !important;
-  height: 10px !important;
-  margin: 5px 5px !important;
-}
-.owl-page {
-  margin: 0 2px;
-}
-
-
-
 
 
 
@@ -127,14 +91,15 @@
 
 
 
+/* section 4 */
 
 .newstore {
   display: inline-block;
   width: 50%;
   background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/weblink/homepage-STORE_1.jpg');
   background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .okla {
   display: block;
@@ -191,6 +156,7 @@
 .title-h2 {
   text-transform: uppercase;
   color: #000;
+  margin: 0;
 }
 .news-content div .title a {
   position: absolute;
@@ -210,7 +176,7 @@
   display: block;
   overflow: hidden;
   list-style: none;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .test:hover {
   color: #b22830;
@@ -282,3 +248,65 @@
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
 }
+.newstore-div-img img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+.calendar {
+  position: relative;
+}
+.calendar i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.calendar span  {
+  padding-left: 20px;
+}
+
+
+.slick-dots {
+  bottom: 2%;
+  margin-bottom: 4px;
+}/* 
+.slick-active {
+  border: solid .5px #fff;
+}
+
+*/
+
+
+.slick-dots li button {
+  width: 10px !important;
+    height: 10px !important;
+    background: #ffffff !important;
+    border-radius: 100% !important;
+    font-size: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    position: relative !important;
+    /* opacity: 0.5 !important; */
+}
+.slick-dots li button::before {
+  content: "" !important;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100% !important;
+    
+    -webkit-transition: all 0.3s linear !important;
+    -o-transition: all 0.3s linear !important;
+    transition: all 0.3s linear !important;
+    opacity: 1;
+}
+.slick-dots li {
+  display: inline-block;
+}
+.slick-dots li.slick-active button:before {
+  border: solid 1px #ffffff !important;
+  opacity: 1;
+  color: #fff;
+}
+

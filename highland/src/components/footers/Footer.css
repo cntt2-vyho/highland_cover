@@ -1,3 +1,7 @@
+
+
+
+/* footer */
 .footer {
   display: block;
   background-color: #53382c;
@@ -5,7 +9,8 @@
 .footer-ul {
   padding: 0;
   display: block;
-  margin: 0 180px;
+  margin: 0 10%;
+  overflow: hidden;
 }
 .footer li {
   list-style: none;
@@ -43,6 +48,12 @@
 }
 .footer-li-item {
   display: inline-block;
+  padding: 0 2px;
+  transition: all .3s linear;
+}
+.footer-li-item:hover {
+  transform: translateY(-3px);
+  transition: all .3s linear;
 }
 .symbol {
   position: relative;
@@ -53,4 +64,15 @@
   left: 0;
   font-size: 13px;
   top: 40%;
+}
+.footer-li:hover .symbol-footer-span {
+  color: #f1bc7a;
+  transition: all .5s linear;
+}
+.footer-li:hover .symbol-i {
+  color: #f1bc7a;
+  transition: all .5s linear;
+}
+.footer-li a {
+  text-decoration: none;
 }

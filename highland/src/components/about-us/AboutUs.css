@@ -1,0 +1,201 @@
+.section-1-abu {
+  background-color: #ffffff;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.div-img-abu {
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  position: relative;
+}
+.div-img-1-abu {
+    float: right;
+    padding: 0;
+}
+.div-img-1-abu:before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 59%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+.div-img-abu img {
+  width: 100%;
+  margin-bottom: -6px;
+  
+}
+.div-content-abu {
+  width: 50%;
+}
+.div-content-container-1-abu h1 {
+  margin-top: 0;
+}
+.div-content-container-1-abu h1 a {
+  font-size: 46px;
+  color: #53382c;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.div-content-container-1-abu h1 a:hover {
+  color: #f1bc7a;
+  transition: all 0.3s linear;
+}
+.div-content-container-abu p {
+  word-break: break-word;
+}
+.div-content-1-abu {
+  padding: 0;
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10%;
+}
+
+
+.section-2-abu {
+  background-color: #bd945d;
+  overflow: hidden;
+  position: relative;
+}
+.div-content-2-abu {
+  float: right;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+.div-content-container-2-abu {
+  /* margin-right: 10%;
+  margin-top: 50px; */
+}
+.div-img-2-abu {
+  float: left;
+}
+.div-content-container-2-abu h1 a {
+    font-size: 46px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s linear;
+  }
+  .div-content-container-2-abu h1 a:hover {
+    color: #f1bc7a;
+    transition: all 0.3s linear;
+  }
+
+.div-content-container-2-abu {
+    color: #fff;
+    text-align: right;
+}
+.div-img-2-abu:before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) -1%, rgba(255,255,255,0) 0%, rgba(222,201,173,0) 50%, rgba(192,152,100,1) 95%, rgba(189,148,93,1) 99%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(222,201,173,0) 50%,rgba(192,152,100,1) 95%,rgba(189,148,93,1) 99%);
+    background: linear-gradient(to right, rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(222,201,173,0) 50%,rgba(192,152,100,1) 95%,rgba(189,148,93,1) 99%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+.section-3-abu {
+    background-color: #8e5a2d;
+    overflow: hidden;
+    position: relative;
+}
+.div-img-3-abu {
+    float: right;
+}
+.div-content-3-abu {
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 40%;
+    transform: translateY(-50%);
+}
+.div-content-container-3-abu h1 a {
+    font-size: 46px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s linear;
+  }
+  .div-content-container-3-abu h1 a:hover {
+    color: #f1bc7a;
+    transition: all 0.3s linear;
+  }
+
+  .div-content-container-3-abu h4, .div-content-container-3-abu p, .div-content-container-3-abu button {
+      color: #fff;
+  }
+.div-img-3-abu::before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(142,90,45,1) 0%, rgba(194,166,142,0) 46%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(142,90,45,1) 0%,rgba(194,166,142,0) 46%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(142,90,45,1) 0%,rgba(194,166,142,0) 46%,rgba(255,255,255,0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+
+.btn-abu {
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  margin-top: 20px;
+}
+.btn-1-abu:hover {
+  transition: all 0.3s linear;
+}
+.btn-1-abu {
+  color: #b22830;
+  border: solid 1px #b22830;
+  transition: all 0.3s linear;
+  
+}
+.btn-1-abu:hover {
+  background-color: #b22830;
+  color: #ffffff;
+  transition: all 0.3s linear;
+}
+.btn-2-abu {
+  color: #fff;
+  border: solid 1px #fff;
+  transition: all 0.3s linear;
+}
+.btn-2-abu:hover {
+  background-color: #fff;
+  color: #b22830;
+  transition: all 0.3s linear;
+}

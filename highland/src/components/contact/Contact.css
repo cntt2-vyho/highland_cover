@@ -1,0 +1,82 @@
+.contact-container {
+  margin: 45px 10%;
+  overflow: hidden;
+  background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/weblink/bg.png');
+  background-repeat: no-repeat;
+  background-position: right top; 
+}
+.contact-container h1 {
+  color: #53382c;
+}
+.contact-container h1, .contact-container h3 {
+  text-transform: uppercase;
+}
+.contact-container .label {
+  display: block;
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+.input-item {
+  width: 100%;
+  border: none;
+  border: solid 1px #cccccc;
+  background: #f2f5f8;
+  height: 45px;
+  padding-left: 30px;
+  border-radius: 5px;
+  outline: none;
+}
+.input-container {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 12px;
+  color: #666;
+}
+.textarea {
+  height: 122px;
+  resize: none;
+  padding: 15px 15px 15px 30px;
+}
+.input-item:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.vertify-container {
+  display: block;
+  overflow: hidden;
+}
+.for-vertify {
+  width: calc( 100% - 120px );
+  display: inline-block;
+  float: left;
+}
+.vertify {
+  width: 100px;
+  display: inline-block;
+  float: right;
+}
+.send-btn {
+  color: #b22830;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: solid 1px #b22830;
+  padding: 8px 15px;
+  transition: all 0.5s linear;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  outline: none;
+}
+.send-btn:hover {
+  background-color: #b22830;
+  color: #ffffff;
+  transition: all 0.5s linear;
+}

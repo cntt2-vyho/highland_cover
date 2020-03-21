@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import classes from './Homepage.css';
+import classes from './Header.css';
+import { NavLink } from 'react-router-dom';
 
-class Homepage extends Component {
+export default class Header extends Component {
   render() {
     return (
       <header>
@@ -33,11 +34,11 @@ class Homepage extends Component {
             </li>
           </ul>
         </div>
-        <a className="dropdown-toggle" href="../cart/cart.html">
+        <NavLink className="dropdown-toggle" to="/order">
           <i className="fa fa-shopping-cart" />
           {/* Counter - Messages */}
           <span className="badge-danger">7</span>
-        </a>
+        </NavLink>
         <div className="auth">
           <a href="#">
             đăng nhập
@@ -49,7 +50,7 @@ class Homepage extends Component {
           <a href="../cafe/cafe.html">quán cà phê</a>
         </li>
         <li className="menu-li">
-          <a href="../menu/Menu.html">thực đơn</a>
+          <NavLink to="/menu">thực đơn</NavLink>
           <div className="menu-li-content">
             <ul className="menu-li-content-ul">
               <li className="cafe hover-item col-lg-2">
@@ -165,7 +166,7 @@ class Homepage extends Component {
           </div>
         </li>
         <li className="menu-li">
-          <a href="../news/news.html">tin tức</a>
+          <NavLink to="/news">tin tức</NavLink>
           <div className="menu-li-content">
             <div className="hover-div-containers">
               <div className="hover-item-news col-lg-6">
@@ -194,7 +195,7 @@ class Homepage extends Component {
           </div>
         </li>
         <li className="menu-li">
-          <a href="../none.html">trách nhiệm cộng đồng</a>
+          <NavLink to="/responsibility">trách nhiệm cộng đồng</NavLink>
           <div className="menu-li-content">
             <div className="hover-div-containers">
               <div className="hover-item-news col-lg-9">
@@ -237,7 +238,7 @@ class Homepage extends Component {
           </div>
         </li>
         <li className="menu-li">
-          <a href="../aboutUs/aboutUs.html">về chúng tôi</a>
+          <NavLink to="/about">về chúng tôi</NavLink>
           <div className="menu-li-content">
             <div className="hover-div-containers">
               <div className="hover-item-news col-lg-9">
@@ -270,7 +271,7 @@ class Homepage extends Component {
           </div>
         </li>
         <li className="menu-li">
-          <a href="../contact/contact.html">liên hệ</a>
+          <NavLink to="/contact">liên hệ</NavLink>
         </li>
       </ul>
     </div>
@@ -280,4 +281,3 @@ class Homepage extends Component {
     )
   }
 }
-export default Homepage;
