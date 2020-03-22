@@ -55,6 +55,7 @@ header {
 .hover-item ul {
   padding: 0;
   margin: 0;
+  line-height: 1.6 !important;
 }
 .small-item a {
   text-transform: capitalize;
@@ -95,10 +96,31 @@ header {
   margin: 0;
 }
 .phin-container {
-  padding: 15px;
+  padding: 25px;
+}
+#phin-sua-da-img {
+  width: 100%;
+}
+.phin-sua-da a, .title-for-tncd a, .title-for-abu a {
+  color: #f1bc7a;
+  
+  transition: all .3s linear;
+}
+.title-for-abu {
+  margin-bottom: 15px;
+}
+.phin-sua-da a:hover, .title-for-tncd a:hover, .title-for-abu a:hover {
+  color: #fff;
+  transition: all .3s linear;
+}
+.phin-sua-da {
+  margin-bottom: 15px;
 }
 #phin_sua_da {
   padding-bottom: 15px;
+}
+.container-for-tuhaodatviet-img {
+  float: right;
 }
 .header-cart {
   position: absolute;
@@ -187,8 +209,9 @@ header {
 .news-container {
   display: inline-block;
   background-image: url('https://www.highlandscoffee.com.vn/skins/default/images/bgmenu.jpg?fbclid=IwAR05njNKn6gN0QKdGr-9JVtiMmDTeP19TTi7BoScVKZxhizqGikEjVstBh8');
-  padding: 15px;
+  padding: 25px;
   float: right;
+  text-align: left;
 }
 .news-container img {
   max-width: 150px;

@@ -20,7 +20,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(to right, rgba(233,233,233,0) 0%,rgba(233,233,233,0) 0%,rgba(233,233,233,1) 100%);
+    background: linear-gradient(to right, rgba(233,233,233,0) 0%,rgba(233,233,233,0) 41%,rgba(233,233,233,1) 100%);
 }
 .div-content-service {
   display: block;

@@ -10,6 +10,8 @@
 .section1-content {
   display: block;
   position: relative;
+  margin-top: -30px;
+  margin-bottom: -6px;
 }
 .cnth {
   position: absolute;
@@ -113,8 +115,11 @@
   padding: 13.9% 10%;
   
 }
+.okla-container h1 {
+  padding: 15px 0;
+}
 .okla-container-small {
-  padding: 0 10%;
+  padding: 30px 10%;
 }
 .okla-container-small a, .okla-container-small h3, .okla-container-small p {
   text-decoration: none;

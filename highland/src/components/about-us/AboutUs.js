@@ -44,7 +44,7 @@ export default class AboutUs extends Component {
                                 <p>Chúng tôi mong muốn mang đến cho bạn những trải nghiệm đáng nhớ mỗi lần đến Highlands Coffee®.
                                 Hãy chia sẻ với chúng tôi để chúng tôi có thể mang đến cho bạn những trải nghiệm tuyệt vời hơn
           thế.</p>
-          <div className="btn-abu-container">
+          <div className="btn-abu-container btn-abu-container-dvkh">
               <NavLink to="/about/customer-service" className="btn-abu btn-2-abu">
                                     xem chi tiết
         </NavLink>

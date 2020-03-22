@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Menu.css';
+import { NavLink } from 'react-router-dom';
 
 
 export default class Menu extends Component {
@@ -16,9 +17,9 @@ export default class Menu extends Component {
                                 nguyên Việt Nam màu mỡ, qua những bí quyết rang xay độc đáo, Highlands Coffee chúng tôi tự hào
                                 giới thiệu những dòng sản phẩm Cà phê mang hương vị đậm đà và tinh tế.
           </p>
-                                <a href="../tra/tra.html" id="khamphathem1">
+                                <NavLink to="/menu/products" id="khamphathem1">
                                     khám phá thêm
-          </a>
+          </NavLink>
                             </div>
                         </div>
                         <div className="div-img1 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -38,9 +39,9 @@ export default class Menu extends Component {
                                 <p>Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế
                                 từ những nguyên liệu thuần túy của Việt Nam.
           </p>
-                                <button id="khamphathem2">
+                                <NavLink to="/menu/products" id="khamphathem2">
                                     khám phá thêm
-          </button>
+          </NavLink>
                             </div>
                         </div>
                     </div>
@@ -53,9 +54,9 @@ export default class Menu extends Component {
                                 </h1>
                                 <p>Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm giác thật khoan khoái, tươi mới.
           </p>
-                                <button className="khamphathem3">
+                                <NavLink to="/menu/products" className="khamphathem3">
                                     khám phá thêm
-          </button>
+          </NavLink>
                             </div>
                         </div>
                         <div className="div-img3 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -74,9 +75,9 @@ export default class Menu extends Component {
                                 </h1>
                                 <p>Bạn đã quá quen thuộc với Bánh mì Việt Nam. Hãy nếm thử một miếng Bánh mì ngon, giòn, nóng hổi tại Highlands Coffee. Một kết hợp hoàn hảo giữa lớp nhân chua, cay, mặn, ngọt quyện với lớp vỏ bánh mì giòn tan, mịn màng tạo ra tầng tầng lớp lớp dư vị cho thực khách.
           </p>
-                                <button className="khamphathem4">
+                                <NavLink to="/menu/products" className="khamphathem4">
                                     khám phá thêm
-          </button>
+          </NavLink>
                             </div>
                         </div>
                     </div>

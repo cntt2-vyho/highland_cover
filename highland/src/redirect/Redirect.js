@@ -12,6 +12,8 @@ import Origin from './../components/about-us/about-us-item/origin/Origin';
 import CustomerService from './../components/about-us/about-us-item/customer-service/CustomerService';
 import Career from './../components/about-us/about-us-item/career/Career';
 import Order from './../components/order/Order';
+import Product from './../components/products/Product';
+import Cafe from '../components/cafe/Cafe';
 
 
 export default class Redirect extends Component {
@@ -23,6 +25,7 @@ export default class Redirect extends Component {
 
 
         <Route exact path="/" component={Content} />
+        <Route exact path="/cafe" component={Cafe} />
         <Route exact path="/categories" component={Menu} />
         <Route exact path="/news" component={News} />
         <Route exact path="/responsibility" component={SocialResponsibility} />
@@ -33,6 +36,8 @@ export default class Redirect extends Component {
         <Route exact path="/about/career" component={Career} />
 
         <Route exact path="/order" component={Order} />
+
+        <Route exact path="/menu/products" component={Product} />
         
         
         

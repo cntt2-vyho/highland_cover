@@ -7,7 +7,7 @@ export default class Carrer extends Component {
     return (
       <div className="content-career">
                 <div className="div-img-career">
-                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/About_Customer_service_2.jpg" alt="" />
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg" alt="" />
                 </div>
                 <div className="div-content-career">
                     <div className="div-content-container-career">

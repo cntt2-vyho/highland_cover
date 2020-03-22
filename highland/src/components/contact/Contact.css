@@ -80,3 +80,6 @@
   color: #ffffff;
   transition: all 0.5s linear;
 }
+.form-group-for-contact {
+  padding-left: 5px;
+}

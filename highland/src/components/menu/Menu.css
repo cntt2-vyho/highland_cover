@@ -122,6 +122,7 @@
   margin: 30px 0;
   text-decoration: none;
   text-align: center;
+  float: right;
 }
 #khamphathem2:hover {
   background-color: #b22830;
@@ -137,7 +138,9 @@
   padding: 0;
   padding-right: 10%;
 }
-
+.content-container2 a {
+  display: block;
+}
 
 /* section 3 */
 .section3 {
@@ -199,7 +202,9 @@
   transform: translateY(-50%);
   
 }
-
+.content-container3 a {
+  display: block;
+}
 
 
 
@@ -253,6 +258,7 @@
   margin: 30px 0;
   text-decoration: none;
   text-align: center;
+  float: right;
 }
 .khamphathem4:hover {
   background-color: #b22830;
@@ -266,4 +272,7 @@
   top: 50%;
   transform: translateY(-50%);
   
+}
+.content-container4 a {
+  display: block;
 }

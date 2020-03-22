@@ -160,7 +160,9 @@
 }
 
 
-
+.btn-abu-container-dvkh {
+  float: right;
+}
 
 .btn-abu {
   background-color: transparent;
@@ -175,6 +177,8 @@
   outline: none;
   margin-top: 20px;
   text-decoration: none;
+  display: block;
+  text-align: center;
 }
 .btn-1-abu:hover {
   transition: all 0.3s linear;

@@ -47,7 +47,7 @@ export default class Header extends Component {
       </div>
       <ul className="menu-ul">
         <li className="menu-li">
-          <a href="../cafe/cafe.html">quán cà phê</a>
+          <NavLink to="/cafe">quán cà phê</NavLink>
         </li>
         <li className="menu-li">
           <NavLink to="/categories">thực đơn</NavLink>
@@ -155,10 +155,10 @@ export default class Header extends Component {
               <li className="div hover-item phin col-lg-2">
                 <div className="phin-container">
                   <h3 className="title" id="phin_sua_da">
-                    <a href="#">phin sữa <br /> đá đậm đà <br /> chất phim</a>
+                    <a href="#">phin sữa  đá đậm đà chất phim! 29. 000 &#8363;</a>
                   </h3>
                   <a href="#">
-                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/z1.jpg" alt="phin sữa đá đậm đà chất phim 29k" />
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/z1.jpg" id="phin-sua-da-img" alt="phin sữa đá đậm đà chất phim 29k" />
                   </a>
                 </div>
               </li>
@@ -182,13 +182,15 @@ export default class Header extends Component {
                 </ul>
               </div>
               <div className="hover-item-news col-lg-6">
+                <div className="container-for-tuhaodatviet-img col-lg-4">
                 <div className="news-container">
-                  <h3 className="title" id="phin_sua_da">
-                    <a href="#">tự hào sinh <br /> ra từ đất <br /> Việt, 1999!</a>
+                  <h3 className="phin-sua-da">
+                    <a href="#">tự hào sinh ra từ đất Việt, 1999!</a>
                   </h3>
                   <a href="#">
                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/Thumbnail.jpg" alt="phin sữa đá đậm đà chất phim 29k" />
                   </a>
+                </div>
                 </div>
               </div>
             </div>
@@ -224,10 +226,10 @@ export default class Header extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="hover-item-news col-lg-3">
+              <div className="hover-item-news col-lg-2" style={{float: 'right'}}>
                 <div className="news-container">
-                  <h3 className="title" id="phin_sua_da">
-                    <a href="#">đương đại <br /> hóa tranh <br /> đông hồ</a>
+                  <h3 className="title-for-tncd">
+                    <a href="#">đương đại hóa tranh đông hồ</a>
                   </h3>
                   <a href="#">
                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/KV_Highlands_CSR_1.jpg" alt="" />
@@ -257,10 +259,10 @@ export default class Header extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="hover-item-news col-lg-3">
-                <div className="news-container" style={{float: 'left'}}>
-                  <h3 className="title" id="phin_sua_da">
-                    <a href="#">thương <br /> hiệu bắt <br />nguồn từ <br /> cà phê Việt</a>
+              <div className="hover-item-news col-lg-2" style={{float: 'right'}}>
+                <div className="news-container container-for-abu" style={{float: 'right'}}>
+                  <h3 className="title-for-abu">
+                    <a href="#">thương hiệu bắt nguồn từ cà phê Việt!</a>
                   </h3>
                   <a href="#">
                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/ABOUT-ORIGIN.png" alt="phin sữa đá đậm đà chất phim 29k" />
