@@ -1,5 +1,7 @@
 
-
+.section4-content {
+  overflow: hidden;
+}
 
 .content {
   display: block;
@@ -112,7 +114,7 @@
   transform: translate(-50%, -50%); */
 }
 .okla-container {
-  padding: 13.9% 10%;
+  padding: 11.8% 10%;
   
 }
 .okla-container h1 {
@@ -233,12 +235,31 @@
   background-color: #b22830;
   
 }
+.btn-Email span::before {
+  content:"\f1d9";
+  font-family: fontAwesome;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.btn-Email span {
+  position: relative;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
 .input-Email {
   font-style: italic;
   border: none;
   height: 36px;
   padding-left: 15px;
-  width: calc(100% - 145px);
+  width: calc(100% - 130px);
   outline: none;
   font-style: italic;
   border: none;

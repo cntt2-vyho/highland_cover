@@ -30,20 +30,16 @@ export default class Footer extends Component {
                     </li>
                     <li className="footer-li symbol col-md-12 col-sm-12 col-12">
                         <a href="#">
-
-                            <span className="symbol-footer-span">
+                            <span className="symbol-footer-span symbol-footer-span-1">
                                 Đăng ký để nhận bản tin
                             </span>
-                            <i className="fa fa-paper-plane-o symbol-i" aria-hidden="true" />
                         </a>
                     </li>
                     <li className="footer-li symbol col-md-12 col-sm-12 col-12">
                         <a href="#">
-
-                            <span className="symbol-footer-span">
+                            <span className="symbol-footer-span symbol-footer-span-2">
                                 customerservice@highlandscoffee.com.vn
                             </span>
-                            <i className="fa fa-envelope-o symbol-i" aria-hidden="true" />
                         </a>
                     </li>
                 </ul>

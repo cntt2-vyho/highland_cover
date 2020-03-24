@@ -1,7 +1,14 @@
-
+.content-for-card {
+  background-color: #f2f2f2;
+  display: block;
+  overflow: hidden;
+  margin-top: 101.4px;
+}
 .order-container {
   margin: 45px 10%;
   overflow: hidden;
+  background-color: #fff;
+  padding: 15px;
 }
 .div-xemgiohang {
   display: block;
@@ -139,24 +146,23 @@
 .div-voucher input {
   display: inline-block;
   height: 40px;
-  border: solid .1px #000;
   width: calc(100% - 150px);
   padding: 0 15px;
   outline: none;
+  border: solid 1px #000;
 }
 .btn-voucher {
   display: inline-block;
   height: 40px;
   width: 150px;
-  border: transparent;
+  border: solid 1px #b22830;
   background-color: #b22830;
   color: #fff;
   text-transform: uppercase;
-  margin-left: -5px;
   transition: all .3s linear;
 }
 .div-ship, .div-voucher {
-  padding: 10px 0;
+  margin: 10px 0;
 }
 .total {
   display: block;
@@ -283,4 +289,8 @@ text-decoration: none;
 }
 .force-overflow-order {
   padding: 0 10px 0 0;
+}
+
+.pay-container-small {
+  padding: 0 5px;
 }

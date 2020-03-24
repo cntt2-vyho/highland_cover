@@ -5,6 +5,10 @@
   .footer {
     display: block;
     background-color: #53382c;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
   }
   .footer-ul {
     padding: 0;
@@ -76,3 +80,23 @@
   .footer-li a {
     text-decoration: none;
   }
+  .symbol-footer-span {
+    position: relative;
+    padding-left: 20px;
+  }
+  .symbol-footer-span::before {
+    font-family: fontawesome;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+.symbol-footer-span-1::before {
+  content: "\f1d9";
+}
+.symbol-footer-span-2::before {
+  content: "\f003";
+}

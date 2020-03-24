@@ -167,10 +167,7 @@ export default class Content extends Component {
                                         <li>
                                             <input type="text" placeholder="Nhập email của bạn để nhận thông tin..." className="input-Email" />
                                             <button type="submit" className="btn-Email">
-                                                <span>
-                                                    <i className="fa fa-paper-plane-o" aria-hidden="true" />
-          gửi
-        </span>
+                                                <span> gửi </span>
                                             </button>
                                         </li>
                                     </ul>

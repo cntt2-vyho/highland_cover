@@ -48,7 +48,14 @@
 background-color: #333;
 color: #fff;  
 }
-
+#back-to-top-btn::before {
+  content: "\f106";
+  font-family: fontawesome;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 @media(max-width: 992px) {
 .container { padding: 20px 100px; }
 #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }

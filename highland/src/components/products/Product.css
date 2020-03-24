@@ -172,6 +172,7 @@
     left: inherit;
 }
 .slick-next:before, .slick-prev:before {
+  font-family: fontAwesome;
   font-size: 20px;
   line-height: 1;
   opacity: 1 !important;

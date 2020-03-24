@@ -14,6 +14,7 @@ import Career from './../components/about-us/about-us-item/career/Career';
 import Order from './../components/order/Order';
 import Product from './../components/products/Product';
 import Cafe from '../components/cafe/Cafe';
+import ProductDetails from './../components/product-detail/ProductDetails';
 
 
 export default class Redirect extends Component {
@@ -38,6 +39,7 @@ export default class Redirect extends Component {
         <Route exact path="/order" component={Order} />
 
         <Route exact path="/menu/products" component={Product} />
+        <Route exact path="/menu/products/product-details" component={ProductDetails} />
         
         
         

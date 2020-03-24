@@ -4,7 +4,7 @@ import classes from './Order.css';
 export default class Order extends Component {
     render() {
         return (
-            <div className="content">
+            <div className="content-for-card">
                 <div className="order-container">
                     <div className="div-xemgiohang col-lg-12 col-md-12 col-sm-12 col-12">
                         <h3>Xem giỏ hàng</h3>
@@ -221,23 +221,23 @@ export default class Order extends Component {
                                 </div>
                                 <div className="pay-container">
                                     <input type="radio" defaultChecked="checked" name="radio" />
-                                    <label className="container">Thanh toán khi nhận hàng</label>
+                                    <label className="pay-container-small">Thanh toán khi nhận hàng</label>
                                 </div>
                                 <div className="pay-container">
                                     <input type="radio" defaultChecked="checked" name="radio" />
-                                    <label className="container">
+                                    <label className="pay-container-small">
                                         Momo
             </label>
                                 </div>
                                 <div className="pay-container">
                                     <input type="radio" defaultChecked="checked" name="radio" />
-                                    <label className="container">
+                                    <label className="pay-container-small">
                                         Airpay
             </label>
                                 </div>
                                 <div className="pay-container">
                                     <input type="radio" defaultChecked="checked" name="radio" />
-                                    <label className="container">
+                                    <label className="pay-container-small">
                                         Visa / MasterCard
             </label>
                                 </div>
