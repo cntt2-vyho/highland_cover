@@ -13,7 +13,7 @@
   display: block;
   position: relative;
   margin-top: -30px;
-  margin-bottom: -6px;
+  margin-bottom: -7px;
 }
 .cnth {
   position: absolute;
@@ -99,7 +99,6 @@
 
 .newstore {
   display: inline-block;
-  width: 50%;
   background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/weblink/homepage-STORE_1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -147,7 +146,6 @@
   color: #f1bc7a;
 }
 .news {
-  width: 50%;
   background-image: url("https://www.highlandscoffee.com.vn/vnt_upload/weblink/bg2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -200,7 +198,7 @@
 .div-content {
   display: inline-block;
 }
-.div-img {
+.div-img-content {
   display: inline-block;
 }
 .div-content h3 {
@@ -210,7 +208,7 @@
   padding: 0;
   margin: 0;
 }
-.listnews ul li .div-img img {
+.listnews ul li .div-img-content img {
   width: 100%;
     margin-left: -15px;
 }
@@ -335,4 +333,11 @@
   opacity: 1;
   color: #fff;
 }
-
+@media (max-width: 1023px) {
+  #map {
+    padding: 10px 0;
+  }
+  .cnth, #kpt, .kpt-red{
+    display: none;
+  }
+}

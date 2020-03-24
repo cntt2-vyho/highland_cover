@@ -167,7 +167,7 @@ export default class ProductDetails extends Component {
                 </div>
 
                 <ul className="list-related">
-                    <li className="lists-item">
+                    <li className="lists-item col-lg-4 col-md-4 col-sm-4 col-4">
                         <div className="div-img-prddtl">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHVAI.png" alt="" />
                         </div>
@@ -178,7 +178,7 @@ export default class ProductDetails extends Component {
                             <span>Giá: <strong>35.000 Đ</strong></span>
                         </div>
                     </li>
-                    <li className="lists-item">
+                    <li className="lists-item col-lg-4 col-md-4 col-sm-4 col-4">
                         <div className="div-img-prddtl">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png" alt="" />
                         </div>
@@ -189,7 +189,7 @@ export default class ProductDetails extends Component {
                             <span>Giá: <strong>35.000 Đ</strong></span>
                         </div>
                     </li>
-                    <li className="lists-item">
+                    <li className="lists-item col-lg-4 col-md-4 col-sm-4 col-4">
                         <div className="div-img-prddtl">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHANHDAO.png" alt="" />
                         </div>

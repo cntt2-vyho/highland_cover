@@ -7,11 +7,11 @@ export default class AboutUs extends Component {
         return (
             <div className="content">
                     <div className="section-1-abu">
-                        <div className="div-img-abu div-img-1-abu col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="div-img-abu div-img-1-abu col-lg-6 col-md-12 col-sm-12 col-12">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png" />
                             {/* <div className="background1-abu" /> */}
                         </div>
-                        <div className="div-content-abu div-content-1-abu col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="div-content-abu div-content-1-abu col-lg-6 col-md-12 col-sm-12 col-12">
                             <div className="div-content-container-abu div-content-container-1-abu">
                                 <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" target="_blank">khởi nguồn</a>
                                 </h1>

@@ -25,6 +25,7 @@
 }
 .div-img {
   overflow: hidden;
+  width: 100%;
 }
 .div-img img {
   width: 100%;

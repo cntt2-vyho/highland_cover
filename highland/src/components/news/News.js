@@ -10,7 +10,7 @@ export default class News extends Component {
             <h1>tin tức</h1>
           </div>
           <div className="news-content row">
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_82667614_2845674332180059_8209717131743330304_o-Recovered.png" alt="dxui sưn" />
@@ -28,7 +28,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_83739091_2845644318849727_1748210367038750720_o_1.png" alt="dxui sưn" />
@@ -46,7 +46,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/08_2019/thumbs/470_crop_Highlands_-_Freeze_Tra_Xanh_-_KV_Phase_1_470x312.jpg" alt="dxui sưn" />
@@ -64,7 +64,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_82667614_2845674332180059_8209717131743330304_o-Recovered.png" alt="dxui sưn" />
@@ -82,7 +82,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_83739091_2845644318849727_1748210367038750720_o_1.png" alt="dxui sưn" />
@@ -100,7 +100,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/08_2019/thumbs/470_crop_Highlands_-_Freeze_Tra_Xanh_-_KV_Phase_1_470x312.jpg" alt="dxui sưn" />
@@ -118,7 +118,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_82667614_2845674332180059_8209717131743330304_o-Recovered.png" alt="dxui sưn" />
@@ -136,7 +136,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/02_2020/thumbs/470_crop_83739091_2845644318849727_1748210367038750720_o_1.png" alt="dxui sưn" />
@@ -154,7 +154,7 @@ export default class News extends Component {
                 </div>
               </div>
             </div>
-            <div className="news-item col-lg-4 col-md-4 col-sm-6 col-6">
+            <div className="news-item col-lg-4 col-md-4 col-sm-12 col-12">
               <div className="div-img">
                 <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
                   <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/08_2019/thumbs/470_crop_Highlands_-_Freeze_Tra_Xanh_-_KV_Phase_1_470x312.jpg" alt="dxui sưn" />

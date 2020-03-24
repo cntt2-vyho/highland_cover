@@ -45,7 +45,7 @@ export default class Cafe extends Component {
                         </div>
                     </form>
                     <div className="div-map">
-                        <div className="list col-lg-3">
+                        <div className="list col-lg-3 col-md-12 col-sm-12 col-12">
                             <div className="result">
                                 <h4>
                                     Tìm được 116 quán
@@ -286,7 +286,7 @@ export default class Cafe extends Component {
                                 </li>
                             </ul>
                         </div>
-                        <div className="map col-lg-9" id="map">
+                        <div className="map col-lg-9 col-md-12 col-sm-12 col-12" id="map">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.062652425278!2d108.15732981468396!3d16.06223828888518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219246b64ae89%3A0xc9270347fa1b00cd!2zNDU5IFTDtG4gxJDhu6ljIFRo4bqvbmcsIEhvw6AgS2jDoW5oIE5hbSwgTGnDqm4gQ2hp4buDdSwgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1584258807910!5m2!1svi!2s" frameBorder={0} style={{ border: 0 }} allowFullScreen aria-hidden="false" tabIndex={0} className="map-iframe" />
                         </div>
                     </div>

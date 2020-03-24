@@ -33,7 +33,7 @@ select {
 }
 .select-div {
   position: relative;
-  padding: 0 5px !important;
+  padding: 5px 5px !important;
 }
 .fa-caret-down {
   position: absolute;
@@ -168,4 +168,9 @@ select:focus  {
   background-color: #fff;
   margin: 0 0 15px 15px;
   padding: 0;
+}
+@media (max-width: 1023px) {
+  #map {
+    padding: 10px 0;
+}
 }

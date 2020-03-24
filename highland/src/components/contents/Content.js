@@ -113,7 +113,7 @@ export default class Content extends Component {
                                 <div className="listnews">
                                     <ul>
                                         <li>
-                                            <div className="div-img col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
                                                 <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/12_2019/tra-sen-vang-moi.png" />
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">
@@ -129,7 +129,7 @@ export default class Content extends Component {
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="div-img col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
                                                 <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/hco-7598-20-years-concert-web-470x314_1.jpg" />
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">
@@ -148,7 +148,7 @@ export default class Content extends Component {
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="div-img col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
                                                 <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/HCO-7598-20-YEARS-NEWS-BANNER-NEWS-470X314.jpg" />
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">

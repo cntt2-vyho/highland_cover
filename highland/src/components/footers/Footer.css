@@ -100,3 +100,28 @@
 .symbol-footer-span-2::before {
   content: "\f003";
 }
+.div-for-viewmap {
+  display: none
+}
+#viewmap {
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding: 11px 15px;
+  background: #b22830;
+  color: #ffffff;
+  text-decoration: none;
+}
+@media  (max-width: 20000px) {
+  .footer-li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .div-for-viewmap {
+    display: block;
+    width: 20%;
+
+  }
+}

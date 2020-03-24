@@ -204,3 +204,23 @@
   color: #b22830;
   transition: all 0.3s linear;
 }
+@media (max-width: 1200px) {
+  .div-content-1-abu, .div-img-1-abu, .div-content-2-abu, .div-img-2-abu, .div-content-3-abu, .div-img-3-abu {
+    position: unset;
+  }
+  .div-img-1-abu::before, .div-img-2-abu::before, .div-img-3-abu::before {
+    position: unset;
+    display: block;
+  }
+  .div-img-1-abu, .div-img-2-abu, .div-img-3-abu {
+    display: block;
+    width: 100%;
+  }
+  .div-content-1-abu, .div-content-2-abu, .div-content-3-abu {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: unset;
+    padding: 3% 10%;
+  }
+}

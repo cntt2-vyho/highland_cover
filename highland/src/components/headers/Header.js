@@ -96,7 +96,7 @@ export default class Header extends Component {
                                 <NavLink to="/cafe">quán cà phê</NavLink>
                             </li>
                             <li className="menu-li">
-                                <NavLink to="/categories">thực đơn</NavLink>
+                                <NavLink to="/menu">thực đơn</NavLink>
                                 <div className="menu-li-content">
                                     <ul className="menu-li-content-ul">
                                         <li className="cafe hover-item col-lg-2">

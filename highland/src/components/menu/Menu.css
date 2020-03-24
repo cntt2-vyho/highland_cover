@@ -276,3 +276,23 @@
 .content-container4 a {
   display: block;
 }
+@media (max-width: 1200px) {
+  .content1, .content2, .content3, .content4 {
+    padding: 3% 10%;
+    display: block;
+    top: 0;
+    transform: unset;
+    position: unset;
+    width: 100%;
+  }
+  .div-img1, .div-img2, .div-img3, .div-img4 {
+    display: block;
+    width: 100%;
+  }
+  .content-container4, .content-container2 {
+    text-align: unset;
+  }
+  #khamphathem2, .khamphathem4 {
+    float: unset;
+  }
+}

@@ -22,7 +22,7 @@ export default class Product extends Component {
                     <h2 className="main-title">
                         trà
     </h2>
-                    <div className="container">
+                    <div className="container-prd">
                         <div className="main-tain col-lg-8 col-md-12 col-sm-12 col-12">
                             <a href="#">
                                 <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA-inside.jpg" alt="" />

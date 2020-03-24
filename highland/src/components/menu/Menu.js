@@ -9,21 +9,20 @@ export default class Menu extends Component {
             <div className="content">
                 <div className="section1">
                     <div className="section-container">
+                        
+                        <div className="div-img1 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png" />
+                        </div>
                         <div className="content1 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="content-container1">
                                 <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" target="_blank">cà phê</a>
                                 </h1>
                                 <p>Sự kết hợp hoàn hảo giữa hạt cà phê Robusta &amp; Arabica thượng hạng được trồng trên những vùng cao
                                 nguyên Việt Nam màu mỡ, qua những bí quyết rang xay độc đáo, Highlands Coffee chúng tôi tự hào
-                                giới thiệu những dòng sản phẩm Cà phê mang hương vị đậm đà và tinh tế.
-          </p>
+                                giới thiệu những dòng sản phẩm Cà phê mang hương vị đậm đà và tinh tế.</p>
                                 <NavLink to="/menu/products" id="khamphathem1">
-                                    khám phá thêm
-          </NavLink>
+                                    khám phá thêm</NavLink>
                             </div>
-                        </div>
-                        <div className="div-img1 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png" />
                         </div>
                     </div>
                 </div>
@@ -48,6 +47,9 @@ export default class Menu extends Component {
                 </div>
                 <div className="section3">
                     <div className="section-container">
+                    <div className="div-img3 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png" />
+                        </div>
                         <div className="content3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="content-container3">
                                 <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" target="_blank">trà</a>
@@ -59,9 +61,7 @@ export default class Menu extends Component {
           </NavLink>
                             </div>
                         </div>
-                        <div className="div-img3 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png" />
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="section4">

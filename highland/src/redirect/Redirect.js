@@ -27,11 +27,13 @@ export default class Redirect extends Component {
 
         <Route exact path="/" component={Content} />
         <Route exact path="/cafe" component={Cafe} />
-        <Route exact path="/categories" component={Menu} />
+        <Route exact path="/menu" component={Menu} />
         <Route exact path="/news" component={News} />
         <Route exact path="/responsibility" component={SocialResponsibility} />
         <Route exact path="/about" component={AboutUs} />
         <Route exact path="/contact" component={Contact} />
+
+
         <Route exact path="/about/origin" component={Origin} />
         <Route exact path="/about/customer-service" component={CustomerService} />
         <Route exact path="/about/career" component={Career} />

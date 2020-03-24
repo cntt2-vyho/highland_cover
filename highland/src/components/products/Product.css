@@ -2,7 +2,7 @@
   padding: 45px 10%;
   background-color: #fbedd7;
 }
-.container {
+.container-prd {
   overflow: hidden;
   display: block;
 }
@@ -183,7 +183,7 @@
 }
 .prd-div-img {
   position: relative;
-  height: 400px;
+  padding-top: 100%;
 }
 .prd-div-img img {
   position: absolute;
@@ -213,6 +213,14 @@
   color: #f14a50;
   transition: all .3s linear;
 }
-
-
+/* @media (min-width: 1024px) {
+  .prd-div-img {
+    height: 400px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .prd-div-img {
+    height: 300px;
+  }
+} */
 /* #f14a50 */
