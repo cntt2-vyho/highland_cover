@@ -27,6 +27,7 @@ header {
   list-style: none;
   display: inline-block;
   padding: 10px;
+  transition: all .3s linear;
 }
 .menu-li a {
   text-decoration: none;
@@ -49,6 +50,7 @@ header {
 }
 .menu-li:hover .menu-li-content {
   display: block  ;
+  transition: all .3s linear;
 }
 .hover-item, .small-item {
   list-style: none;
@@ -192,6 +194,7 @@ header {
 }
 .menu-li:hover {
   background-color: #53382c;
+  transition: all .3s linear;
 }
 .hover-div-containers {
   overflow: hidden;
@@ -240,7 +243,7 @@ header {
   overflow: hidden;
 }
 .hover-item-news ul {
-  text-align: left;
+  text-align: center;
 }
 .fa-search {
   color: #fff;
@@ -451,4 +454,97 @@ header {
   top: 50%;
   transform: translateY(-50%);
     margin-bottom: 20px;
+}
+
+/* Responsive icon */
+.responsive-icon {
+  position: relative;
+}
+.none-for-dropdown {
+  display: none;
+}
+.none-for-dropdown {
+  position: absolute;
+  position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+}
+.none-for-dropdown::before {
+  content: "\f054";
+  position: absolute;
+  font-family: fontawesome;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-li-resp {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .menu-li {
+    position: relative;
+  }
+  .menu-li-resp {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    transition: all .3s linear;
+    background-color: #53382c;
+    color: #fff;
+    position: relative;
+    
+  }
+  .menu-li-resp a {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s linear;
+  }
+  .menu-li-resp:hover a {
+    color: #53382c;
+    transition: all .3s linear;
+  }
+  .menu-li-resp:hover {
+    cursor: pointer;
+    background-color: #fff;
+    transition: all .3s linear;
+    color: #53382c;
+  }
+  .responsive-icon::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+
+  }
+  .menu-li {
+    display: block;
+    border: solid .5px #000;
+    text-align: left;
+    padding: 15px 40px;
+  }
+  .menu-li a {
+    color: #53382c;
+    font-weight: bold;
+  }
+  .menu-ul {
+    display: none;
+  }
+  .responsive {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    padding: 0;
+    background: #fff;
+
+  }
+  .none-for-dropdown {
+    display: inline-block;
+  }
 }

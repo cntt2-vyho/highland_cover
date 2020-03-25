@@ -3,6 +3,7 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
+  transition: all .3s linear;
 }
 .section1 {
   display: block;

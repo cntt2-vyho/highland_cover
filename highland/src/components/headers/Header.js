@@ -5,15 +5,15 @@ import { NavLink } from 'react-router-dom';
 export default class Header extends Component {
     render() {
         return (
-            <header>
+            <header id="header">
 
                 <div className="header-container">
-                    <div className="header-logo col-lg-2 col-md-2 col-sm-12 col-12">
+                    <div className="header-logo col-lg-2 col-md-2 col-sm-2 col-2">
                         <NavLink to="/">
                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/logo.svg" alt="Highland Coffee" />
                         </NavLink>
                     </div>
-                    <div className="header-menu col-lg-10 col-md-10 col-sm-12 col-12">
+                    <div className="header-menu col-lg-10 col-md-10 col-sm-10 col-10">
                         <div className="header-tool">
 
                             <div className="header-tool-language">
@@ -54,49 +54,24 @@ export default class Header extends Component {
                             </div>
                             </div>
 
-                            
-                            {/* <div className="auth">
-                                <a href="#">
-                                    đăng nhập</a>
-                            </div> */}
-                            {/* <div className="dropdown-toggle">
-                                <NavLink to="/order">
-                                    <i className="fa fa-shopping-cart" />
-                                    <span className="badge-danger">7</span>
-                                </NavLink>
-                                <div className="dropdown-click-menu-for-cart">
-                                    <ul>
-                                        <li>
-                                            <div className="div-img-dropclickmenu">
-                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_GTF.png" />
-
-                                            </div>
-                                            <div className="div-content-dropclickmenu">
-                                                <p>
-                                                    freeze trà xanh
-                                                </p>
-                                                <p>
-                                                    35. 000 Đ
-                                                </p>
-
-                                            </div>
-                                            <div className="div-count-dropclickmenu">
-                                                <div>1</div>
-
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div> */}
-
                         </div>
+                        <div className="menu-li-resp">
+                                <a href="#">
+                                Menu
+                                </a>
+
+                            </div>
                         <ul className="menu-ul">
+                            
                             <li className="menu-li">
                                 <NavLink to="/cafe">quán cà phê</NavLink>
                             </li>
                             <li className="menu-li">
-                                <NavLink to="/menu">thực đơn</NavLink>
+                                    <span className="none-for-dropdown">
+                                    </span>
+                                <NavLink to="/menu">thực đơn
+                                
+                                </NavLink>
                                 <div className="menu-li-content">
                                     <ul className="menu-li-content-ul">
                                         <li className="cafe hover-item col-lg-2">
@@ -212,6 +187,8 @@ export default class Header extends Component {
                                 </div>
                             </li>
                             <li className="menu-li">
+                            <span className="none-for-dropdown">
+                                    </span>
                                 <NavLink to="/news">tin tức</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
@@ -243,6 +220,8 @@ export default class Header extends Component {
                                 </div>
                             </li>
                             <li className="menu-li">
+                            <span className="none-for-dropdown">
+                                    </span>
                                 <NavLink to="/responsibility">trách nhiệm cộng đồng</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
@@ -286,6 +265,8 @@ export default class Header extends Component {
                                 </div>
                             </li>
                             <li className="menu-li">
+                            <span className="none-for-dropdown">
+                                    </span>
                                 <NavLink to="/about">về chúng tôi</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
@@ -322,6 +303,8 @@ export default class Header extends Component {
                                 <NavLink to="/contact">liên hệ</NavLink>
                             </li>
                             <li className="menu-li menu-li-search">
+                            <span className="none-for-dropdown">
+                                    </span>
                                 <span>
                                     <i class="fa fa-search f-search" aria-hidden="true"></i>
                                 </span>

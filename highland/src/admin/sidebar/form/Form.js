@@ -4,7 +4,7 @@ import classes from './Form.css'
 export default class Form extends Component {
     render() {
         return (
-            <div className="content">
+            <div className="content-for-form">
                 <div className="admin-content" style={{ margin: '45px 10%' }}>
 
 

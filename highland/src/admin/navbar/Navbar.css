@@ -1,0 +1,32 @@
+.content-for-admin {
+  overflow: hidden;
+  display: block;
+  float: right;
+}
+.navbar {
+  display: block;
+  overflow: hidden;
+  background-color: #fec3a6;
+  padding: 1% 2%;
+}
+.div-img-navbar {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 25px;
+}
+.div-username-navbar {
+  display: inline-block;
+  margin-left: 30px;
+}
+.navbar-username {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+.div-img-navbar img {
+  width: 100%;
+  margin-bottom: -7px;
+}

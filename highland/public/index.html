@@ -114,11 +114,12 @@
   };
 </script>
 
-<!-- <script>
-  $(document).ready(function() {
-  $('.div-for-cart-header').click(function() {
-    $('.dropdown-click-menu-for-cart-hidden').toggleClass('dropdown-click-menu-for-cart-visible');
+<script>
+  const responsive = document.querySelector('menu-li-resp');
+  const ulRes = document.querySelector('menu-ul')
+  responsive.addEventListener('click', () => {
+    ulRes.classList.toggle('responsive')
+
   });
-});
-</script> -->
+</script>
 </html>

@@ -1,11 +1,25 @@
+#root {
+  overflow: hidden;
+}
+.sidebar a {
+  text-decoration: none;
+}
 .sidebar {
   overflow: hidden;
+  padding: 15px;
+  /* background-color: #b22830; */
+  background-color: #ff928b;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
 }
 .sidebar-title {
   display: block;
+  overflow: hidden;
 }
 .sidebar-div-img {
-  width: 50%;
+  width: 20%;
   float: left;
 }
 .sidebar-div-img img {
@@ -24,4 +38,64 @@
 }
 .sidebar-li {
   display: block;
+  padding: 30px;
+  border-bottom: solid 1px #fff;
+  text-transform: uppercase;
+  transition: all .3s linear;
+  opacity: .5;
+}
+.sidebar-li-last {
+  border-bottom: none;
+}
+.sidebar-li a span {
+  position: relative;
+  padding-left: 30px;
+}
+.sidebar-li a span::before {
+  
+  position: absolute;
+  font-family: fontawesome;
+  top: 0;
+  left: 0;
+}
+.sidebar-li a .sidebar-span-for-news::before {
+  content: "\f1ea";
+}
+.sidebar-li a .sidebar-span-for-categories::before {
+  content: "\f14e";
+}
+.sidebar-li a .sidebar-span-for-products::before {
+  content: "\f0f4";
+}
+.sidebar-li a .sidebar-span-for-responsibility::before {
+  content: "\f2b5";
+}
+.sidebar-li a .sidebar-span-for-about::before {
+  content: "\f00c";
+}
+.sidebar-li a .sidebar-span-for-cafe::before {
+  content: "\f041";
+}
+.sidebar-span-for-title {
+  opacity: 1;
+}
+[class*="sidebar-span-for-"] {
+  text-transform: uppercase;
+  color: #fff;
+}
+.sidebar-li:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+.sidebar-li-for-title {
+  position: relative;
+  text-align: center;
+  opacity: 1;
+}
+.sidebar-div-img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
 }

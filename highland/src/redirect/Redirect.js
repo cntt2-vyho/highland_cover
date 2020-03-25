@@ -17,21 +17,23 @@ import Cafe from '../components/cafe/Cafe';
 import ProductDetails from './../components/product-detail/ProductDetails';
 import Sidebar from './../admin/sidebar/Sidebar';
 import Form from './../admin/sidebar/form/Form';
+import Admin from './../admin/Admin';
+import Navbar from './../admin/navbar/Navbar';
 
 
 export default class Redirect extends Component {
   render() {
     return (
       <Fragment>
-        <Route exact path="/admin" component={Sidebar} />
-        <Route exact path="/form" component={Form} />
+        {/* <Route exact path="/admin" component={Sidebar} />
+        <Route exact path="/form" component={Form} /> */}
 
 
-        <Route path="/" component={Header} />
+        {/* <Route path="/" component={Header} />
 
 
 
-        <Route exact path="/adb" component={Content} />
+        <Route exact path="/" component={Content} />
         <Route exact path="/cafe" component={Cafe} />
         <Route exact path="/menu" component={Menu} />
         <Route exact path="/news" component={News} />
@@ -52,7 +54,16 @@ export default class Redirect extends Component {
         
         
         
-        <Route path="/" component={Footer} />
+        <Route path="/" component={Footer} /> */}
+        <Route exact path="/admin" component={Sidebar} />
+        {/* <Route exact path="/admin" component={Admin} /> */}
+        
+        <div className="content-for-admin col-lg-9 col-md-9 col-sm-9 col-9">
+          <Route exact path="/admin" component={Navbar} />
+          <Route exact path="/admin" component={Form} />
+        </div>
+
+        
       </Fragment>
     )
   }
