@@ -8,10 +8,12 @@ export default class Footer extends Component {
             <div className="footer">
                 <ul className="footer-ul">
                     <li className="div-for-viewmap">
+                        <div className="div-for-viewmap-container">
                         <NavLink to="/cafe" id="viewmap">
-                            view map
-
-                </NavLink></li>
+                            <span>viewmap</span>
+                        </NavLink>
+                        </div>
+                    </li>
                     <li className="footer-li">
                         <ul className="footer-ul-item">
                             <li className="footer-li-item">

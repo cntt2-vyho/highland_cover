@@ -38,7 +38,7 @@ export default class Order extends Component {
                                         </div>
                                     </li>
                                     <li>
-                                        <div className="div-img col-lg-3 col-md-3 col-sm-12 col-12">
+                                        <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
                                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="" />
                                         </div>
                                         <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
@@ -62,7 +62,7 @@ export default class Order extends Component {
                                         </div>
                                     </li>
                                     <li>
-                                        <div className="div-img col-lg-3 col-md-3 col-sm-12 col-12">
+                                        <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
                                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="" />
                                         </div>
                                         <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
@@ -86,7 +86,7 @@ export default class Order extends Component {
                                         </div>
                                     </li>
                                     <li>
-                                        <div className="div-img col-lg-3 col-md-3 col-sm-12 col-12">
+                                        <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
                                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="" />
                                         </div>
                                         <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
@@ -110,31 +110,7 @@ export default class Order extends Component {
                                         </div>
                                     </li>
                                     <li>
-                                        <div className="div-img col-lg-3 col-md-3 col-sm-12 col-12">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="" />
-                                        </div>
-                                        <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
-                                            <div className="name-size col-lg-6 col-md-6 col-sm-12 col-12">
-                                                <h3>
-                                                    <a href="../trasenvang/ProductDetails.html">
-                                                        trà sen vàng</a>
-                                                </h3>
-                                                <p>Vừa</p>
-                                                <span>35.000 Đ</span>
-                                            </div>
-                                            <div className="quantity col-lg-6 col-md-6 col-sm-12 col-12">
-                                                <button className="minus-btn" type="button" name="button">
-                                                    <i className="fa fa-minus" aria-hidden="true" />
-                                                </button>
-                                                <input type="text" name="name" defaultValue={1} className="input-count" />
-                                                <button className="plus-btn" type="button" name="button">
-                                                    <i className="fa fa-plus" aria-hidden="true" />
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="div-img col-lg-3 col-md-3 col-sm-12 col-12">
+                                        <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
                                             <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="" />
                                         </div>
                                         <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
@@ -191,23 +167,23 @@ export default class Order extends Component {
                                 <div className="small-container">
                                     <h3>Xác nhận giao hàng</h3>
                                     <form action>
-                                        <div className="form-group">
+                                        <div className="form-group-for-order">
                                             <i className="fa fa-user-o" aria-hidden="true" />
                                             <input type="text" placeholder="Người nhận" />
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group-for-order">
                                             <i className="fa fa-map-marker" aria-hidden="true" />
                                             <input type="text" placeholder="Nhập địa chỉ giao hàng" />
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group-for-order">
                                             <i className="fa fa-phone" aria-hidden="true" />
                                             <input type="text" placeholder="Điện thoại" />
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group-for-order">
                                             <i className="fa fa-sticky-note-o" aria-hidden="true" />
                                             <input type="text" placeholder="Ghi chú" />
                                         </div>
-                                        <button className="form-group" id="btn-submit">
+                                        <button className="form-group-for-order" id="btn-submit">
                                             xác nhận
               </button>
                                     </form>

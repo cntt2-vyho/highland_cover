@@ -1,0 +1,27 @@
+.sidebar {
+  overflow: hidden;
+}
+.sidebar-title {
+  display: block;
+}
+.sidebar-div-img {
+  width: 50%;
+  float: left;
+}
+.sidebar-div-img img {
+  width: 100%;
+}
+.sidebar-small-title {
+  width: 50%;
+  float: right;
+}
+.sidebar-content {
+  display: block;
+}
+.sidebar-ul {
+  padding: 0;
+  margin: 0;
+}
+.sidebar-li {
+  display: block;
+}

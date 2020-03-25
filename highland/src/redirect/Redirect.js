@@ -15,17 +15,23 @@ import Order from './../components/order/Order';
 import Product from './../components/products/Product';
 import Cafe from '../components/cafe/Cafe';
 import ProductDetails from './../components/product-detail/ProductDetails';
+import Sidebar from './../admin/sidebar/Sidebar';
+import Form from './../admin/sidebar/form/Form';
 
 
 export default class Redirect extends Component {
   render() {
     return (
       <Fragment>
+        <Route exact path="/admin" component={Sidebar} />
+        <Route exact path="/form" component={Form} />
+
+
         <Route path="/" component={Header} />
 
 
 
-        <Route exact path="/" component={Content} />
+        <Route exact path="/adb" component={Content} />
         <Route exact path="/cafe" component={Cafe} />
         <Route exact path="/menu" component={Menu} />
         <Route exact path="/news" component={News} />
