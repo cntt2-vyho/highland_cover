@@ -15,21 +15,20 @@ import Order from './../components/order/Order';
 import Product from './../components/products/Product';
 import Cafe from '../components/cafe/Cafe';
 import ProductDetails from './../components/product-detail/ProductDetails';
-import Sidebar from './../admin/sidebar/Sidebar';
-import Form from './../admin/sidebar/form/Form';
-import Admin from './../admin/Admin';
 import Navbar from './../admin/navbar/Navbar';
+import Form from '../admin/form/Form';
+import Sidebar from './../admin/sidebar/Sidebar';
+import Table from './../admin/table/Table';
+import Modal from './../components/modal/Modal';
 
 
 export default class Redirect extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Route exact path="/admin" component={Sidebar} />
-        <Route exact path="/form" component={Form} /> */}
 
 
-        {/* <Route path="/" component={Header} />
+        <Route path="/" component={Header} />
 
 
 
@@ -50,18 +49,23 @@ export default class Redirect extends Component {
 
         <Route exact path="/menu/products" component={Product} />
         <Route exact path="/menu/products/product-details" component={ProductDetails} />
+
+        <Route exact path="/modal" component={Modal} />
         
         
         
         
-        <Route path="/" component={Footer} /> */}
-        <Route exact path="/admin" component={Sidebar} />
-        {/* <Route exact path="/admin" component={Admin} /> */}
+        <Route path="/" component={Footer} />
+
+
+
+        {/* <Route path="/admin" component={Sidebar} />
         
-        <div className="content-for-admin col-lg-9 col-md-9 col-sm-9 col-9">
-          <Route exact path="/admin" component={Navbar} />
-          <Route exact path="/admin" component={Form} />
-        </div>
+        <div className="content-for-admin col-lg-10 col-md-10 col-sm-10 col-10">
+          <Route path="/admin" component={Navbar} />
+          <Route exact path="/admin/form" component={Form} />
+          <Route exact path="/admin/table" component={Table} />
+        </div> */}
 
         
       </Fragment>

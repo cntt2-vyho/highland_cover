@@ -196,7 +196,7 @@ export default class Order extends Component {
             </h3>
                                 </div>
                                 <div className="pay-container">
-                                    <input type="radio" defaultChecked="checked" name="radio" />
+                                    <input type="radio" defaultChecked="checked" name="radio"/>
                                     <label className="pay-container-small">Thanh toán khi nhận hàng</label>
                                 </div>
                                 <div className="pay-container">

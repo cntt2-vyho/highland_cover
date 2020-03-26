@@ -1,0 +1,100 @@
+.table-container {
+  display: block;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.table-container a {
+  text-decoration: none;
+}
+.table-content {
+  display: block;
+  margin: 45px 10%;
+  padding: 15px;
+  background-color: #fff;
+}
+.table-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  border: solid .1px #ccc;
+}
+.table-title h1 {
+  padding: 15px 0;
+}
+.table-forNewandSearch ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  padding: 15px 0;
+  margin: 0 -15px;
+}
+.table-forNewandSearch ul li {
+  list-style: none;
+  display: inline-block;
+}
+.table-forNewandSearch {
+  display: block;
+  overflow: hidden;
+  margin-top: 15px;
+  border: solid .1px #ccc;
+  
+}
+.table-forNewandSearch ul li input {
+  height: 40px;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 0 15px;
+  outline: none;
+  font-style: italic;
+  
+}
+.table-forNewandSearch ul li button i {
+  color: #000;
+}
+.table-forNewandSearch ul li button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.table-forNewandSearch ul li {
+  position: relative;
+  padding: 0 15px;
+}
+.table-forNewandSearch ul li a {
+  border: solid 1px #b22830;
+  color: #b22830;
+  max-width: 250px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  margin: 30px 0;
+  text-decoration: none;
+  text-align: center;
+}
+.table-forNewandSearch ul li a:hover {
+  background-color: #b22830;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.table-content-container table {
+  border-collapse: collapse;
+  border: .1px solid #ccc;
+  margin-top: 15px;
+}
+.table-content-container table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

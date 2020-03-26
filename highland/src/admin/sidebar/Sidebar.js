@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default class Sidebar extends Component {
     render() {
         return (
-            <div className="sidebar col-lg-3 col-md-3 col-lg-3 col-3">
+            <div className="sidebar col-lg-2 col-md-2 col-lg-2 col-2">
                 <div className="sidebar-content">
                     <ul className="sidebar-ul">
                         <li className="sidebar-li sidebar-li-for-title">
@@ -43,13 +43,6 @@ export default class Sidebar extends Component {
                             <NavLink to="/products">
                                 <span className="sidebar-span-for-products">
                                     products
-                            </span>
-                            </NavLink>
-                        </li>
-                        <li className="sidebar-li">
-                            <NavLink to="/responsibility">
-                                <span className="sidebar-span-for-responsibility">
-                                    social responsibility
                             </span>
                             </NavLink>
                         </li>

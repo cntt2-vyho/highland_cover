@@ -8,7 +8,8 @@
   overflow: hidden;
   padding: 15px;
   /* background-color: #b22830; */
-  background-color: #ff928b;
+  /* background-color: #800000; */
+  background: linear-gradient(#800000 0%,#ff4d4d 79%);
   position: fixed;
   top: 0;
   height: 100%;
@@ -38,7 +39,7 @@
 }
 .sidebar-li {
   display: block;
-  padding: 30px;
+  padding: 15px;
   border-bottom: solid 1px #fff;
   text-transform: uppercase;
   transition: all .3s linear;
@@ -80,7 +81,7 @@
   opacity: 1;
 }
 [class*="sidebar-span-for-"] {
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #fff;
 }
 .sidebar-li:hover {
@@ -92,10 +93,11 @@
   position: relative;
   text-align: center;
   opacity: 1;
+  padding: 15px 0;
 }
 .sidebar-div-img {
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 0;
   transform: translateY(-50%);
 }
