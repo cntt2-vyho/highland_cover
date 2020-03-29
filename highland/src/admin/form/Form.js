@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './Form.css';
-import axios from 'axios';
+import Axios from 'axios';
+import { NavLink } from 'react-router-dom';
+
 
 export default class Form extends Component {
 
@@ -8,28 +10,64 @@ export default class Form extends Component {
         super(props);
         this.state = {
             imageurl : '',
-            name: '',
+            product_name: '',
+            baseprice: '',
             description: '',
-            size: ''
+            slug: '',
+            size_id: '',
+            category: '',
+            detailcategories: '',
+            arraySize : []
         }
     }
+    componentDidMount() {
+        Axios.get('https://highland-a1203.firebaseio.com/size.json')
+        .then(response => {
+            const data = response.data;
 
-    // save = () => {
+                const objects = Object.values(response.data);
+                const keys = Object.keys(data);
 
-    //     var productData = {
-    //         title: this.state.title,
-    //         price: this.state.price,
-    //         category: this.state.category,
-    //         imageURL: this.state.imageURL,
-    //         suppliers: this.state.suppliers,
-    //         description: this.state.description
-    //     };
+                objects.map((values, key) => {
+                    values.id = keys[key];
+                });
+                this.setState({ arraySize: objects });
+        })
+    }
+    
 
-    //     execPOST('https://highland-a1203.firebaseio.com', productData);
-    // };
+    save = () => {
+
+        var productData = {
+            imageurl: this.state.imageurl,
+            product_name: this.state.product_name,
+            baseprice: this.state.baseprice,
+            description: this.state.description,
+            slug: this.state.slug,
+            size: this.state.size,
+            category: this.state.category,
+            detailcategories: this.state.detailcategories
+        };
+
+        execPOST('https://highland-a1203.firebaseio.com/products.json', productData);
+    };
+
+
+    isChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+    
+        this.setState({ [name]: value });
+    
+    };
 
 
     render() {
+        const size = this.state.arraySize.map((value, key) =>{
+            return(
+            <option key={key}>{value.id}</option>
+            )
+        })
         return (
             <div className="content-for-form">
 
@@ -45,23 +83,33 @@ export default class Form extends Component {
                             <div className="form-content-small">
                                 <div class="form-group">
                                     <label for="">image url</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                                    <input type="text" name="imageurl"  onChange={(event) => this.isChange(event)}  className="form-control"  aria-describedby="helpId" />
                                 </div>
                                 <div class="form-group">
                                     <label for="">name</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                                    <input type="text" name="product_name"  onChange={(event) => this.isChange(event)} className="form-control"aria-describedby="helpId" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">base price</label>
+                                    <input type="text" name="baseprice"   onChange={(event) => this.isChange(event)} className="form-control" aria-describedby="helpId" />
                                 </div>
                                 <div class="form-group">
                                     <label for="">desciption</label>
-                                    <textarea />
+                                    <textarea  name="description"  onChange={(event) => this.isChange(event)}   />
                                 </div>
                                 <div class="form-group">
-                                    <label for="">size</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                                    <label for="">slug</label>
+                                    <input type="text" name="slug"  onChange={(event) => this.isChange(event)} className="form-control"aria-describedby="helpId" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">size id</label>
+                                    <select className="form-group-select" name="size_id"  onChange={(event) => this.isChange(event)}  >
+                                    {size}
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="">category</label>
-                                    <select className="form-group-select" >
+                                    <select className="form-group-select" name="category"  onChange={(event) => this.isChange(event)} >
                                         <option>cà phê</option>
                                         <option>freeze</option>
                                         <option>trà</option>
@@ -72,42 +120,20 @@ export default class Form extends Component {
                                 </div>
                                 <div class="form-group">
                                     <label for="">detail categories</label>
-                                    <select className="form-group-select">
+                                    <select className="form-group-select" name="detailcategories"  onChange={(event) => this.isChange(event)} >
                                         <option>cà phê phin</option>
                                         <option>cà phê espresso</option>
                                     </select>
                                 </div>
 
-                            </div>
-
-
-                        </div>
-
-
-                        <div className="form-text col-lg-6 col-md-6 col-sm-12 col-12">
-
-                            <div className="form-content-small">
-                                <div class="form-group">
-                                    <label for="">image url</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="">name</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="">desciption</label>
-                                    <input type="date" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="">time</label>
-                                    <input type="text" name="" id="" className="form-control" placeholder="" aria-describedby="helpId" />
-                                </div>
+                                <NavLink to="/admin/form" onClick={() => this.save()} className="save-btn">  save </NavLink>
 
                             </div>
 
 
                         </div>
+
+
 
 
                     </div>

@@ -7,7 +7,7 @@ export default class Carrer extends Component {
     return (
       <div className="content-career">
                 <div className="div-img-career">
-                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg" alt="" />
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg" alt="none" />
                 </div>
                 <div className="div-content-career">
                     <div className="div-content-container-career">
@@ -26,7 +26,7 @@ export default class Carrer extends Component {
                                 </p>
                                 <p>
                                     <a href="https://vticareers.talentnetwork.vn/tim-viec-lam/phong-ban-highlands-coffee.829/vi">
-                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/talent-highlands.png" alt />
+                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/talent-highlands.png" alt="none" />
                                     </a>
                                     </p>
                             </div>
@@ -43,7 +43,7 @@ export default class Carrer extends Component {
                                 </li>
                                 <li>
                                     <NavLink to="/about/customer-service">
-                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/thumbs/370_crop_About_Customer_service_2.jpg" />
+                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/thumbs/370_crop_About_Customer_service_2.jpg" alt="none"/>
                                     </NavLink>
                                     <NavLink to="/about/customer-service">
                                         <span>dịch vụ khách hàng</span>

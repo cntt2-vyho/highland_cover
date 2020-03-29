@@ -18,7 +18,7 @@ export default class Footer extends Component {
                         <ul className="footer-ul-item">
                             <li className="footer-li-item">
                                 <a href="#">
-                                    <i class="fa fa-facebook fff" aria-hidden="true"></i>
+                                    <i className="fa fa-facebook fff" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li className="footer-li-item">

@@ -7,7 +7,7 @@ export default class Origin extends Component {
         return (
             <div className="content-origin">
                 <div className="div-img-origin">
-                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png" alt="" />
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png" alt="none" />
                 </div>
                 <div className="div-content-origin">
                     <div className="div-content-container-origin">

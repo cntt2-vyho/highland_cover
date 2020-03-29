@@ -20,12 +20,12 @@ export default class Header extends Component {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/lang/flag-vn.jpg" alt="" />
+                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/lang/flag-vn.jpg" alt="none" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/lang/flag-en.jpg" alt="" />
+                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/lang/flag-en.jpg" alt="none"/>
                                         </a>
                                     </li>
                                 </ul>
@@ -34,7 +34,7 @@ export default class Header extends Component {
                             <div className="test-user">
                                 <ul className="div-for-header-user">
                                 <div className="header-avatar">
-                                    <img src="https://cf.shopee.vn/file/2a6502c770fe88648ab97c319317bdff_tn" alt />
+                                    <img src="https://cf.shopee.vn/file/2a6502c770fe88648ab97c319317bdff_tn" alt="none" />
 
                                 </div>
 
@@ -257,7 +257,7 @@ export default class Header extends Component {
                                                     <a href="#">đương đại hóa tranh đông hồ</a>
                                                 </h3>
                                                 <a href="#">
-                                                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/KV_Highlands_CSR_1.jpg" alt="" />
+                                                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/KV_Highlands_CSR_1.jpg" alt="none"/>
                                                 </a>
                                             </div>
                                         </div>
@@ -306,11 +306,11 @@ export default class Header extends Component {
                             <span className="none-for-dropdown">
                                     </span>
                                 <span>
-                                    <i class="fa fa-search f-search" aria-hidden="true"></i>
+                                    <i className="fa fa-search f-search" aria-hidden="true"></i>
                                 </span>
                                 <div className="menu-li-content-search">
                                     <div className="header-tool-li-input">
-                                        <input type="text" name id placeholder="Từ khóa" />
+                                        <input type="text" placeholder="Từ khóa" />
                                         <button>
                                             <i className="fa fa-search" aria-hidden="true" style={{ color: '#000' }} />
                                         </button>

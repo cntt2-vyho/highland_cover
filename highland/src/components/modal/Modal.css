@@ -112,7 +112,7 @@
   overflow: hidden;
   display: block;
 }
-input[type='radio']:after {
+.modal-input-radio:after {
   width: 10px;
   height: 10px;
   border-radius: 15px;
@@ -127,7 +127,7 @@ input[type='radio']:after {
   border: 2px solid white;
 }
 
-input[type='radio']:checked:after {
+.modal-input-radio:checked:after {
   content: "\f00c";
   font-family: fontawesome;
   width: 10px;

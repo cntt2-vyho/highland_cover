@@ -7,7 +7,7 @@ export default class CustomerService extends Component {
         return (
             <div className="content-service">
                 <div className="div-img-service">
-                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/About_Customer_service_2.jpg" alt="" />
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/About_Customer_service_2.jpg" alt="none" />
                 </div>
                 <div className="div-content-service">
                     <div className="div-content-container-service">
@@ -35,7 +35,7 @@ export default class CustomerService extends Component {
                             <ul>
                                 <li>
                                     <NavLink to="/about/origin">
-                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png" />
+                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png" alt="none" />
                                     </NavLink>
                                     <NavLink to="/about/origin">
                                         <span>khởi nguồn</span>
@@ -43,7 +43,7 @@ export default class CustomerService extends Component {
                                 </li>
                                 <li>
                                     <NavLink to="/about/career">
-                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/thumbs/370_crop_ABOUT-CAREER3.jpg" />
+                                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/about/thumbs/370_crop_ABOUT-CAREER3.jpg" alt="none" />
                                     </NavLink>
                                     <NavLink to="/about/career">
                                         <span>nghề nghiệp</span>

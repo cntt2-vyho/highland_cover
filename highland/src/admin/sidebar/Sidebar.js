@@ -11,7 +11,7 @@ export default class Sidebar extends Component {
                         <li className="sidebar-li sidebar-li-for-title">
                             <NavLink to="/">
                                 <div className="sidebar-div-img">
-                                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/logo.svg" alt />
+                                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/logo.svg" alt="none" />
                                 </div>
                                 <span className="sidebar-span-for-title">
                                     Highland Coffee

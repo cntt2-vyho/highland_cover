@@ -1,0 +1,138 @@
+.cart-detail-payment {
+  overflow: hidden;
+    float: right;
+    position: unset !important;
+}
+.payment-container {
+  margin: 45px 10%;
+  overflow: hidden;
+}
+.div-xemgiohang h3 {
+  text-transform: uppercase;
+}
+.content-for-payment {
+  display: block;
+  overflow: hidden;
+  margin-top: 101.4px;
+  background-color: #f2f2f2;
+}
+.force-overflow-payment {
+  padding: 0;
+}
+.name-size-payment, .quantity-payment {
+  padding: 0 15px;
+}
+.quantity-payment {
+  text-align: center;
+  background-color: #b22830;
+}
+.quantity-payment span {
+  font-weight: bold;
+  color: #fff;
+}
+.card-detail-container a {
+  text-decoration: none;
+}
+.div-xemgiohang-payment:hover {
+  opacity: .75;
+}
+.giaohang-container {
+  margin: 15px;
+  background-color: #fff;
+  padding: 15px;
+  overflow: hidden;
+}
+.confirm-order h3 {
+  padding: 15px 0;
+  text-decoration: underline;
+}
+.form-group-payment {
+  padding: 15px 0;
+  position: relative;
+}
+.form-group-payment input {
+  width: 100%;
+  height: 40px;
+  padding-left: 40px;
+  outline: none;
+  /* border: none;
+  border-left: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4; */
+  border: solid 1px #e4e4e4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  opacity: .75;
+
+}
+.form-group-payment input:focus  {
+  border-color: #b22830;
+  outline: 0;
+  /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #b22830; */
+  opacity: 1;
+}
+.form-group-payment span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.span-for-name::before {
+  content: "\f007";
+}
+.span-for-phone::before {
+  content: "\f095";
+}
+.span-for-address::before {
+  content: "\f2ba";
+}
+.span-for-note::before {
+  content: "\f044";
+}
+[class*="span-for-"]::before {
+  font-family: fontawesome;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #b22830;
+}
+.label-input-for-payment {
+  padding: 15px 0;
+}
+.label-input-for-payment span {
+  padding-left: 10px;
+}
+.label-input-for-payment input {
+  position: relative;
+}
+.label-input-for-payment input:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #f2f2f2;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.label-input-for-payment input:checked:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  width: 10px;
+  height: 24px;
+  border-radius: 15px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #fff; 
+  color: #b22830;
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}

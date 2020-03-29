@@ -12,13 +12,13 @@ export default class SocialResponsibility extends Component {
                     <div className="news-content row">
                         <div className="news-item-rs col-lg-4 col-md-4 col-sm-12 col-12">
                             <div className="div-img">
-                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
+                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html">
                                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/09_2019/thumbs/470_crop_Picture1.png" alt="dxui sưn" />
                                 </a>
                             </div>
                             <div style={{ padding: '0 15px' }}>
                                 <div className="div-title">
-                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">HIGHLANDS COFFEE CÙNG Ý TƯỞNG “LỒNG ĐÈN XANH” THẮP SÁNG "TRUNG THU XANH” CHO HƠN</a>
+                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" >HIGHLANDS COFFEE CÙNG Ý TƯỞNG “LỒNG ĐÈN XANH” THẮP SÁNG "TRUNG THU XANH” CHO HƠN</a>
                                 </div>
                                 <div className="div-calendar">
                                     <i className="fa fa-calendar-o" aria-hidden="true" />
@@ -30,13 +30,13 @@ export default class SocialResponsibility extends Component {
                         </div>
                         <div className="news-item-rs col-lg-4 col-md-4 col-sm-12 col-12">
                             <div className="div-img">
-                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
+                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" >
                                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/03_2018/thumbs/470_crop_KV_Highlands_CSR_1.jpg" alt="dxui sưn" />
                                 </a>
                             </div>
                             <div style={{ padding: '0 15px' }}>
                                 <div className="div-title">
-                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">ĐƯƠNG ĐẠI HÓA TRANH ĐÔNG HỒ!</a>
+                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" >ĐƯƠNG ĐẠI HÓA TRANH ĐÔNG HỒ!</a>
                                 </div>
                                 <div className="div-calendar">
                                     <i className="fa fa-calendar-o" aria-hidden="true" />
@@ -48,13 +48,13 @@ export default class SocialResponsibility extends Component {
                         </div>
                         <div className="news-item-rs col-lg-4 col-md-4 col-sm-12 col-12">
                             <div className="div-img">
-                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">
+                                <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" >
                                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/05_2018/thumbs/470_crop_IMG_0479.jpg" alt="dxui sưn" />
                                 </a>
                             </div>
                             <div style={{ padding: '0 15px' }}>
                                 <div className="div-title">
-                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" target="_blank">TRUNG THU YÊU THƯƠNG - LỚP HỌC CHO EM 2017</a>
+                                    <a href="https://www.highlandscoffee.com.vn/vn/lich-mo-cua-tet-2020-highlands-coffee.html" >TRUNG THU YÊU THƯƠNG - LỚP HỌC CHO EM 2017</a>
                                 </div>
                                 <div className="div-calendar">
                                     <i className="fa fa-calendar-o" aria-hidden="true" />

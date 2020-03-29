@@ -36,7 +36,7 @@ export default class Table extends Component {
         const datas = this.state.arayProducts.map((values, key) => {
             return (<tr key={key}>
                 <td>
-                    <img width="80" height="80" src={values.imageurl} alt />
+                    <img width="80" height="80" src={values.imageurl} alt="none" />
                 </td>
                 <td>{values.name}</td>
                 <td>{values.description}</td>

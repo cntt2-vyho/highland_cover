@@ -13,7 +13,7 @@ export default class AboutUs extends Component {
                         </div>
                         <div className="div-content-abu div-content-1-abu col-lg-6 col-md-12 col-sm-12 col-12">
                             <div className="div-content-container-abu div-content-container-1-abu">
-                                <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" target="_blank">khởi nguồn</a>
+                                <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" >khởi nguồn</a>
                                 </h1>
                                 <h4>Thương hiệu bắt nguồn từ cà phê Việt Nam</h4>
                                 <p>Highlands Coffee® được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam. Qua một chặng

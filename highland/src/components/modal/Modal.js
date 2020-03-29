@@ -53,19 +53,19 @@ export default class Modal extends Component {
                             <div className="modal-size-containner">
 
                                 <label>
-                                    <input type="radio" defaultChecked="checked" name="size" />
+                                    <input type="radio" defaultChecked="checked" name="size" className="modal-input-radio"/>
                                     <span>
                                         Lớn
                                     </span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="size" />
+                                    <input type="radio" name="size" className="modal-input-radio" />
                                     <span>
                                         Vừa
                                     </span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="size" />
+                                    <input type="radio" name="size" className="modal-input-radio" />
                                     <span>
                                         Nhỏ
                                     </span>
@@ -83,7 +83,7 @@ export default class Modal extends Component {
                             <div className="modal-topping-container">
 
                                 <label>
-                                    <input type="radio" defaultChecked="checked" name="topping" />
+                                    <input type="radio" defaultChecked="checked" name="topping" className="modal-input-radio" />
                                     <span>
                                         trân châu trắng
                                     </span>
@@ -91,7 +91,7 @@ export default class Modal extends Component {
 
 
                                 <label>
-                                    <input type="radio" name="topping" />
+                                    <input type="radio" name="topping" className="modal-input-radio" />
                                     <span>
                                         thạch vải
                                     </span>

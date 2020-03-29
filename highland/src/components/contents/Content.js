@@ -27,18 +27,18 @@ export default class Content extends Component {
                     <Slider {...settings1}>
                         <div className="item">
                             <a href="https://www.youtube.com/watch?v=MRxa1wTZEDs">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639.jpg" alt="" style={{ width: '100%' }} /></a>
+                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639.jpg" alt="none" style={{ width: '100%' }} /></a>
                         </div>
                         <div className="item">
                             <a href="https://www.highlandscoffee.com.vn/vn/highlands-coffee-20-nam-gan-ket-niem-tu-hao-dat-viet.html">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HL20_2000x639.jpg" alt="" style={{ width: '100%' }} />
+                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HL20_2000x639.jpg" alt="none" style={{ width: '100%' }} />
                             </a>
                         </div>
                         <div className="item item-position">
                             <a href="https://highlandscoffee.com.vn/tuhaodatviet/">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/VIET.Brand_Campaign_WEBBANNER.jpg" alt="" style={{ width: '100%' }} />
+                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/VIET.Brand_Campaign_WEBBANNER.jpg" alt="none" style={{ width: '100%' }} />
                             </a>
-                            <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html" className="cnth" target="_blank">cùng nhau tự hào</a>
+                            <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html" className="cnth">cùng nhau tự hào</a>
                         </div>
                     </Slider>
 
@@ -46,11 +46,11 @@ export default class Content extends Component {
                 <div className="section2-content">
                     <div className="img">
                         <a href="https://www.highlandscoffee.com.vn/vn/freeze.html">
-                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/Product_banner_confirmed.jpg" style={{ width: '100%' }} />
+                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/Product_banner_confirmed.jpg" style={{ width: '100%' }}  alt="none"/>
                         </a>
                     </div>
                     <div className="caption">
-                        <a href="https://www.highlandscoffee.com.vn/vn/freeze.html" id="kpt" target="_blank">khám phá thêm</a>
+                        <a href="https://www.highlandscoffee.com.vn/vn/freeze.html" id="kpt" >khám phá thêm</a>
                     </div>
                 </div>
 
@@ -58,11 +58,11 @@ export default class Content extends Component {
                 <div className="section3-content">
                     <div className="img">
                         <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html">
-                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639_1.png" style={{ width: '100%' }} />
+                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639_1.png" style={{ width: '100%' }}  alt="none"/>
                         </a>
                     </div>
                     <div className="caption" style={{ top: '80%', left: '60%' }}>
-                        <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html" className="kpt-red" target="_blank">khám phá thêm</a>
+                        <a href="https://www.highlandscoffee.com.vn/vn/highlands-teas.html" className="kpt-red">khám phá thêm</a>
                     </div>
                 </div>
 
@@ -108,13 +108,13 @@ export default class Content extends Component {
                             <div style={{ margin: '0 15%' ,padding: '32px 0px'}}>
                                 <div className="title">
                                     <h2 className="title-h2">tin mới nhất</h2>
-                                    <a href="https://www.highlandscoffee.com.vn/vn/tin-tuc.html" target="_blank">Xem toàn bộ</a>
+                                    <a href="https://www.highlandscoffee.com.vn/vn/tin-tuc.html" >Xem toàn bộ</a>
                                 </div>
                                 <div className="listnews">
                                     <ul>
                                         <li>
                                             <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/12_2019/tra-sen-vang-moi.png" />
+                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/12_2019/tra-sen-vang-moi.png" alt="none" />
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">
                                                 <h4>
@@ -130,7 +130,7 @@ export default class Content extends Component {
                                         </li>
                                         <li>
                                             <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/hco-7598-20-years-concert-web-470x314_1.jpg" />
+                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/hco-7598-20-years-concert-web-470x314_1.jpg" alt="none"/>
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">
                                                 <h4>
@@ -149,7 +149,7 @@ export default class Content extends Component {
                                         </li>
                                         <li>
                                             <div className="div-img-content col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/HCO-7598-20-YEARS-NEWS-BANNER-NEWS-470X314.jpg" />
+                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/HCO-7598-20-YEARS-NEWS-BANNER-NEWS-470X314.jpg" alt="none" />
                                             </div>
                                             <div className="div-content col-lg-9 col-md-9 col-sm-9 col-9">
                                                 <h4>

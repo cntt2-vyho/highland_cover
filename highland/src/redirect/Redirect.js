@@ -20,6 +20,10 @@ import Form from '../admin/form/Form';
 import Sidebar from './../admin/sidebar/Sidebar';
 import Table from './../admin/table/Table';
 import Modal from './../components/modal/Modal';
+import Payment from './../components/payment/Payment';
+import SizeForm from './../admin/form/sizeform/SizeForm';
+import CategoryForm from './../admin/form/categoryform/CategoryForm';
+import CategoriesDetailForm from '../admin/form/categoriesDetailForm/CategoriesDetailForm';
 
 
 export default class Redirect extends Component {
@@ -51,11 +55,14 @@ export default class Redirect extends Component {
         <Route exact path="/menu/products/product-details" component={ProductDetails} />
 
         <Route exact path="/modal" component={Modal} />
+        <Route exact path="/payment" component={Payment} />
         
         
         
         
         <Route path="/" component={Footer} />
+
+        
 
 
 
@@ -65,6 +72,10 @@ export default class Redirect extends Component {
           <Route path="/admin" component={Navbar} />
           <Route exact path="/admin/form" component={Form} />
           <Route exact path="/admin/table" component={Table} />
+
+          <Route path="/admin/form/size" component={SizeForm} />
+        <Route path="/admin/form/category" component={CategoryForm} />
+        <Route path="/admin/form/detail-categories" component={CategoriesDetailForm} />
         </div> */}
 
         

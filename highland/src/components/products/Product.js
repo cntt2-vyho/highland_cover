@@ -25,7 +25,7 @@ export default class Product extends Component {
                     <div className="container-prd">
                         <div className="main-tain col-lg-8 col-md-12 col-sm-12 col-12">
                             <a href="#">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA-inside.jpg" alt="" />
+                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA-inside.jpg" alt="none"/>
                             </a>
                             <p>Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở
           vị giác của bản thân và tận hưởng một cảm giác thật khoan khoái, tươi mới.</p>
@@ -36,7 +36,7 @@ export default class Product extends Component {
                                 <li>
                                     <div className="li-img">
                                         <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png" alt="" />
+                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png" alt="none"/>
                                         </a>
                                     </div>
                                     <div className="li-detail">
@@ -50,7 +50,7 @@ export default class Product extends Component {
                                 <li>
                                     <div className="li-img">
                                         <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png" alt="" />
+                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png"  alt="none" />
                                         </a>
                                     </div>
                                     <div className="li-detail">
