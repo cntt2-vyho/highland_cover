@@ -5,7 +5,7 @@
   margin-top: 101.4px;
 }
 .order-container {
-  /* margin: 45px 10%; */
+  margin: 45px 5%;
   overflow: hidden;
 }
 .div-xemgiohang {
@@ -19,20 +19,11 @@
   color: #fff;
   padding: 15px 0;
 }
-.div-img-order {
-  text-align: center;
-}
-.div-img-order img {
-  width: 100px;
-  margin-top: 15px;
-}
+
 .cart-detail li {
   list-style: none;
   overflow: hidden;
   border-top: solid .1px #ccc;
-}
-.div-product-details {
-  margin: 15px 0;
 }
 .name-size p {
   font-style: italic;
@@ -184,15 +175,13 @@ text-decoration: none;
 .cart-detail {
   overflow: hidden;
     float: right;
-    position: fixed;
-    right: 0;
-    padding-top: 0;
-    height: 100%;
-    z-index: 1000;
 }
 .force-overflow-order {
   padding: 0;
-  padding-right: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  margin-top: 15px;
 }
 .card-detail-container {
   margin: 15px;
@@ -207,6 +196,8 @@ text-decoration: none;
 .product-order-page-container ul {
   padding: 0;
   overflow: hidden;
+  overflow-y: auto;
+  max-height: 604px;
 }
 .product-order-page-container ul li {
   list-style: none;
@@ -281,7 +272,38 @@ text-decoration: none;
     padding-bottom: 503px;
   }
 }
-#scroll-order {
-  overflow-y: auto;
-  max-height: 500px;
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.force-overflow-order li {
+  margin: 0 15px;
+}
+
+.div-img-order {
+  text-align: center;
+  padding: 0 15px;
+}
+.div-img-order img {
+  width: 100px;
+  margin-top: 15px;
+}
+.div-product-details {
+  margin: 15px 0;
+  padding: 0 15px;
+}
+
+
+/* ------------- */
+.div-img-order-right {
+  text-align: center;
+}
+.div-img-order-right img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+
+.div-product-details-right {
+  margin: 15px 0;
 }

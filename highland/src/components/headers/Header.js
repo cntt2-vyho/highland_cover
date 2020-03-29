@@ -81,11 +81,12 @@ export default class Header extends Component {
                                             <ul>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">cà phê phin</a>
+                                                    <NavLink to="/menu/products/product-details">cà phê phin</NavLink>
                                                 </li>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">cà phê espresso</a>
+                                                    <NavLink to="/menu/products/product-details">cà phê espresso</NavLink>
+                                                   
                                                 </li>
                                             </ul>
                                         </li>
@@ -96,11 +97,13 @@ export default class Header extends Component {
                                             <ul>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">freeze cà phê phin</a>
+                                                    <NavLink to="/menu/products/product-details">freeze cà phê phin</NavLink>
+                                                 
                                                 </li>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">freeze không cà phê</a>
+                                                    <NavLink to="/menu/products/product-details">freeze không cà phê</NavLink>
+                                                   
                                                 </li>
                                             </ul>
                                         </li>
@@ -111,11 +114,15 @@ export default class Header extends Component {
                                             <ul>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">trà sen vàng</a>
+                                                    <NavLink to="/menu/products/product-details">
+                                                        trà sen vàng
+                                                    </NavLink>
                                                 </li>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">trà thạch đào</a>
+                                                    <NavLink to="/menu/products/product-details">
+                                                        trà thạch đào
+                                                    </NavLink>
                                                 </li>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
@@ -123,7 +130,9 @@ export default class Header extends Component {
                                                 </li>
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">trà thạch vải</a>
+                                                    <NavLink to="/menu/products/product-details">
+                                                        trà thạch vải
+                                                    </NavLink>
                                                 </li>
                                             </ul>
                                         </li>
@@ -273,16 +282,16 @@ export default class Header extends Component {
                                         <div className="hover-item-news col-lg-9">
                                             <ul>
                                                 <li className="news-hover-li col-lg-4">
-                                                    <a href="https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html">khởi
-                      nguồn</a>
+                                                <NavLink to="/about/origin">
+                                                    khởi nguồn
+                                                </NavLink>
                                                 </li>
                                                 <li className="news-hover-li col-lg-4">
-                                                    <a href="https://www.highlandscoffee.com.vn/vn/tin-khuyen-mai.html">dịch
-                      vụ khách hàng</a>
+                                                <NavLink to="/about/customer-service">dịch vụ khách hàng</NavLink>
                                                 </li>
                                                 <li className="news-hover-li col-lg-4">
-                                                    <a href="https://www.highlandscoffee.com.vn/vn/nghe-nghiep.html">nghề
-                      nghiệp</a>
+                                                    <NavLink to="/about/career">nghề nghiệp
+                                                    </NavLink>
                                                 </li>
                                             </ul>
                                         </div>
