@@ -55,26 +55,27 @@ export default class Header extends Component {
                             </div>
 
                         </div>
-                        <div className="menu-li-resp">
-                                <a href="#">
-                                Menu
-                                </a>
-
-                            </div>
-                        <ul className="menu-ul">
+                        <div className="menu-li-resp">Menu
+                        </div>
+                        <div className="header-menu-small">
+                            <button className="btnX">
+                                <i className="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                            
+                            <ul className="menu-ul">
                             
                             <li className="menu-li">
-                                <NavLink to="/cafe">quán cà phê</NavLink>
+                                <NavLink to="/cafe" className="menu-li-a">quán cà phê</NavLink>
                             </li>
                             <li className="menu-li">
                                     <span className="none-for-dropdown">
                                     </span>
-                                <NavLink to="/menu">thực đơn
+                                <NavLink to="/menu" className="menu-li-a">thực đơn
                                 
                                 </NavLink>
                                 <div className="menu-li-content">
                                     <ul className="menu-li-content-ul">
-                                        <li className="cafe hover-item col-lg-2">
+                                        <li className="cafe hover-item col-lg-2 ">
                                             <h3 className="title">
                                                 <a href="#">cà phê</a>
                                             </h3>
@@ -198,7 +199,7 @@ export default class Header extends Component {
                             <li className="menu-li">
                             <span className="none-for-dropdown">
                                     </span>
-                                <NavLink to="/news">tin tức</NavLink>
+                                <NavLink to="/news" className="menu-li-a">tin tức</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-6">
@@ -231,7 +232,7 @@ export default class Header extends Component {
                             <li className="menu-li">
                             <span className="none-for-dropdown">
                                     </span>
-                                <NavLink to="/responsibility">trách nhiệm cộng đồng</NavLink>
+                                <NavLink to="/responsibility" className="menu-li-a">trách nhiệm cộng đồng</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-9">
@@ -276,7 +277,7 @@ export default class Header extends Component {
                             <li className="menu-li">
                             <span className="none-for-dropdown">
                                     </span>
-                                <NavLink to="/about">về chúng tôi</NavLink>
+                                <NavLink to="/about" className="menu-li-a">về chúng tôi</NavLink>
                                 <div className="menu-li-content">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-9">
@@ -309,15 +310,15 @@ export default class Header extends Component {
                                 </div>
                             </li>
                             <li className="menu-li">
-                                <NavLink to="/contact">liên hệ</NavLink>
+                                <NavLink to="/contact" className="menu-li-a">liên hệ</NavLink>
                             </li>
-                            <li className="menu-li menu-li-search">
-                            <span className="none-for-dropdown">
-                                    </span>
-                                <span>
+                            <li className="menu-li menu-li-search-display-none">
+                            <span className="none-for-dropdown"></span>
+                                <a className="menu-li-a">
                                     <i className="fa fa-search f-search" aria-hidden="true"></i>
-                                </span>
-                                <div className="menu-li-content-search">
+                                </a>
+                                    
+                                <div className="menu-li-content" style={{backgroundColor: 'transparent'}}>
                                     <div className="header-tool-li-input">
                                         <input type="text" placeholder="Từ khóa" />
                                         <button>
@@ -326,7 +327,17 @@ export default class Header extends Component {
                                     </div>
                                 </div>
                             </li>
+                            <li className="menu-li menu-li-search-hidden" style={{padding: '15px', background: '#ccc'}}>
+                                <div className="input-hidden-container" style={{position: 'relative'}}>
+                                <input placeholder="Từ khóa" className="input-hidden"/>
+                                <NavLink to="/result" style={{position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: '10px'}} >
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                                </NavLink>
+                                </div>
+                            </li>
                         </ul>
+
+                        </div>
                     </div>
                 </div>
             </header>

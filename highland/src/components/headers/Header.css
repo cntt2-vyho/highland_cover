@@ -18,6 +18,7 @@ header {
   text-align: center;
   margin-top: 15px;
 }
+
 .menu-ul {
   padding: 0;
   margin: 0;
@@ -26,7 +27,7 @@ header {
 .menu-li {
   list-style: none;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 20px;
   transition: all .3s linear;
 }
 .menu-li a {
@@ -339,6 +340,7 @@ header {
 .div-for-header-user {
   display: inline-block;
   position: relative;
+  padding-left: 20px;
 }
 .header-avatar img {
   width: 100%;
@@ -456,7 +458,13 @@ header {
     margin-bottom: 20px;
 }
 
+
+
+
 /* Responsive icon */
+.menu-li-search-hidden {
+  display: none;
+}
 .responsive-icon {
   position: relative;
 }
@@ -465,10 +473,13 @@ header {
 }
 .none-for-dropdown {
   position: absolute;
-  position: absolute;
     top: 50%;
     right: 10%;
     transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    right: -22px;
+    border-left: 0.1px solid #000;
 }
 .none-for-dropdown::before {
   content: "\f054";
@@ -478,73 +489,151 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+
+.btnX {
+  display: none;
+}
+.btnX {
+  width: 45px;
+    height: 44px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+}
+
+.btnX {
+  outline: none;
+}
+
+.btnX:hover {
+  cursor: pointer;
+
+}
+.btnX:hover .header-menu-small{
+  background-color: #ccc;
+
+}
+
+
 .menu-li-resp {
   display: none;
 }
-@media (max-width: 1200px) {
-  .menu-li {
-    position: relative;
-  }
-  .menu-li-resp {
-    list-style: none;
+.header-menu-small {
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .btnX {
     display: inline-block;
-    padding: 10px;
-    transition: all .3s linear;
-    background-color: #53382c;
-    color: #fff;
-    position: relative;
-    
   }
-  .menu-li-resp a {
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    transition: all .3s linear;
-  }
-  .menu-li-resp:hover a {
-    color: #53382c;
-    transition: all .3s linear;
-  }
-  .menu-li-resp:hover {
-    cursor: pointer;
-    background-color: #fff;
-    transition: all .3s linear;
-    color: #53382c;
-  }
-  .responsive-icon::before {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-
-  }
-  .menu-li {
-    display: block;
-    border: solid .5px #000;
-    text-align: left;
-    padding: 15px 40px;
-  }
-  .menu-li a {
-    color: #53382c;
-    font-weight: bold;
-  }
-  .menu-ul {
+  .header-menu-small {
     display: none;
   }
-  .responsive {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .menu-li {
     display: block;
+  }
+  .menu-li-resp {
+    display: block;
+    list-style: none;
+    padding: 10px 20px;
+    transition: all .3s linear;
+    float: right;
+    background-color: #53382c;color: #fff;
+  }
+  .menu-li-resp:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;color: #53382c;
+  }
+  
+  .menu-ul {
+    width: 300px;
+    max-width: 300px;
+    background-color: #fff;
+  }
+  .header-logo img {
+    width: 100%;
+  }
+  .header-menu-small {
+    position: absolute;
+    background-color: transparent;
+    color: #000;
+    top: 0;
+    right: 0;
+    width: 345px;
+    max-width: 345px;
     padding: 0;
-    background: #fff;
-
+  }
+  .menu-li a {
+    color: #000;
+  }
+  .menu-li {
+    text-align: left;
+    border-bottom: solid 1px #000;
+  }
+  .menu-li .fa-search {
+    color: #000;
+  }
+  .menu-li:hover {
+    background-color: #b22830;
+    color: #fff;
+  }
+  .menu-li:hover .menu-li-a {
+    color: #fff;
+  }
+  .menu-li-search-display-none {
+    display: none;
   }
   .none-for-dropdown {
     display: inline-block;
   }
+  .menu-li {
+    position: relative;
+  }
+  .menu-li:hover {
+    cursor: pointer;
+  }
+  .hover-item ul {
+    display: none;
+  }
+  .menu-li-content-ul, .menu-li-content {
+    padding: 0;
+  }
+  .phin {
+    display: none;
+  }
+  .hover-item {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .menu-li-search-hidden {
+    display: block;
+  }
+  .menu-li-content {
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+}
+@media only screen and (max-width:450px) {
+  .btnX {
+    width: 10%;
+  }
+  
+}
+.input-hidden {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0;
+  height: 40px;
+  font-style: italic;
+  padding-left: 15px;
 }

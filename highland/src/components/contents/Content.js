@@ -25,6 +25,10 @@ export default class Content extends Component {
             <div className="content">
                 <div className="section1-content">
                     <Slider {...settings1}>
+                    <div className="item">
+                            <a href="https://highlandscoffee.com.vn/vn/highlands-coffee-dich-vu-giao-hang-mien-phi.html">
+                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HL20_2000x639_1.png" alt="none" style={{ width: '100%' }} /></a>
+                        </div>
                         <div className="item">
                             <a href="https://www.youtube.com/watch?v=MRxa1wTZEDs">
                                 <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7605-FESTIVE-2020-WEB-FB-2000X639.jpg" alt="none" style={{ width: '100%' }} /></a>
