@@ -1,37 +1,33 @@
 {
   "data": [
     {
-      "_id": "5d92fbc89e12b47db8cabbd6",
+      "_id": "5e819a19458e7100112c56fa",
       "localize": {
-        "en": "Cà Phê Phin TCH Traditional (200gr)",
-        "vi": "Cà Phê Phin TCH Traditional (200gr)"
+        "en": "7 ngày Cà phê sữa đá",
+        "vi": "7 ngày Cà phê sữa đá"
       },
-      "description": "Tỉ lệ hài hoà kết tinh từ hạt Robusta và Arabica nhằm đảm bảo sự cân bằng hoàn hảo giữa hương thơm ngất ngây cùng vị chua nhẹ nhưng vẫn giữ được hậu vị đậm đà của cà phê phin truyền thống.",
+      "description": "7 coupon tương ứng với 7 ly Cà phê Việt Nam size M giá 35,000đ. Sử dụng coupon để đặt giao hàng tận nơi. HSD: 10 ngày kể từ ngày mua Gói. Tặng bạn phí giao hàng 10,000đ cho đơn dưới 50,000đ.",
       "product_odoo": {
-        "product_tmpl_id": 2748,
+        "product_tmpl_id": 3943,
         "variants": [
           {
-            "code": "10070007",
-            "price": 60000,
-            "product_id": 2091,
-            "val": "Vừa",
-            "localize": {
-              "en": null,
-              "vi": "Size Vừa"
-            }
+            "code": "15070033",
+            "price": 175000,
+            "product_id": 2205,
+            "val": "Vừa"
           }
         ]
       },
       "categ_id": [
         9,
-        18
+        19
       ],
       "topping_list": [],
       "variants": [
         {
-          "code": "10070007",
-          "price": 60000,
-          "product_id": 2091,
+          "code": "15070033",
+          "price": 175000,
+          "product_id": 2205,
           "localize": {
             "en": "Vừa",
             "vi": "Vừa"
@@ -49,14 +45,268 @@
           "default_index": 0,
           "items": [
             {
-              "code": "10070007",
+              "code": "15070033",
               "price": 0,
-              "product_id": 2091,
+              "product_id": 2205,
               "localize": {
                 "en": "Vừa",
                 "vi": "Vừa"
               },
               "val": "Vừa",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5e819b69538a2402ff619802",
+      "product_name": "7 ngày Cà phê sữa đá",
+      "price": 175000,
+      "base_price": 175000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "7-ngay-ca-phe-sua-da",
+      "created_at": "2020-03-30 07:04:57",
+      "updated_at": "2020-04-06 02:52:02",
+      "__v": 0,
+      "product_vc_cmp": "5e8172bde144e6001148c966",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e819a19458e7100112c56fa_hinh%20app%203%20-%202.%20.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e819a19458e7100112c56fa_hinh%20app%203%20-%202.%20.jpg"
+    },
+    {
+      "_id": "5e819a19458e7100112c56fb",
+      "localize": {
+        "en": "5 ngày Cà phê sữa đá",
+        "vi": "5 ngày Cà phê sữa đá"
+      },
+      "description": "5 coupon tương ứng với 5 ly Cà phê Việt Nam size M giá 35,000đ. Sử dụng coupon để đặt giao hàng tận nơi. HSD: 8 ngày kể từ ngày mua Gói. Tặng bạn phí giao hàng 10,000đ cho đơn dưới 50,000đ.",
+      "product_odoo": {
+        "product_tmpl_id": 3942,
+        "variants": [
+          {
+            "code": "15070035",
+            "price": 135000,
+            "product_id": 2204,
+            "val": "Vừa"
+          }
+        ]
+      },
+      "categ_id": [
+        9,
+        19
+      ],
+      "topping_list": [],
+      "variants": [
+        {
+          "code": "15070035",
+          "price": 135000,
+          "product_id": 2204,
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          },
+          "val": "Vừa"
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "15070035",
+              "price": 0,
+              "product_id": 2204,
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "val": "Vừa",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5e819b5548916b75fd17e172",
+      "product_name": "5 ngày Cà phê sữa đá",
+      "price": 135000,
+      "base_price": 135000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "5-ngay-ca-phe-sua-da",
+      "created_at": "2020-03-30 07:04:57",
+      "updated_at": "2020-04-06 02:52:23",
+      "__v": 0,
+      "product_vc_cmp": "5e81759fe144e6001148cb3c",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e819a19458e7100112c56fb_hi%CC%80nh%20go%CC%81i%205%20nga%CC%80y%20.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e819a19458e7100112c56fb_hi%CC%80nh%20go%CC%81i%205%20nga%CC%80y%20.jpg"
+    },
+    {
+      "_id": "5e819a19458e7100112c56fd",
+      "localize": {
+        "en": "3 ngày Cà phê sữa đá",
+        "vi": "3 ngày Cà phê sữa đá"
+      },
+      "description": "3 coupon tương ứng với 3 ly Cà phê Việt Nam size M giá 35,000đ. Sử dụng coupon để đặt giao hàng tận nơi. HSD: 6 ngày kể từ ngày mua Gói. Tặng bạn phí giao hàng 10,000đ cho đơn dưới 50,000đ.",
+      "product_odoo": {
+        "product_tmpl_id": 3941,
+        "variants": [
+          {
+            "code": "15070034",
+            "price": 90000,
+            "product_id": 2203,
+            "val": "Vừa"
+          }
+        ]
+      },
+      "categ_id": [
+        9,
+        19
+      ],
+      "topping_list": [],
+      "variants": [
+        {
+          "code": "15070034",
+          "price": 90000,
+          "product_id": 2203,
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          },
+          "val": "Vừa"
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "15070034",
+              "price": 0,
+              "product_id": 2203,
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "val": "Vừa",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5e819b462d2d6a24a216c8d2",
+      "product_name": "3 ngày Cà phê sữa đá",
+      "price": 90000,
+      "base_price": 90000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "3-ngay-ca-phe-sua-da",
+      "created_at": "2020-03-30 07:04:57",
+      "updated_at": "2020-04-06 02:52:36",
+      "__v": 0,
+      "product_vc_cmp": "5e81770483287b0011b72a2f",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e819a19458e7100112c56fd_hi%CC%80nh%20app%203%20nga%CC%80y%20.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e819a19458e7100112c56fd_hi%CC%80nh%20app%203%20nga%CC%80y%20.jpg"
+    },
+    {
+      "_id": "5d92fbc89e12b47db8cabbd6",
+      "localize": {
+        "en": "Cà Phê Phin TCH Traditional (200gr)",
+        "vi": "Cà Phê Phin TCH Traditional (200gr)"
+      },
+      "description": "Tỉ lệ hài hoà kết tinh từ hạt Robusta và Arabica nhằm đảm bảo sự cân bằng hoàn hảo giữa hương thơm ngất ngây cùng vị chua nhẹ nhưng vẫn giữ được hậu vị đậm đà của cà phê phin truyền thống.",
+      "product_odoo": {
+        "product_tmpl_id": 2748,
+        "variants": [
+          {
+            "code": "10070007",
+            "price": 60000,
+            "product_id": 2091,
+            "val": "Khách hàng tự xay hạt tại nhà",
+            "localize": {
+              "en": "Khách hàng tự xay hạt tại nhà",
+              "vi": "Khách hàng tự xay hạt tại nhà"
+            }
+          },
+          {
+            "code": "11020074",
+            "price": 60000,
+            "product_id": 2207,
+            "val": "Cửa hàng xay sẵn hạt thành dạng bột",
+            "localize": {
+              "vi": "Cửa hàng xay sẵn hạt thành dạng bột",
+              "en": "Cửa hàng xay sẵn hạt thành dạng bột"
+            }
+          }
+        ]
+      },
+      "categ_id": [
+        9,
+        18
+      ],
+      "topping_list": [],
+      "variants": [
+        {
+          "code": "10070007",
+          "price": 60000,
+          "product_id": 2091,
+          "localize": {
+            "en": "Khách hàng tự xay hạt tại nhà",
+            "vi": "Khách hàng tự xay hạt tại nhà"
+          },
+          "val": "Khách hàng tự xay hạt tại nhà"
+        },
+        {
+          "code": "11020074",
+          "price": 60000,
+          "product_id": 2207,
+          "localize": {
+            "en": "Cửa hàng xay sẵn hạt thành dạng bột",
+            "vi": "Cửa hàng xay sẵn hạt thành dạng bột"
+          },
+          "val": "Cửa hàng xay sẵn hạt thành dạng bột"
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10070007",
+              "price": 0,
+              "product_id": 2091,
+              "localize": {
+                "en": "Khách hàng tự xay hạt tại nhà",
+                "vi": "Khách hàng tự xay hạt tại nhà"
+              },
+              "val": "Khách hàng tự xay hạt tại nhà",
+              "is_main": true
+            },
+            {
+              "code": "11020074",
+              "price": 0,
+              "product_id": 2207,
+              "localize": {
+                "en": "Cửa hàng xay sẵn hạt thành dạng bột",
+                "vi": "Cửa hàng xay sẵn hạt thành dạng bột"
+              },
+              "val": "Cửa hàng xay sẵn hạt thành dạng bột",
               "is_main": true
             }
           ]
@@ -71,11 +321,11 @@
       "branch": "TCH",
       "slug": "ca-phe-phin-tch-traditional-(200gr)",
       "created_at": "2019-10-01 07:10:00",
-      "updated_at": "2020-03-27 07:40:57",
+      "updated_at": "2020-04-06 02:53:27",
       "__v": 0,
       "active": true,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d92fbc89e12b47db8cabbd6_coffee%20cf%20phin%20app%20%282%29.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d92fbc89e12b47db8cabbd6_coffee%20cf%20phin%20app%20%282%29.jpg"
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d92fbc89e12b47db8cabbd6_CPG%20CA%CC%80%20PHE%CC%82%20PHIN%201.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d92fbc89e12b47db8cabbd6_CPG%20CA%CC%80%20PHE%CC%82%20PHIN%201.jpg"
     },
     {
       "_id": "5d92fbc89e12b47db8cabbd7",
@@ -91,10 +341,20 @@
             "code": "10070008",
             "price": 100000,
             "product_id": 2090,
-            "val": "Vừa",
+            "val": "Khách hàng tự xay hạt tại nhà",
             "localize": {
-              "en": null,
-              "vi": "Size Vừa"
+              "en": "Khách hàng tự xay hạt tại nhà",
+              "vi": "Khách hàng tự xay hạt tại nhà"
+            }
+          },
+          {
+            "code": "11020075",
+            "price": 100000,
+            "product_id": 2206,
+            "val": "Cửa hàng xay sẵn hạt thành dạng bột",
+            "localize": {
+              "vi": "Cửa hàng xay sẵn hạt thành dạng bột",
+              "en": "Cửa hàng xay sẵn hạt thành dạng bột"
             }
           }
         ]
@@ -109,10 +369,20 @@
           "code": "10070008",
           "price": 100000,
           "product_id": 2090,
-          "val": "Vừa",
+          "val": "Khách hàng tự xay hạt tại nhà",
           "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
+            "en": "Khách hàng tự xay hạt tại nhà",
+            "vi": "Khách hàng tự xay hạt tại nhà"
+          }
+        },
+        {
+          "code": "11020075",
+          "price": 100000,
+          "product_id": 2206,
+          "val": "Cửa hàng xay sẵn hạt thành dạng bột",
+          "localize": {
+            "vi": "Cửa hàng xay sẵn hạt thành dạng bột",
+            "en": "Cửa hàng xay sẵn hạt thành dạng bột"
           }
         }
       ],
@@ -129,10 +399,21 @@
               "code": "10070008",
               "price": 0,
               "product_id": 2090,
-              "val": "Vừa",
+              "val": "Khách hàng tự xay hạt tại nhà",
               "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
+                "en": "Khách hàng tự xay hạt tại nhà",
+                "vi": "Khách hàng tự xay hạt tại nhà"
+              },
+              "is_main": true
+            },
+            {
+              "code": "11020075",
+              "price": 0,
+              "product_id": 2206,
+              "val": "Cửa hàng xay sẵn hạt thành dạng bột",
+              "localize": {
+                "vi": "Cửa hàng xay sẵn hạt thành dạng bột",
+                "en": "Cửa hàng xay sẵn hạt thành dạng bột"
               },
               "is_main": true
             }
@@ -148,11 +429,11 @@
       "branch": "TCH",
       "slug": "ca-phe-arabica-tch-(200gr)",
       "created_at": "2019-10-01 07:10:00",
-      "updated_at": "2020-03-27 07:41:21",
+      "updated_at": "2020-04-06 02:53:40",
       "__v": 0,
       "active": true,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d92fbc89e12b47db8cabbd7_coffee%20cf%20%20arabica%20app%20%282%29.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d92fbc89e12b47db8cabbd7_coffee%20cf%20%20arabica%20app%20%282%29.jpg"
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d92fbc89e12b47db8cabbd7_CPG%20ARABICA%201.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d92fbc89e12b47db8cabbd7_CPG%20ARABICA%201.jpg"
     },
     {
       "_id": "5b03966a1acd4d5bbd6723a3",
@@ -402,128 +683,6 @@
             "price": 35000,
             "product_id": 167,
             "val": "Vừa"
-          }
-        ]
-      }
-    },
-    {
-      "_id": "5b03966a1acd4d5bbd672391",
-      "product_name": "Latte Đá",
-      "base_price": 50000,
-      "description": "Latte là một sự kết hợp tinh tế giữa lớp nền Espresso hảo hạng và sữa tươi (nhiều hơn so với Cappucino) - mang đến sự cân bằng, nhẹ nhàng trong hương vị.",
-      "categ_id": [
-        1
-      ],
-      "branch": "TCH",
-      "image_id": 217,
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5b03966a1acd4d5bbd672391_IMAGE%202019-09-09%2014%3A23%3A25.jpg",
-      "variants": [
-        {
-          "product_id": 10020032,
-          "code": "10020032",
-          "price": 50000,
-          "val": "Nhỏ",
-          "localize": {
-            "vi": "Nhỏ",
-            "en": "Nhỏ"
-          }
-        },
-        {
-          "product_id": 10020033,
-          "code": "10020033",
-          "price": 55000,
-          "val": "Vừa",
-          "localize": {
-            "vi": "Vừa",
-            "en": "Vừa"
-          }
-        }
-      ],
-      "updated_at": "2019-10-30 07:20:15",
-      "created_at": "2018-05-22 04:02:50",
-      "active": true,
-      "localize": {
-        "en": "Ice Latte",
-        "vi": "Latte Đá"
-      },
-      "topping_list": [
-        {
-          "product_id": 196,
-          "product_name": "Espresso (1shot)",
-          "code": "10100003",
-          "price": 10000
-        }
-      ],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "product_id": 10020032,
-              "code": "10020032",
-              "price": 0,
-              "val": "Nhỏ",
-              "localize": {
-                "vi": "Nhỏ",
-                "en": "Nhỏ"
-              },
-              "is_main": true
-            },
-            {
-              "product_id": 10020033,
-              "code": "10020033",
-              "price": 5000,
-              "val": "Vừa",
-              "localize": {
-                "vi": "Vừa",
-                "en": "Vừa"
-              },
-              "is_main": true
-            }
-          ]
-        },
-        {
-          "name": "Topping",
-          "desciption": "Chọn tối đa 2 loại",
-          "min": 0,
-          "max": 2,
-          "default_index": -1,
-          "items": [
-            {
-              "product_id": 196,
-              "product_name": "Espresso (1shot)",
-              "code": "10100003",
-              "price": 10000,
-              "type": 3
-            }
-          ]
-        }
-      ],
-      "price": 50000,
-      "type": [],
-      "slug": "latte-da",
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5b03966a1acd4d5bbd672391_IMAGE%202019-09-09%2014%3A23%3A25.jpg",
-      "__v": 6,
-      "codes": [],
-      "product_category_id": "5d71dc6fad2aba2980db0b24",
-      "product_odoo": {
-        "product_tmpl_id": 1353,
-        "variants": [
-          {
-            "code": "10020033",
-            "price": 55000,
-            "product_id": 217,
-            "val": "Vừa"
-          },
-          {
-            "code": "10020032",
-            "price": 50000,
-            "product_id": 216,
-            "val": "Nhỏ"
           }
         ]
       }
@@ -801,154 +960,6 @@
         ]
       },
       "active": true
-    },
-    {
-      "_id": "5e4f9e4316bd0a0018d2e250",
-      "localize": {
-        "en": "Trà Cam Vàng",
-        "vi": "Trà Cam Vàng"
-      },
-      "description": "Giàu vitamin C - tăng đề kháng - Sự kết hợp của 2 cái tên đỉnh cao của nền trà tươi mát hảo hạng cùng Cam Vàng tươi 100% giàu vitamin C, cho bạn hương vị tươi mới và cực \"healthy\" từ trong ra ngoài chỉ ngay ngụm đầu tiên.",
-      "product_odoo": {
-        "product_tmpl_id": 3937,
-        "variants": [
-          {
-            "code": "10010085",
-            "price": 65000,
-            "product_id": 2193,
-            "val": "Lớn"
-          },
-          {
-            "code": "10010086",
-            "price": 60000,
-            "product_id": 2192,
-            "val": "Vừa"
-          },
-          {
-            "code": "10010087",
-            "price": 55000,
-            "product_id": 2191,
-            "val": "Nhỏ"
-          }
-        ]
-      },
-      "categ_id": [
-        5
-      ],
-      "topping_list": [
-        {
-          "product_id": 1667,
-          "product_name": "Trân châu trắng",
-          "code": "10100016",
-          "price": 10000
-        }
-      ],
-      "variants": [
-        {
-          "code": "10010085",
-          "price": 65000,
-          "product_id": 2193,
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "val": "Lớn"
-        },
-        {
-          "code": "10010086",
-          "price": 60000,
-          "product_id": 2192,
-          "val": "Vừa",
-          "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
-          }
-        },
-        {
-          "code": "10010087",
-          "price": 55000,
-          "product_id": 2191,
-          "val": "Nhỏ",
-          "localize": {
-            "en": "Nhỏ",
-            "vi": "Nhỏ"
-          }
-        }
-      ],
-      "type": [],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "code": "10010085",
-              "price": 10000,
-              "product_id": 2193,
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "val": "Lớn",
-              "is_main": true
-            },
-            {
-              "code": "10010086",
-              "price": 5000,
-              "product_id": 2192,
-              "val": "Vừa",
-              "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
-              },
-              "is_main": true
-            },
-            {
-              "code": "10010087",
-              "price": 0,
-              "product_id": 2191,
-              "val": "Nhỏ",
-              "localize": {
-                "en": "Nhỏ",
-                "vi": "Nhỏ"
-              },
-              "is_main": true
-            }
-          ]
-        },
-        {
-          "name": "Topping",
-          "desciption": "Chọn tối đa 2 loại",
-          "min": 0,
-          "max": 2,
-          "default_index": -1,
-          "items": [
-            {
-              "product_id": 1667,
-              "product_name": "Trân châu trắng",
-              "code": "10100016",
-              "price": 10000,
-              "type": 3
-            }
-          ]
-        }
-      ],
-      "codes": [],
-      "product_category_id": "5d71dc6fad2aba2980db0b27",
-      "product_name": "Trà Cam Vàng",
-      "price": 55000,
-      "base_price": 55000,
-      "active": true,
-      "branch": "TCH",
-      "slug": "tra-cam-vang",
-      "created_at": "2020-02-21 09:09:23",
-      "updated_at": "2020-03-27 08:17:27",
-      "__v": 2,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e250_Tr%C3%A0%20cam%20v%C3%A0ng%20copy.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e250_Tr%C3%A0%20cam%20v%C3%A0ng%20copy.jpg"
     },
     {
       "_id": "5b03966a1acd4d5bbd67239c",
@@ -1249,6 +1260,83 @@
       "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e0586a4eebc600011ddef5c_Tra%CC%80%20bu%CC%9Bo%CC%9B%CC%89i_la%CC%A3nh.jpg"
     },
     {
+      "_id": "5c3ff3c5acf0d338d22adbaa",
+      "product_name": "Oolong Hạt Sen - Nóng",
+      "base_price": 52000,
+      "description": "Trà Oolong Sen nóng sẽ dậy hơn mùi thơm của trà và hạt sen. Trà có vị ngọt dịu nhẹ, rất tốt cho sức khoẻ và giúp giữ ấm cơ thể. Sản phẩm có vị trà nhẹ nhàng vừa phải, có thể dùng được cả cho buổi  sáng và chiều tối.",
+      "branch": "TCH",
+      "categ_id": [
+        5
+      ],
+      "active": true,
+      "variants": [
+        {
+          "code": "10010048",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          },
+          "price": 52000,
+          "product_id": 1859,
+          "val": "Vừa"
+        }
+      ],
+      "updated_at": "2020-01-12 15:46:41",
+      "created_at": "2019-01-17 03:17:25",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5UsWluW9TPuXNPzWtNkac6LcOPbSomv2VPTgP3xO.png",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/trasennong.png",
+      "localize": {
+        "en": "Hot Oolong Tea With Lotus Seed",
+        "vi": "Oolong Hạt Sen - Nóng"
+      },
+      "topping_list": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10010048",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "price": 0,
+              "product_id": 1859,
+              "val": "Vừa",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "price": 52000,
+      "type": [],
+      "slug": "oolong-hat-sen---nong",
+      "__v": 5,
+      "codes": [],
+      "product_category_id": "5d71dc6fad2aba2980db0b27",
+      "product_odoo": {
+        "product_tmpl_id": 1869,
+        "variants": [
+          {
+            "code": "10010048",
+            "price": 52000,
+            "product_id": 1859,
+            "val": "Vừa"
+          },
+          {
+            "code": "10010047",
+            "price": 49000,
+            "product_id": 1858,
+            "val": "Nhỏ"
+          }
+        ]
+      }
+    },
+    {
       "_id": "5b03966a1acd4d5bbd67239e",
       "product_name": "Trà Đen Macchiato",
       "base_price": 42000,
@@ -1409,167 +1497,6 @@
           }
         ]
       }
-    },
-    {
-      "_id": "5e4f9e4316bd0a0018d2e251",
-      "localize": {
-        "en": "Trà Lài Macchiato - Lạnh",
-        "vi": "Trà Lài Macchiato - Lạnh"
-      },
-      "description": "Ngay ngụm đầu tiên chính là vị beo béo ngọt dịu của lớp macchiato, sau đó được cân bằng lại bởi lớp thanh mát từ nền trà oolong hảo hạng - 1 hương vị tươi mới cho team hảo ngọt nhưng thích thanh mát.",
-      "product_odoo": {
-        "product_tmpl_id": 3936,
-        "variants": [
-          {
-            "code": "10010088",
-            "price": 55000,
-            "product_id": 2189,
-            "val": "Lớn"
-          },
-          {
-            "code": "10010089",
-            "price": 48000,
-            "product_id": 2188,
-            "val": "Vừa"
-          },
-          {
-            "code": "10010090",
-            "price": 42000,
-            "product_id": 2187,
-            "val": "Nhỏ"
-          }
-        ]
-      },
-      "categ_id": [
-        4
-      ],
-      "topping_list": [
-        {
-          "product_id": 1456,
-          "product_name": "Extra foam",
-          "code": "10100024",
-          "price": 10000
-        },
-        {
-          "product_id": 1667,
-          "product_name": "Trân châu trắng",
-          "code": "10100016",
-          "price": 10000
-        }
-      ],
-      "variants": [
-        {
-          "code": "10010088",
-          "price": 55000,
-          "product_id": 2189,
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "val": "Lớn"
-        },
-        {
-          "code": "10010089",
-          "price": 48000,
-          "product_id": 2188,
-          "val": "Vừa",
-          "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
-          }
-        },
-        {
-          "code": "10010090",
-          "price": 42000,
-          "product_id": 2187,
-          "val": "Nhỏ",
-          "localize": {
-            "en": "Nhỏ",
-            "vi": "Nhỏ"
-          }
-        }
-      ],
-      "type": [],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "code": "10010088",
-              "price": 13000,
-              "product_id": 2189,
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "val": "Lớn",
-              "is_main": true
-            },
-            {
-              "code": "10010089",
-              "price": 6000,
-              "product_id": 2188,
-              "val": "Vừa",
-              "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
-              },
-              "is_main": true
-            },
-            {
-              "code": "10010090",
-              "price": 0,
-              "product_id": 2187,
-              "val": "Nhỏ",
-              "localize": {
-                "en": "Nhỏ",
-                "vi": "Nhỏ"
-              },
-              "is_main": true
-            }
-          ]
-        },
-        {
-          "name": "Topping",
-          "desciption": "Chọn tối đa 2 loại",
-          "min": 0,
-          "max": 2,
-          "default_index": -1,
-          "items": [
-            {
-              "product_id": 1456,
-              "product_name": "Extra foam",
-              "code": "10100024",
-              "price": 10000,
-              "type": 3
-            },
-            {
-              "product_id": 1667,
-              "product_name": "Trân châu trắng",
-              "code": "10100016",
-              "price": 10000,
-              "type": 3
-            }
-          ]
-        }
-      ],
-      "codes": [],
-      "product_category_id": "5d71dc6dad2aba2980db0af2",
-      "product_name": "Trà Lài Macchiato - Lạnh",
-      "price": 42000,
-      "base_price": 42000,
-      "active": true,
-      "branch": "TCH",
-      "slug": "tra-lai-macchiato---lanh",
-      "created_at": "2020-02-21 09:09:23",
-      "updated_at": "2020-03-27 08:17:43",
-      "__v": 2,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e251_Tr%C3%A0%20l%C3%A0i%20Machiatto.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e251_Tr%C3%A0%20l%C3%A0i%20Machiatto.jpg"
     },
     {
       "_id": "5b03966a1acd4d5bbd672396",
@@ -1955,6 +1882,831 @@
       "active": true
     },
     {
+      "_id": "5e4f9e4316bd0a0018d2e24e",
+      "localize": {
+        "en": "Cà Phê Đá Xay-Lạnh",
+        "vi": "Cà Phê Đá Xay-Lạnh"
+      },
+      "description": "Một phiên bản \"upgrade\" từ ly cà phê sữa quen thuộc, nhưng lại tỉnh táo và tươi mát hơn bởi lớp đá xay đi kèm. Nhấp 1 ngụm là thấy đã, ngụm thứ hai thêm tỉnh táo và cứ thế lôi cuốn bạn đến giọt cuối cùng.",
+      "product_odoo": {
+        "product_tmpl_id": 3939,
+        "variants": [
+          {
+            "code": "10030028",
+            "price": 65000,
+            "product_id": 2199,
+            "val": "Lớn"
+          },
+          {
+            "code": "10030029",
+            "price": 59000,
+            "product_id": 2198,
+            "val": "Vừa"
+          }
+        ]
+      },
+      "categ_id": [
+        9,
+        1,
+        2
+      ],
+      "topping_list": [],
+      "variants": [
+        {
+          "code": "10030028",
+          "price": 65000,
+          "product_id": 2199,
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "val": "Lớn"
+        },
+        {
+          "code": "10030029",
+          "price": 59000,
+          "product_id": 2198,
+          "val": "Vừa",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          }
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10030028",
+              "price": 6000,
+              "product_id": 2199,
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "val": "Lớn",
+              "is_main": true
+            },
+            {
+              "code": "10030029",
+              "price": 0,
+              "product_id": 2198,
+              "val": "Vừa",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5d71dc71ad2aba2980db0b3e",
+      "product_name": "Cà Phê Đá Xay-Lạnh",
+      "price": 59000,
+      "base_price": 59000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "ca-phe-da-xay-lanh",
+      "created_at": "2020-02-21 09:09:23",
+      "updated_at": "2020-03-29 14:41:14",
+      "__v": 1,
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e24e_Cf%20%C4%91%C3%A1%20xay.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e24e_Cf%20%C4%91%C3%A1%20xay.jpg"
+    },
+    {
+      "_id": "5b03966a1acd4d5bbd67237e",
+      "product_name": "Cookie Đá Xay",
+      "base_price": 59000,
+      "description": "Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú. Một món uống phá cách dễ thương.",
+      "categ_id": [
+        2
+      ],
+      "branch": "TCH",
+      "image_id": 1275,
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/HOlc6LGTYBrh0K6fFndZKwdAeXaZcY538jM7JiVO.jpeg",
+      "variants": [
+        {
+          "product_id": 10030003,
+          "code": "10030003",
+          "price": 59000,
+          "val": "Vừa",
+          "localize": {
+            "vi": "Vừa",
+            "en": "Vừa"
+          }
+        },
+        {
+          "code": "10030018",
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "price": 65000,
+          "product_id": 10030018,
+          "val": "Lớn"
+        }
+      ],
+      "updated_at": "2019-10-30 07:18:27",
+      "created_at": "2018-05-22 04:02:50",
+      "active": true,
+      "localize": {
+        "en": "Cookie Ice Blended",
+        "vi": "Cookie Đá Xay"
+      },
+      "topping_list": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "product_id": 10030003,
+              "code": "10030003",
+              "price": 0,
+              "val": "Vừa",
+              "localize": {
+                "vi": "Vừa",
+                "en": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10030018",
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "price": 6000,
+              "product_id": 10030018,
+              "val": "Lớn",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "price": 59000,
+      "type": [],
+      "slug": "cookie-da-xay",
+      "__v": 6,
+      "codes": [],
+      "product_category_id": "5d71dc6fad2aba2980db0b21",
+      "product_odoo": {
+        "product_tmpl_id": 1316,
+        "variants": [
+          {
+            "code": "10030003",
+            "price": 59000,
+            "product_id": 1275,
+            "val": "Vừa"
+          },
+          {
+            "code": "10030018",
+            "price": 65000,
+            "product_id": 2015,
+            "val": "Lớn"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "5ca47f92acf0d3492076b298",
+      "product_name": "Cold Brew Cam Sả",
+      "base_price": 50000,
+      "description": "Tươi mát - Mượt mà, là sự kết hợp đầy mới mẻ khi hương vị của cam và sả được cân bằng trên nền của những nốt hương cà phê pha lạnh.",
+      "branch": "TCH",
+      "categ_id": [
+        1
+      ],
+      "active": true,
+      "localize": {
+        "en": "Cold Brew With Orange and Lemongrass",
+        "vi": "Cold Brew Cam Sả"
+      },
+      "variants": [
+        {
+          "product_id": 1946,
+          "code": "10020228",
+          "price": 50000,
+          "val": "Vừa",
+          "localize": {
+            "vi": "Vừa",
+            "en": "Vừa"
+          }
+        },
+        {
+          "code": "10020251",
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "price": 55000,
+          "product_id": 10020251,
+          "val": "Lớn"
+        }
+      ],
+      "updated_at": "2019-10-30 09:15:53",
+      "created_at": "2019-04-03 09:40:34",
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "product_id": 1946,
+              "code": "10020228",
+              "price": 0,
+              "val": "Vừa",
+              "localize": {
+                "vi": "Vừa",
+                "en": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10020251",
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "price": 5000,
+              "product_id": 10020251,
+              "val": "Lớn",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "topping_list": [],
+      "type": [],
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5ca47f92acf0d3492076b298_ColBrewCamSa_1x1.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5ca47f92acf0d3492076b298_ColBrewCamSa_1x1.jpg",
+      "price": 50000,
+      "slug": "cold-brew-cam-sa",
+      "__v": 6,
+      "codes": [],
+      "product_category_id": "5d71dc6ead2aba2980db0b0e",
+      "product_odoo": {
+        "product_tmpl_id": 1942,
+        "variants": [
+          {
+            "code": "10020251",
+            "price": 55000,
+            "product_id": 2005,
+            "val": "Lớn"
+          },
+          {
+            "code": "10020228",
+            "price": 50000,
+            "product_id": 1946,
+            "val": "Vừa"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "5d2bdfa5acf0d30ba264432b",
+      "product_name": "Đào Việt Quất Đá Xay",
+      "base_price": 59000,
+      "description": "Vẫn vị đào quen thuộc nhưng được khoác lên mình một vẻ đầy thanh mát và giải khát hơn.",
+      "branch": "TCH",
+      "categ_id": [
+        2
+      ],
+      "active": true,
+      "localize": {
+        "en": "Peach Mixed Berries Ice Blended",
+        "vi": "Đào Việt Quất Đá Xay"
+      },
+      "variants": [
+        {
+          "product_id": 2002,
+          "code": "10030014",
+          "price": 59000,
+          "val": "Vừa",
+          "localize": {
+            "vi": "Vừa",
+            "en": "Vừa"
+          }
+        },
+        {
+          "code": "10030015",
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "price": 65000,
+          "product_id": 2003,
+          "val": "Lớn"
+        }
+      ],
+      "updated_at": "2019-11-05 09:58:33",
+      "created_at": "2019-07-15 02:06:29",
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "product_id": 2002,
+              "code": "10030014",
+              "price": 0,
+              "val": "Vừa",
+              "localize": {
+                "vi": "Vừa",
+                "en": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10030015",
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "price": 6000,
+              "product_id": 2003,
+              "val": "Lớn",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "price": 59000,
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d2bdfa5acf0d30ba264432b_Dao.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d2bdfa5acf0d30ba264432b_Dao.jpg",
+      "slug": "dao-viet-quat-da-xay",
+      "topping_list": [],
+      "type": [],
+      "__v": 6,
+      "codes": [],
+      "product_category_id": "5d71dc6fad2aba2980db0b21",
+      "product_odoo": {
+        "product_tmpl_id": 1992,
+        "variants": [
+          {
+            "code": "10030015",
+            "price": 65000,
+            "product_id": 2003,
+            "val": "Lớn"
+          },
+          {
+            "code": "10030014",
+            "price": 59000,
+            "product_id": 2002,
+            "val": "Vừa"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "5e4f9e4316bd0a0018d2e251",
+      "localize": {
+        "en": "Trà Lài Macchiato - Lạnh",
+        "vi": "Trà Lài Macchiato - Lạnh"
+      },
+      "description": "Ngay ngụm đầu tiên chính là vị beo béo ngọt dịu của lớp macchiato, sau đó được cân bằng lại bởi lớp thanh mát từ nền trà oolong hảo hạng - 1 hương vị tươi mới cho team hảo ngọt nhưng thích thanh mát.",
+      "product_odoo": {
+        "product_tmpl_id": 3936,
+        "variants": [
+          {
+            "code": "10010088",
+            "price": 55000,
+            "product_id": 2189,
+            "val": "Lớn"
+          },
+          {
+            "code": "10010089",
+            "price": 48000,
+            "product_id": 2188,
+            "val": "Vừa"
+          },
+          {
+            "code": "10010090",
+            "price": 42000,
+            "product_id": 2187,
+            "val": "Nhỏ"
+          }
+        ]
+      },
+      "categ_id": [
+        4
+      ],
+      "topping_list": [
+        {
+          "product_id": 1456,
+          "product_name": "Extra foam",
+          "code": "10100024",
+          "price": 10000
+        },
+        {
+          "product_id": 1667,
+          "product_name": "Trân châu trắng",
+          "code": "10100016",
+          "price": 10000
+        }
+      ],
+      "variants": [
+        {
+          "code": "10010088",
+          "price": 55000,
+          "product_id": 2189,
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "val": "Lớn"
+        },
+        {
+          "code": "10010089",
+          "price": 48000,
+          "product_id": 2188,
+          "val": "Vừa",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          }
+        },
+        {
+          "code": "10010090",
+          "price": 42000,
+          "product_id": 2187,
+          "val": "Nhỏ",
+          "localize": {
+            "en": "Nhỏ",
+            "vi": "Nhỏ"
+          }
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10010088",
+              "price": 13000,
+              "product_id": 2189,
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "val": "Lớn",
+              "is_main": true
+            },
+            {
+              "code": "10010089",
+              "price": 6000,
+              "product_id": 2188,
+              "val": "Vừa",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10010090",
+              "price": 0,
+              "product_id": 2187,
+              "val": "Nhỏ",
+              "localize": {
+                "en": "Nhỏ",
+                "vi": "Nhỏ"
+              },
+              "is_main": true
+            }
+          ]
+        },
+        {
+          "name": "Topping",
+          "desciption": "Chọn tối đa 2 loại",
+          "min": 0,
+          "max": 2,
+          "default_index": -1,
+          "items": [
+            {
+              "product_id": 1456,
+              "product_name": "Extra foam",
+              "code": "10100024",
+              "price": 10000,
+              "type": 3
+            },
+            {
+              "product_id": 1667,
+              "product_name": "Trân châu trắng",
+              "code": "10100016",
+              "price": 10000,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5d71dc6dad2aba2980db0af2",
+      "product_name": "Trà Lài Macchiato - Lạnh",
+      "price": 42000,
+      "base_price": 42000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "tra-lai-macchiato---lanh",
+      "created_at": "2020-02-21 09:09:23",
+      "updated_at": "2020-03-27 08:17:43",
+      "__v": 2,
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e251_Tr%C3%A0%20l%C3%A0i%20Machiatto.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e251_Tr%C3%A0%20l%C3%A0i%20Machiatto.jpg"
+    },
+    {
+      "_id": "5e4f9e4316bd0a0018d2e250",
+      "localize": {
+        "en": "Trà Cam Vàng",
+        "vi": "Trà Cam Vàng"
+      },
+      "description": "Giàu \"C\" - tăng đề kháng - Sự kết hợp của 2 cái tên đỉnh cao của nền trà tươi mát hảo hạng cùng Cam Vàng tươi 100% giàu vitamin C, cho bạn hương vị tươi mới và cực \"healthy\" từ trong ra ngoài chỉ ngay ngụm đầu tiên.",
+      "product_odoo": {
+        "product_tmpl_id": 3937,
+        "variants": [
+          {
+            "code": "10010085",
+            "price": 65000,
+            "product_id": 2193,
+            "val": "Lớn"
+          },
+          {
+            "code": "10010086",
+            "price": 60000,
+            "product_id": 2192,
+            "val": "Vừa"
+          },
+          {
+            "code": "10010087",
+            "price": 55000,
+            "product_id": 2191,
+            "val": "Nhỏ"
+          }
+        ]
+      },
+      "categ_id": [
+        5
+      ],
+      "topping_list": [
+        {
+          "product_id": 1667,
+          "product_name": "Trân châu trắng",
+          "code": "10100016",
+          "price": 10000
+        }
+      ],
+      "variants": [
+        {
+          "code": "10010085",
+          "price": 65000,
+          "product_id": 2193,
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "val": "Lớn"
+        },
+        {
+          "code": "10010086",
+          "price": 60000,
+          "product_id": 2192,
+          "val": "Vừa",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          }
+        },
+        {
+          "code": "10010087",
+          "price": 55000,
+          "product_id": 2191,
+          "val": "Nhỏ",
+          "localize": {
+            "en": "Nhỏ",
+            "vi": "Nhỏ"
+          }
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10010085",
+              "price": 10000,
+              "product_id": 2193,
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "val": "Lớn",
+              "is_main": true
+            },
+            {
+              "code": "10010086",
+              "price": 5000,
+              "product_id": 2192,
+              "val": "Vừa",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10010087",
+              "price": 0,
+              "product_id": 2191,
+              "val": "Nhỏ",
+              "localize": {
+                "en": "Nhỏ",
+                "vi": "Nhỏ"
+              },
+              "is_main": true
+            }
+          ]
+        },
+        {
+          "name": "Topping",
+          "desciption": "Chọn tối đa 2 loại",
+          "min": 0,
+          "max": 2,
+          "default_index": -1,
+          "items": [
+            {
+              "product_id": 1667,
+              "product_name": "Trân châu trắng",
+              "code": "10100016",
+              "price": 10000,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5d71dc6fad2aba2980db0b27",
+      "product_name": "Trà Cam Vàng",
+      "price": 55000,
+      "base_price": 55000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "tra-cam-vang",
+      "created_at": "2020-02-21 09:09:23",
+      "updated_at": "2020-03-27 08:17:27",
+      "__v": 2,
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e250_Tr%C3%A0%20cam%20v%C3%A0ng%20copy.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e250_Tr%C3%A0%20cam%20v%C3%A0ng%20copy.jpg"
+    },
+    {
+      "_id": "5b03966a1acd4d5bbd672391",
+      "product_name": "Latte Đá",
+      "base_price": 50000,
+      "description": "Latte là một sự kết hợp tinh tế giữa lớp nền Espresso hảo hạng và sữa tươi (nhiều hơn so với Cappucino) - mang đến sự cân bằng, nhẹ nhàng trong hương vị.",
+      "categ_id": [
+        1
+      ],
+      "branch": "TCH",
+      "image_id": 217,
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5b03966a1acd4d5bbd672391_IMAGE%202019-09-09%2014%3A23%3A25.jpg",
+      "variants": [
+        {
+          "product_id": 10020032,
+          "code": "10020032",
+          "price": 50000,
+          "val": "Nhỏ",
+          "localize": {
+            "vi": "Nhỏ",
+            "en": "Nhỏ"
+          }
+        },
+        {
+          "product_id": 10020033,
+          "code": "10020033",
+          "price": 55000,
+          "val": "Vừa",
+          "localize": {
+            "vi": "Vừa",
+            "en": "Vừa"
+          }
+        }
+      ],
+      "updated_at": "2019-10-30 07:20:15",
+      "created_at": "2018-05-22 04:02:50",
+      "active": true,
+      "localize": {
+        "en": "Ice Latte",
+        "vi": "Latte Đá"
+      },
+      "topping_list": [
+        {
+          "product_id": 196,
+          "product_name": "Espresso (1shot)",
+          "code": "10100003",
+          "price": 10000
+        }
+      ],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "product_id": 10020032,
+              "code": "10020032",
+              "price": 0,
+              "val": "Nhỏ",
+              "localize": {
+                "vi": "Nhỏ",
+                "en": "Nhỏ"
+              },
+              "is_main": true
+            },
+            {
+              "product_id": 10020033,
+              "code": "10020033",
+              "price": 5000,
+              "val": "Vừa",
+              "localize": {
+                "vi": "Vừa",
+                "en": "Vừa"
+              },
+              "is_main": true
+            }
+          ]
+        },
+        {
+          "name": "Topping",
+          "desciption": "Chọn tối đa 2 loại",
+          "min": 0,
+          "max": 2,
+          "default_index": -1,
+          "items": [
+            {
+              "product_id": 196,
+              "product_name": "Espresso (1shot)",
+              "code": "10100003",
+              "price": 10000,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "price": 50000,
+      "type": [],
+      "slug": "latte-da",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5b03966a1acd4d5bbd672391_IMAGE%202019-09-09%2014%3A23%3A25.jpg",
+      "__v": 6,
+      "codes": [],
+      "product_category_id": "5d71dc6fad2aba2980db0b24",
+      "product_odoo": {
+        "product_tmpl_id": 1353,
+        "variants": [
+          {
+            "code": "10020033",
+            "price": 55000,
+            "product_id": 217,
+            "val": "Vừa"
+          },
+          {
+            "code": "10020032",
+            "price": 50000,
+            "product_id": 216,
+            "val": "Nhỏ"
+          }
+        ]
+      }
+    },
+    {
       "_id": "5e4f9e4316bd0a0018d2e24f",
       "localize": {
         "en": "Cam Vàng Chanh Đá Xay",
@@ -2051,105 +2803,6 @@
       "__v": 1,
       "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e24f_cam%20v%C3%A0ng%20%C4%91%C3%A1%20xay.jpg",
       "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e24f_cam%20v%C3%A0ng%20%C4%91%C3%A1%20xay.jpg"
-    },
-    {
-      "_id": "5e4f9e4316bd0a0018d2e24e",
-      "localize": {
-        "en": "Cà Phê Đá Xay-Lạnh",
-        "vi": "Cà Phê Đá Xay-Lạnh"
-      },
-      "description": "Một phiên bản \"upgrade\" từ ly cà phê sữa quen thuộc, nhưng lại tỉnh táo và tươi mát hơn bởi lớp đá xay đi kèm. Nhấp 1 ngụm là thấy đã, ngụm thứ hai thêm tỉnh táo và cứ thế lôi cuốn bạn đến giọt cuối cùng.",
-      "product_odoo": {
-        "product_tmpl_id": 3939,
-        "variants": [
-          {
-            "code": "10030028",
-            "price": 65000,
-            "product_id": 2199,
-            "val": "Lớn"
-          },
-          {
-            "code": "10030029",
-            "price": 59000,
-            "product_id": 2198,
-            "val": "Vừa"
-          }
-        ]
-      },
-      "categ_id": [
-        9,
-        1
-      ],
-      "topping_list": [],
-      "variants": [
-        {
-          "code": "10030028",
-          "price": 65000,
-          "product_id": 2199,
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "val": "Lớn"
-        },
-        {
-          "code": "10030029",
-          "price": 59000,
-          "product_id": 2198,
-          "val": "Vừa",
-          "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
-          }
-        }
-      ],
-      "type": [],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "code": "10030028",
-              "price": 6000,
-              "product_id": 2199,
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "val": "Lớn",
-              "is_main": true
-            },
-            {
-              "code": "10030029",
-              "price": 0,
-              "product_id": 2198,
-              "val": "Vừa",
-              "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
-              },
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "codes": [],
-      "product_category_id": "5d71dc71ad2aba2980db0b3e",
-      "product_name": "Cà Phê Đá Xay-Lạnh",
-      "price": 59000,
-      "base_price": 59000,
-      "active": true,
-      "branch": "TCH",
-      "slug": "ca-phe-da-xay-lanh",
-      "created_at": "2020-02-21 09:09:23",
-      "updated_at": "2020-02-24 05:50:22",
-      "__v": 1,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e4f9e4316bd0a0018d2e24e_Cf%20%C4%91%C3%A1%20xay.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e4f9e4316bd0a0018d2e24e_Cf%20%C4%91%C3%A1%20xay.jpg"
     },
     {
       "_id": "5b03966a1acd4d5bbd67237c",
@@ -2664,104 +3317,6 @@
       "active": true
     },
     {
-      "_id": "5d2bdfa5acf0d30ba264432b",
-      "product_name": "Đào Việt Quất Đá Xay",
-      "base_price": 59000,
-      "description": "Vẫn vị đào quen thuộc nhưng được khoác lên mình một vẻ đầy thanh mát và giải khát hơn.",
-      "branch": "TCH",
-      "categ_id": [
-        2
-      ],
-      "active": true,
-      "localize": {
-        "en": "Peach Mixed Berries Ice Blended",
-        "vi": "Đào Việt Quất Đá Xay"
-      },
-      "variants": [
-        {
-          "product_id": 2002,
-          "code": "10030014",
-          "price": 59000,
-          "val": "Vừa",
-          "localize": {
-            "vi": "Vừa",
-            "en": "Vừa"
-          }
-        },
-        {
-          "code": "10030015",
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "price": 65000,
-          "product_id": 2003,
-          "val": "Lớn"
-        }
-      ],
-      "updated_at": "2019-11-05 09:58:33",
-      "created_at": "2019-07-15 02:06:29",
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "product_id": 2002,
-              "code": "10030014",
-              "price": 0,
-              "val": "Vừa",
-              "localize": {
-                "vi": "Vừa",
-                "en": "Vừa"
-              },
-              "is_main": true
-            },
-            {
-              "code": "10030015",
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "price": 6000,
-              "product_id": 2003,
-              "val": "Lớn",
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "price": 59000,
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d2bdfa5acf0d30ba264432b_Dao.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d2bdfa5acf0d30ba264432b_Dao.jpg",
-      "slug": "dao-viet-quat-da-xay",
-      "topping_list": [],
-      "type": [],
-      "__v": 6,
-      "codes": [],
-      "product_category_id": "5d71dc6fad2aba2980db0b21",
-      "product_odoo": {
-        "product_tmpl_id": 1992,
-        "variants": [
-          {
-            "code": "10030015",
-            "price": 65000,
-            "product_id": 2003,
-            "val": "Lớn"
-          },
-          {
-            "code": "10030014",
-            "price": 59000,
-            "product_id": 2002,
-            "val": "Vừa"
-          }
-        ]
-      }
-    },
-    {
       "_id": "5d2bdfa5acf0d30ba264432a",
       "product_name": "Ổi Hồng Việt Quất Đá Xay",
       "base_price": 59000,
@@ -3050,104 +3605,6 @@
             "code": "10020229",
             "price": 45000,
             "product_id": 1947,
-            "val": "Vừa"
-          }
-        ]
-      }
-    },
-    {
-      "_id": "5ca47f92acf0d3492076b298",
-      "product_name": "Cold Brew Cam Sả",
-      "base_price": 50000,
-      "description": "Tươi mát - Mượt mà, là sự kết hợp đầy mới mẻ khi hương vị của cam và sả được cân bằng trên nền của những nốt hương cà phê pha lạnh.",
-      "branch": "TCH",
-      "categ_id": [
-        1
-      ],
-      "active": true,
-      "localize": {
-        "en": "Cold Brew With Orange and Lemongrass",
-        "vi": "Cold Brew Cam Sả"
-      },
-      "variants": [
-        {
-          "product_id": 1946,
-          "code": "10020228",
-          "price": 50000,
-          "val": "Vừa",
-          "localize": {
-            "vi": "Vừa",
-            "en": "Vừa"
-          }
-        },
-        {
-          "code": "10020251",
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "price": 55000,
-          "product_id": 10020251,
-          "val": "Lớn"
-        }
-      ],
-      "updated_at": "2019-10-30 09:15:53",
-      "created_at": "2019-04-03 09:40:34",
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "product_id": 1946,
-              "code": "10020228",
-              "price": 0,
-              "val": "Vừa",
-              "localize": {
-                "vi": "Vừa",
-                "en": "Vừa"
-              },
-              "is_main": true
-            },
-            {
-              "code": "10020251",
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "price": 5000,
-              "product_id": 10020251,
-              "val": "Lớn",
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "topping_list": [],
-      "type": [],
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5ca47f92acf0d3492076b298_ColBrewCamSa_1x1.jpg",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5ca47f92acf0d3492076b298_ColBrewCamSa_1x1.jpg",
-      "price": 50000,
-      "slug": "cold-brew-cam-sa",
-      "__v": 6,
-      "codes": [],
-      "product_category_id": "5d71dc6ead2aba2980db0b0e",
-      "product_odoo": {
-        "product_tmpl_id": 1942,
-        "variants": [
-          {
-            "code": "10020251",
-            "price": 55000,
-            "product_id": 2005,
-            "val": "Lớn"
-          },
-          {
-            "code": "10020228",
-            "price": 50000,
-            "product_id": 1946,
             "val": "Vừa"
           }
         ]
@@ -5097,7 +5554,7 @@
       ],
       "price": 45000,
       "type": [],
-      "slug": "espresso-da",
+      "slug": " ",
       "__v": 5,
       "codes": [],
       "product_category_id": "5d71dc6fad2aba2980db0b24",
@@ -5341,181 +5798,6 @@
       }
     },
     {
-      "_id": "5b03966a1acd4d5bbd67237e",
-      "product_name": "Cookie Đá Xay",
-      "base_price": 59000,
-      "description": "Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú. Một món uống phá cách dễ thương.",
-      "categ_id": [
-        2
-      ],
-      "branch": "TCH",
-      "image_id": 1275,
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/HOlc6LGTYBrh0K6fFndZKwdAeXaZcY538jM7JiVO.jpeg",
-      "variants": [
-        {
-          "product_id": 10030003,
-          "code": "10030003",
-          "price": 59000,
-          "val": "Vừa",
-          "localize": {
-            "vi": "Vừa",
-            "en": "Vừa"
-          }
-        },
-        {
-          "code": "10030018",
-          "localize": {
-            "en": "Lớn",
-            "vi": "Lớn"
-          },
-          "price": 65000,
-          "product_id": 10030018,
-          "val": "Lớn"
-        }
-      ],
-      "updated_at": "2019-10-30 07:18:27",
-      "created_at": "2018-05-22 04:02:50",
-      "active": true,
-      "localize": {
-        "en": "Cookie Ice Blended",
-        "vi": "Cookie Đá Xay"
-      },
-      "topping_list": [],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "product_id": 10030003,
-              "code": "10030003",
-              "price": 0,
-              "val": "Vừa",
-              "localize": {
-                "vi": "Vừa",
-                "en": "Vừa"
-              },
-              "is_main": true
-            },
-            {
-              "code": "10030018",
-              "localize": {
-                "en": "Lớn",
-                "vi": "Lớn"
-              },
-              "price": 6000,
-              "product_id": 10030018,
-              "val": "Lớn",
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "price": 59000,
-      "type": [],
-      "slug": "cookie-da-xay",
-      "__v": 6,
-      "codes": [],
-      "product_category_id": "5d71dc6fad2aba2980db0b21",
-      "product_odoo": {
-        "product_tmpl_id": 1316,
-        "variants": [
-          {
-            "code": "10030003",
-            "price": 59000,
-            "product_id": 1275,
-            "val": "Vừa"
-          },
-          {
-            "code": "10030018",
-            "price": 65000,
-            "product_id": 2015,
-            "val": "Lớn"
-          }
-        ]
-      }
-    },
-    {
-      "_id": "5c3ff3c5acf0d338d22adbaa",
-      "product_name": "Oolong Hạt Sen - Nóng",
-      "base_price": 52000,
-      "description": "Trà Oolong Sen nóng sẽ dậy hơn mùi thơm của trà và hạt sen. Trà có vị ngọt dịu nhẹ, rất tốt cho sức khoẻ và giúp giữ ấm cơ thể. Sản phẩm có vị trà nhẹ nhàng vừa phải, có thể dùng được cả cho buổi  sáng và chiều tối.",
-      "branch": "TCH",
-      "categ_id": [
-        5
-      ],
-      "active": true,
-      "variants": [
-        {
-          "code": "10010048",
-          "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
-          },
-          "price": 52000,
-          "product_id": 1859,
-          "val": "Vừa"
-        }
-      ],
-      "updated_at": "2020-01-12 15:46:41",
-      "created_at": "2019-01-17 03:17:25",
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5UsWluW9TPuXNPzWtNkac6LcOPbSomv2VPTgP3xO.png",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/trasennong.png",
-      "localize": {
-        "en": "Hot Oolong Tea With Lotus Seed",
-        "vi": "Oolong Hạt Sen - Nóng"
-      },
-      "topping_list": [],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại size",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "code": "10010048",
-              "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
-              },
-              "price": 0,
-              "product_id": 1859,
-              "val": "Vừa",
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "price": 52000,
-      "type": [],
-      "slug": "oolong-hat-sen---nong",
-      "__v": 5,
-      "codes": [],
-      "product_category_id": "5d71dc6fad2aba2980db0b27",
-      "product_odoo": {
-        "product_tmpl_id": 1869,
-        "variants": [
-          {
-            "code": "10010048",
-            "price": 52000,
-            "product_id": 1859,
-            "val": "Vừa"
-          },
-          {
-            "code": "10010047",
-            "price": 49000,
-            "product_id": 1858,
-            "val": "Nhỏ"
-          }
-        ]
-      }
-    },
-    {
       "_id": "5c3ff3c5acf0d338d22adbae",
       "product_name": "Oolong Hạt Sen - Đá",
       "base_price": 45000,
@@ -5675,133 +5957,6 @@
           }
         ]
       }
-    },
-    {
-      "_id": "5c78b3e2696fb3492953f81e",
-      "product_name": "Chocolate",
-      "localize": {
-        "en": "Chocolate",
-        "vi": "Chocolate"
-      },
-      "base_price": 59000,
-      "categ_id": [
-        15
-      ],
-      "topping_list": [],
-      "description": "Chocolate",
-      "variants": [
-        {
-          "code": "10050004",
-          "localize": {
-            "en": "Vừa",
-            "vi": "Vừa"
-          },
-          "price": 59000,
-          "product_id": 10050004,
-          "val": "Vừa"
-        }
-      ],
-      "type": [
-        {
-          "name": "Đá",
-          "product_name": "Chocolate đá",
-          "base_price": 59000,
-          "options": [
-            {
-              "name": "Size",
-              "desciption": "Chọn 1 loại size",
-              "min": 1,
-              "max": 1,
-              "default_index": 0,
-              "items": [
-                {
-                  "product_id": "10050004",
-                  "code": "10050004",
-                  "price": 0,
-                  "val": "Vừa",
-                  "localize": {
-                    "vi": "Vừa",
-                    "en": "Vừa"
-                  },
-                  "is_main": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Nóng",
-          "product_name": "Chocolate nóng",
-          "base_price": 59000,
-          "options": [
-            {
-              "name": "Size",
-              "desciption": "Chọn 1 loại size",
-              "min": 1,
-              "max": 1,
-              "default_index": 0,
-              "items": [
-                {
-                  "product_id": "10050003",
-                  "code": "10050003",
-                  "price": 0,
-                  "val": "Vừa",
-                  "localize": {
-                    "vi": "Vừa",
-                    "en": "Vừa"
-                  },
-                  "is_main": true
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "options": [
-        {
-          "name": "Size",
-          "desciption": "Chọn 1 loại",
-          "min": 1,
-          "max": 1,
-          "default_index": 0,
-          "items": [
-            {
-              "code": "10050004",
-              "localize": {
-                "en": "Vừa",
-                "vi": "Vừa"
-              },
-              "price": 0,
-              "product_id": 10050004,
-              "val": "Vừa",
-              "is_main": true
-            }
-          ]
-        }
-      ],
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5c78b3e2696fb3492953f81e_59N46ec9zJ6mAqeTMegOh1629gh2CIjRJAfZZBrj.png",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5c78b3e2696fb3492953f81e_59N46ec9zJ6mAqeTMegOh1629gh2CIjRJAfZZBrj.png",
-      "branch": "TCH",
-      "updated_at": "2019-10-01 04:02:29",
-      "created_at": "2019-03-01 04:24:02",
-      "active": true,
-      "price": 59000,
-      "slug": "chocolate",
-      "__v": 4,
-      "codes": [],
-      "product_category_id": "5d71dc71ad2aba2980db0b3d",
-      "product_odoo": {
-        "product_tmpl_id": 260,
-        "variants": [
-          {
-            "code": "10050004",
-            "price": 59000,
-            "product_id": 187,
-            "val": "Vừa"
-          }
-        ]
-      },
-      "is_deleted": true
     },
     {
       "_id": "5cdbd6e8696fb3792a389754",

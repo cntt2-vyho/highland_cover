@@ -327,3 +327,8 @@ text-decoration: none;
 .product-order-page-container ul li a .name-size-right p {
   color: #000;
 }
+@media (max-width: 1023px) {
+  .div-img-order-right img {
+    width: 50%;
+  }
+}

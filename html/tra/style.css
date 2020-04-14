@@ -233,7 +233,7 @@ body {
   margin-left: 15px;
 }
 .div-owl-img {
-  height: 400px !important;
+  padding-top: 100%;
   position: relative;
   border: .2px solid #ccc;
 }
