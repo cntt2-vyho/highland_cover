@@ -51,7 +51,7 @@ export default class Redirect extends Component {
 
         <Route exact path="/order" component={Order} />
 
-        <Route exact path="/menu/products" component={Product} />
+        <Route exact path="/menu/products/:slug/:id.html" component={Product} />
         <Route exact path="/menu/products/product-details" component={ProductDetails} />
 
         <Route exact path="/modal" component={Modal} />

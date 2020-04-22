@@ -3,11 +3,82 @@ import classes from './Menu.css';
 import { NavLink } from 'react-router-dom';
 
 
+import { db } from '../../firebase/FirebaseConfig';
+
+
 export default class Menu extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            arrayCategory: []
+        }
+    }
+    componentDidMount() {
+        var list = [];
+        db.collection("categories").get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+
+                    list.push(doc.data());
+                    this.setState({
+                        arrayCategory: list
+                    })
+                });
+            });
+    }
+
     render() {
+
+
+        const item = this.state.arrayCategory.map((value, key) => {
+            if (key % 2 == 0) {
+                return (
+                    <div className="section1">
+                        <div className="section-container">
+
+                            <div className="div-img1 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <img src={value.image} alt={value.category_name} />
+                            </div>
+                            <div className="content1 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div className="content-container1">
+                                    <h1><a href="https://www.highlandscoffee.com.vn/vn/khoi-nguon.html" >{value.category_name}</a>
+                                    </h1>
+                                    <p>{value.description}</p>
+                                    <NavLink to={`/menu/products/${value.slug}/${value.category_id}.html`} id="khamphathem1">
+                                        khám phá thêm</NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+            else {
+                return (
+                    <div className="section4">
+                        {/* <a href={"/details/" +this.chuyenDoiURL(this.props.name) +"."+this.props.newsId+".html" }></a> 
+                        <Route path="/details/:slug.:id.html" component={Details} />*/}
+                        <div className="section-container">
+                            <div className="div-img4 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <img src={value.image} alt={value.category_name} />
+                            </div>
+                            <div className="content4 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div className="content-container4">
+                                    <h1><a href="https://www.highlandscoffee.com.vn/vn/freeze.html">{value.category_name}</a>
+                                    </h1>
+                                    <p>{value.description}</p>
+                                    <NavLink to={`/menu/products/${value.slug}/${value.category_id}.html`} className="khamphathem4">
+                                        khám phá thêm
+          </NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        })
         return (
             <div className="content">
-                <div className="section1">
+                {/* <div className="section1">
                     <div className="section-container">
                         
                         <div className="div-img1 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -81,7 +152,8 @@ export default class Menu extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                {item}
             </div>
 
         )

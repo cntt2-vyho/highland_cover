@@ -277,6 +277,10 @@
 .content-container4 a {
   display: block;
 }
+.content-container4 a:hover {
+  color: #b22830;
+  transition: all .3s linear;
+}
 @media (max-width: 1200px) {
   .content1, .content2, .content3, .content4 {
     padding: 3% 10%;

@@ -18,40 +18,39 @@ export default class Order extends Component {
         }
     }
     componentDidMount() {
-        var list = [];
-        db.collection("data").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
+        this.getCate();
+        // this.state.arrayCategory? this.getProducts():this.getCate();
 
-                list.push(doc.data());
-                this.setState({
-                    arrayProduct: list
-                })
 
-            });
-        });
-
-        var item = [];
-        db.collection("categories").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-
-                item.push(doc.id);
-                this.setState({
-                    arrayCategory: item
-                })
-
-            });
-        });
     }
+    getCate = () => {
+        var list1 = [];
+        db.collection("categories").get()
+            .then((querySnapshot) => {
+                console.log(querySnapshot);
+
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.products);
+
+                    list1.push(doc.data());
+
+                });
+                this.setState({
+                    arrayCategory: list1
+                })
+            });
+    }
+
 
     getCategoryName = (a) => {
         if (a.indexOf("5d71dc67ad2aba2980db0a9d") !== -1) {
             //category_name = "Thức ăn nhẹ";
-            return a = "Thức ăn nhẹ";
+            return a = "Mít Sấy";
         }
         //thức ăn nhẹ : điều vàng, đậu phộng
         if (a.indexOf("5d71dc6ead2aba2980db0b04") !== -1) {
-           // category_name = "Thức ăn nhẹ";
-           return a = "Thức ăn nhẹ";
+            // category_name = "Thức ăn nhẹ";
+            return a = "Thức ăn nhẹ";
         }
 
         //cà phê gói: cà phê anrica, cà phê phin
@@ -69,7 +68,7 @@ export default class Order extends Component {
         //đá xay : phuc-bon-tu-cam-da-xay, Cà Phê Đá Xay-Lạnh, Cam Vàng Chanh Đá Xay, Trà Cà Phê Đá Xay - Lạnh, chanh-sa-da-xay
         if (a.indexOf("5d71dc71ad2aba2980db0b3e") !== -1) {
             //category_name = "Thức Uống Đá Xay";
-            return a = "Thức Uống Đá Xay";
+            return a = "Trái Cây Đá Xay";
         }
         //đá xay : cookie-da-xay, dao-viet-quat-da-xay, chocolate-da-xay, oi-hong-viet-quat-da-xay, matcha-da-xay
         if (a.indexOf("5d71dc6fad2aba2980db0b21") !== -1) {
@@ -84,14 +83,14 @@ export default class Order extends Component {
         }
         //cà phê : ca-phe-den-nong, ca-phe-den-da, ca-phe-sua-nong, bac-xiu-nong, ca-phe-sua-da, Bạc Xỉu
         if (a.indexOf("5d71dc6dad2aba2980db0af8") !== -1) {
-           // category_name = "Cà Phê";
-           return a = "Cà Phê";
+            // category_name = "Cà Phê";
+            return a = "Cà Phê";
         }
         //cà phê : cappucino-nong, cappuchino-da, caramel-macchiato-nong, latte-nong, 
         //mocha-nong, mocha-da, espresso-da, espresso-nong, caramel-macchiato-da, latte-da, americano-nong, americano-da
         if (a.indexOf("5d71dc6fad2aba2980db0b24") !== -1) {
             //category_name = "Cà Phê";
-            return a = "Cà Phê";
+            return a = "Cà Phê Rang Xay";
         }
         //socola-da, tra-matcha-latte-nong, tra-matcha-latte-da
         if (a.indexOf("5d71dc71ad2aba2980db0b3d") !== -1) {
@@ -100,28 +99,28 @@ export default class Order extends Component {
         }
         //ô lông
         if (a.indexOf("5d71dc6fad2aba2980db0b27") !== -1) {
-           // category_name = "Oo Loong";
-           return a = "Oo Loong";
+            // category_name = "Oo Loong";
+            return a = "Oo Loong";
         }
         //cold-brew
         if (a.indexOf("5d71dc6ead2aba2980db0b0e") !== -1) {
-           // category_name = "Thức uống Cold Brew";
-           return a = "Thức uống Cold Brew";
+            // category_name = "Thức uống Cold Brew";
+            return a = "Thức uống Cold Brew";
         }
 
         if (a.indexOf("5e819b462d2d6a24a216c8d2") !== -1) {
-           // category_name = "Gói Subscription";
-           return a = "Gói Subscription";
+            // category_name = "Gói Subscription";
+            return a = "Gói Subscription 3 ngày";
         }
 
         if (a.indexOf("5e819b5548916b75fd17e172") !== -1) {
-           /// category_name = "Gói Subscription";
-           return a = "Gói Subscription";
+            /// category_name = "Gói Subscription";
+            return a = "Gói Subscription 5 ngày";
         }
 
         if (a.indexOf("5e819b69538a2402ff619802") !== -1) {
             //category_name = "Gói Subscription";
-            return a = "Gói Subscription";
+            return a = "Gói Subscription 7 ngày";
         }
 
         //trà trái cây: trà xoài nóng
@@ -131,38 +130,8 @@ export default class Order extends Component {
         }
     }
 
-
-    getProduct = () => {
-        var category_name = '';
-
-        this.state.arrayProduct.map(value => {
-
-            var a = value.product_category_id;
-
-            
-            let data = {
-                category_name : category_name
-            }
-
-            //db.collection("categories").doc(value.product_category_id).set(data)
-        })
-
-
-        db.collection('categories').add({
-            name: 'LA',
-            capial: 'unset'
-        })
-
-
-
-    }
-
     isChange = (event) => {
-        console.log(event.target.value);
-
-
         this.setState({ searchText: event.target.value });
-
     };
 
     change_alias = (alias) => {
@@ -182,63 +151,60 @@ export default class Order extends Component {
     }
 
 
+    getProducts = () => {
+        var list = [];
+        console.log(this.state.arrayCategory);
+
+        this.state.arrayCategory.map(value => {
+            console.log(value);
+
+            db.collection('categories').doc(value).collection('products').get().then((querySnapshot) => {
+                querySnapshot.forEach(function (doc) {
+                    // console.log(doc.data());
+
+                    list.push(doc.data())
+
+
+                })
+                this.setState({
+                    arrayProduct: list
+                })
+                // console.log(this.state.arrayProduct);
+            })
+        })
+
+
+    }
+
+
+
+    pushData = () => {
+
+        this.state.arrayProduct.map(value => {
+            // db.collection("categories").doc(value.product_category_id).collection("products").doc(value._id).set(value, { merge: true });
+
+            db.collection("categories").doc(value.product_category_id).set({
+                // category_name: this.getCategoryName(value.product_category_id),
+                // description: value.description,
+                // image: value.image
+                //category_id: value.product_category_id
+                slug: ''
+            }, { merge: true })
+        })
+
+
+    }
+
 
     render() {
 
-        //this.getProduct();
-        
-
-        //console.log(this.state.arrayProduct);
-
-        var categorys = [];
-        
-        this.state.arrayCategory.map((value,key)=>{
-            
-            var listProduct =[]
-            this.state.arrayProduct.map((values,keys)=>{
-                if(values.product_category_id==value){
-                    listProduct.push(values);
-                }
-            
-            })
-            // console.log(listProduct);
-            // console.log(value);
-            var products ={};
-            products.key = value;
-            products.value =listProduct;
-            
-            categorys.push(products);
-
-        })
-        //console.log(categorys);
-
-        
-        
-
-        //console.log(this.state.arrayCategory);
-        this.state.arrayCategory.map(values => {
-            categorys.map(value => {
-                if(values == value.key ) {
-
-                    db.collection("categories").doc(values).collection("productList").doc("ahihi").set(value.value[0]);
-
-                    //console.log(value.value);
-                    //console.log("trung");
-                    
-                    
-                }
-            })
-            
-            
-        })
-        
+        // console.log(this.state.arrayCategory);
 
 
-        
-        
+        //    this.getProducts();
+        console.log(this.state.arrayCategory);
 
 
-        
 
 
 
@@ -255,7 +221,7 @@ export default class Order extends Component {
         })
 
 
-        const product = result.map((values, key) => {
+        const product = this.state.arrayProduct.map((values, key) => {
             return (
                 <li key={key} >
                     <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
@@ -270,7 +236,6 @@ export default class Order extends Component {
                 </li>
             )
         });
-
 
         return (
             <div className="content-for-card">

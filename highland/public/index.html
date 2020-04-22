@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -23,29 +23,29 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/grid.css">
-  <link rel="stylesheet" type="text/css" charset="UTF-8"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/grid.css">
+    <link rel="stylesheet" type="text/css" charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
     <link rel="stylesheet" href="%PUBLIC_URL%/css/BackToTop.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=vietnamese"
-    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=vietnamese"
+        rel="stylesheet">
 
 
-  <title>React App</title>
+    <title>React App</title>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root">
-    
-  </div>
-  <!--
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+
+    </div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -55,77 +55,132 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <button id="back-to-top-btn">
-      
-  </button>
+    <button id="back-to-top-btn">
+
+    </button>
 </body>
 <script>
-  const backToTopButton = document.querySelector("#back-to-top-btn");
+    const backToTopButton = document.querySelector("#back-to-top-btn");
 
-  window.addEventListener("scroll", scrollFunction);
+    window.addEventListener("scroll", scrollFunction);
 
-  function scrollFunction() {
-      if (window.pageYOffset > 300) { // Show backToTopButton
-          if (!backToTopButton.classList.contains("btnEntrance")) {
-              backToTopButton.classList.remove("btnExit");
-              backToTopButton.classList.add("btnEntrance");
-              backToTopButton.style.display = "block";
-          }
-      }
-      else { // Hide backToTopButton
-          if (backToTopButton.classList.contains("btnEntrance")) {
-              backToTopButton.classList.remove("btnEntrance");
-              backToTopButton.classList.add("btnExit");
-              setTimeout(function () {
-                  backToTopButton.style.display = "none";
-              }, 250);
-          }
-      }
-  }
+    function scrollFunction() {
+        if (window.pageYOffset > 300) { // Show backToTopButton
+            if (!backToTopButton.classList.contains("btnEntrance")) {
+                backToTopButton.classList.remove("btnExit");
+                backToTopButton.classList.add("btnEntrance");
+                backToTopButton.style.display = "block";
+            }
+        }
+        else { // Hide backToTopButton
+            if (backToTopButton.classList.contains("btnEntrance")) {
+                backToTopButton.classList.remove("btnEntrance");
+                backToTopButton.classList.add("btnExit");
+                setTimeout(function () {
+                    backToTopButton.style.display = "none";
+                }, 250);
+            }
+        }
+    }
 
-  backToTopButton.addEventListener("click", smoothScrollBackToTop);
+    backToTopButton.addEventListener("click", smoothScrollBackToTop);
 
-  // function backToTop() {
-  //   window.scrollTo(0, 0);
-  // }
+    // function backToTop() {
+    //   window.scrollTo(0, 0);
+    // }
 
-  function smoothScrollBackToTop() {
-      const targetPosition = 0;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 750;
-      let start = null;
+    function smoothScrollBackToTop() {
+        const targetPosition = 0;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 750;
+        let start = null;
 
-      window.requestAnimationFrame(step);
+        window.requestAnimationFrame(step);
 
-      function step(timestamp) {
-          if (!start) start = timestamp;
-          const progress = timestamp - start;
-          window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-          if (progress < duration) window.requestAnimationFrame(step);
-      }
-  }
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) window.requestAnimationFrame(step);
+        }
+    }
 
-  function easeInOutCubic(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t * t + b;
-      t -= 2;
-      return c / 2 * (t * t * t + 2) + b;
-  };
+    function easeInOutCubic(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t * t + b;
+        t -= 2;
+        return c / 2 * (t * t * t + 2) + b;
+    };
 </script>
 <script>
-  var clickMe = document.getElementsByClassName('menu-li-resp')[0];
-  var show = document.getElementsByClassName('header-menu-small')[0];
-  clickMe.onclick = function () {
-    show.style.display="block";
-  }
-  var btnX = document.getElementsByClassName('btnX')[0];
-  btnX.onclick = function () {
-    show.style.display="none";
-  }
-  </script>
+    var clickMe = document.getElementsByClassName('menu-li-resp')[0];
+    var show = document.getElementsByClassName('header-menu-small')[0];
+    clickMe.onclick = function () {
+        show.style.display = "block";
+    }
+    var btnX = document.getElementsByClassName('btnX')[0];
+    btnX.onclick = function () {
+        show.style.display = "none";
+    }
+</script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script>
+    const list = document.querySelectorAll('.li-menu-dr');
+
+    list.forEach(item => {
+        item.getElementsByClassName('none-for-dropdown')[0].addEventListener('click', e => {
+            const submenu = item.getElementsByClassName('menu-li-content')[0];
+            if (submenu.classList.contains('active-v')) {
+                submenu.classList.remove('active-v');
+                item.classList.remove('active-z')
+            } else {
+                submenu.classList.add('active-v');
+                item.classList.add('active-z');
+            }
+        })
+    })
+
+</script>
+<script>
+    const list1 = document.querySelectorAll('.hover-item-test');
+    list1.forEach(item1 => {
+
+        item1.getElementsByClassName('none-for-dropdown1')[0].addEventListener('click', e => {
+            const submenu1 = item1.getElementsByClassName('hidden-small-active')[0];
+            //tncd-small-ul
+            if (submenu1.classList.contains('active-x')) {
+                submenu1.classList.remove('active-x');
+                item1.classList.remove('activen')
+            } else {
+                submenu1.classList.add('active-x');
+                item1.classList.add('activen');
+            }
+        })
+    })
+
+</script>
+<script>
+    const list3 = document.querySelectorAll('.news-hover-li-test');
+    list3.forEach(item3 => {
+
+        item3.getElementsByClassName('none-for-dropdown1')[0].addEventListener('click', e => {
+            const submenu3 = item3.getElementsByClassName('tncd-small-ul')[0];
+            //tncd-small-ul
+            if (submenu3.classList.contains('active-x')) {
+                submenu3.classList.remove('active-x');
+                item3.classList.remove('activen')
+            } else {
+                submenu3.classList.add('active-x');
+                item3.classList.add('activen');
+            }
+        })
+    })
+
+</script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/7.13.1/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use

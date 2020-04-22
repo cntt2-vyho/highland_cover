@@ -249,7 +249,7 @@
   transform: translate(-50%, -50%);
   color: #000;
 }
-::-webkit-scrollbar {
+.product-order-page-container ul::-webkit-scrollbar {
   width: 0px;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }

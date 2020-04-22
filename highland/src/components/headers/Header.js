@@ -2,8 +2,92 @@ import React, { Component } from 'react';
 import classes from './Header.css';
 import { NavLink } from 'react-router-dom';
 
+
+import { db } from '../../firebase/FirebaseConfig';
+
 export default class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            arrayCategory: [],
+            arrayProducts: []
+        }
+    }
+    componentDidMount() {
+        var list = [];
+        db.collection("categories").get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+
+                    list.push(doc.data());
+                    this.setState({
+                        arrayCategory: list
+                    })
+                });
+            });
+            
+    }
+
+
+    getProductItem = () => {
+        db.collection('categories').doc().collection('products').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(doc.data());
+            })
+        })
+    }
+
     render() {
+        this.getProductItem();
+      
+        var database = db.collection('categories').doc();
+
+        const item = this.state.arrayCategory.map((value, key) => {
+            return (
+                <li className="hover-item  hover-item-test col-lg-2 " key = {key}>
+                    <a href="#"  className="title">{value.category_name}</a>
+                    <button className="none-for-dropdown1">
+                        <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                        <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+                    </button>
+                    <ul className="hidden-small-active">
+                        {/* {
+                            db.collection('categories').doc(value.category_id).collection('products').get()
+                            .then(querySnapshot => {
+                                querySnapshot.forEach(function(doc) {
+                                    return (
+                                    <li className="small-item">
+                                        <i className="fa fa-caret-right" aria-hidden="true" />
+                                        <NavLink to="/menu/products/product-details">{doc.data().product_name}</NavLink>
+                                    </li>
+                                    )
+                                    })
+                                })
+                            })
+                        } */}
+                    </ul>
+                </li>
+            )
+            
+        })
+        
+
+        // {
+        //     db.collection('categories').doc(value.category_id).collection('products').get()
+        //     .then((querySnapshot) => {
+        //         querySnapshot.forEach(function(doc) {
+        //             return (
+        //             <li className="small-item">
+        //                 <i className="fa fa-caret-right" aria-hidden="true" />
+        //                 <NavLink to="/menu/products/product-details">{doc.data().category_name}</NavLink>
+        //             </li>
+        //         )
+        //         //console.log(doc.id, " => ", doc.data());
+        //         })
+                
+        //     })
+        // }
+        
         return (
             <header id="header">
 
@@ -55,8 +139,7 @@ export default class Header extends Component {
                             </div>
 
                         </div>
-                        <div className="menu-li-resp">Menu
-                        </div>
+                        <div className="menu-li-resp">Menu</div>
                         <div className="header-menu-small">
                             <button className="btnX">
                                 <i className="fa fa-times" aria-hidden="true"></i>
@@ -67,19 +150,28 @@ export default class Header extends Component {
                             <li className="menu-li">
                                 <NavLink to="/cafe" className="menu-li-a">quán cà phê</NavLink>
                             </li>
-                            <li className="menu-li">
-                                    <span className="none-for-dropdown">
-                                    </span>
+                            <li className="menu-li li-menu-dr">
+                                    {/* <span className=" ">
+                                    </span> */}
+                                    <button className="none-for-dropdown">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                 <NavLink to="/menu" className="menu-li-a">thực đơn
                                 
                                 </NavLink>
-                                <div className="menu-li-content">
+                                <div className="menu-li-content hien-ra-di">
                                     <ul className="menu-li-content-ul">
-                                        <li className="cafe hover-item col-lg-2 ">
-                                            <h3 className="title">
-                                                <a href="#">cà phê</a>
-                                            </h3>
-                                            <ul>
+                                        {item}
+                                        {/* <li className="cafe hover-item  hover-item-test col-lg-2 ">
+                                        <a href="#"  className="title">cà phê</a>
+                                                        <button className="none-for-dropdown1">
+                                                <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                                <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                                </button>
+                                            <ul className="hidden-small-active">
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
                                                     <NavLink to="/menu/products/product-details">cà phê phin</NavLink>
@@ -91,11 +183,14 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="freeze  hover-item col-lg-2">
-                                            <h3 className="title">
-                                                <a href="#">freeze</a>
-                                            </h3>
-                                            <ul>
+                                        <li className="freeze  hover-item  hover-item-test col-lg-2">
+                                        <a href="#"  className="title">freeze</a>
+                                            <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
+                                            <ul className="hidden-small-active">
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
                                                     <NavLink to="/menu/products/product-details">freeze cà phê phin</NavLink>
@@ -108,11 +203,14 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="tea hover-item col-lg-2">
-                                            <h3 className="title">
-                                                <a href="#">trà</a>
-                                            </h3>
-                                            <ul>
+                                        <li className="tea hover-item  hover-item-test col-lg-2">
+                                            <a href="#"  className="title">trà</a>
+                                            <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
+                                            <ul className="hidden-small-active">
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
                                                     <NavLink to="/menu/products/product-details">
@@ -137,11 +235,14 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="bread  hover-item col-lg-2">
-                                            <h3 className="title">
-                                                <a href="#">bánh mì</a>
-                                            </h3>
-                                            <ul>
+                                        <li className="bread  hover-item  hover-item-test col-lg-2">
+                                        <a href="#"  className="title">bánh mì</a>
+                                            <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
+                                            <ul className="hidden-small-active">
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
                                                     <a href="#">thịt nướng</a>
@@ -160,11 +261,14 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="other hover-item col-lg-2">
-                                            <h3 className="title">
-                                                <a href="#">khác</a>
-                                            </h3>
-                                            <ul>
+                                        <li className="other hover-item  hover-item-test col-lg-2">
+                                        <a href="#"  className="title">khác</a>
+                                            <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
+                                            <ul className="hidden-small-active">
                                                 <li className="small-item">
                                                     <i className="fa fa-caret-right" aria-hidden="true" />
                                                     <a href="#">bánh ngọt</a>
@@ -182,8 +286,8 @@ export default class Header extends Component {
                                                     <a href="#">thực đơn giao hàng</a>
                                                 </li>
                                             </ul>
-                                        </li>
-                                        <li className="div hover-item phin col-lg-2">
+                                        </li> */}
+                                        {/* <li className="div hover-item phin col-lg-2">
                                             <div className="phin-container">
                                                 <h3 className="title" id="phin_sua_da">
                                                     <a href="#">phin sữa  đá đậm đà chất phim! 29. 000 &#8363;</a>
@@ -192,15 +296,18 @@ export default class Header extends Component {
                                                     <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/z1.jpg" id="phin-sua-da-img" alt="phin sữa đá đậm đà chất phim 29k" />
                                                 </a>
                                             </div>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </li>
-                            <li className="menu-li">
-                            <span className="none-for-dropdown">
-                                    </span>
+                            <li className="menu-li li-menu-dr">
+                            <button className="none-for-dropdown">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                 <NavLink to="/news" className="menu-li-a">tin tức</NavLink>
-                                <div className="menu-li-content">
+                                <div className="menu-li-content hien-ra-di">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-6">
                                             <ul className="menu-li-content-ul">
@@ -214,7 +321,7 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div className="hover-item-news col-lg-6">
+                                        <div className="hover-item-news col-lg-6 tu-hao-sinh-ra-hidden">
                                             <div className="container-for-tuhaodatviet-img col-lg-4">
                                                 <div className="news-container">
                                                     <h3 className="phin-sua-da">
@@ -229,39 +336,52 @@ export default class Header extends Component {
                                     </div>
                                 </div>
                             </li>
-                            <li className="menu-li">
-                            <span className="none-for-dropdown">
-                                    </span>
+                            <li className="menu-li li-menu-dr">
+                            <button className="none-for-dropdown">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                 <NavLink to="/responsibility" className="menu-li-a">trách nhiệm cộng đồng</NavLink>
-                                <div className="menu-li-content">
+                                <div className="menu-li-content hien-ra-di">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-9">
                                             <ul>
-                                                <li className="news-hover-li col-lg-4">
+                                                <li className="news-hover-li news-hover-li-test col-lg-4">
                                                     <a href="https://www.highlandscoffee.com.vn/vn/tin-tuc-su-kien.html">giá
                       trị văn hóa việt</a>
+                      <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                                     <ul className="tncd-small-ul">
                                                         <li className="tncd-small-li">
                                                             <i className="fa fa-caret-right" aria-hidden="true" />
-                                                            <a href="#" style={{ color: '#fff', textTransform: 'capitalize' }}>đương
+                                                            <a href="#">đương
                           đại hóa trang đông hồ</a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li className="news-hover-li col-lg-4">
+                                                <li className="news-hover-li news-hover-li-test col-lg-4">
                                                     <a href="https://www.highlandscoffee.com.vn/vn/tin-khuyen-mai.html">cộng
                       đồng</a>
+                      <button className="none-for-dropdown1">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                                     <ul className="tncd-small-ul">
                                                         <li className="tncd-small-li">
                                                             <i className="fa fa-caret-right" aria-hidden="true" />
-                                                            <a href="#" style={{ color: '#fff', textTransform: 'capitalize' }}>lớp học
+                                                            <a href="#">lớp học
                           cho em</a>
                                                         </li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div className="hover-item-news col-lg-2" style={{ float: 'right' }}>
+                                        <div className="hover-item-news col-lg-2  tu-hao-sinh-ra-hidden" style={{ float: 'right' }}>
                                             <div className="news-container">
                                                 <h3 className="title-for-tncd">
                                                     <a href="#">đương đại hóa tranh đông hồ</a>
@@ -274,11 +394,14 @@ export default class Header extends Component {
                                     </div>
                                 </div>
                             </li>
-                            <li className="menu-li">
-                            <span className="none-for-dropdown">
-                                    </span>
+                            <li className="menu-li li-menu-dr">
+                            <button className="none-for-dropdown">
+                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
+                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
+
+                                    </button>
                                 <NavLink to="/about" className="menu-li-a">về chúng tôi</NavLink>
-                                <div className="menu-li-content">
+                                <div className="menu-li-content hien-ra-di">
                                     <div className="hover-div-containers">
                                         <div className="hover-item-news col-lg-9">
                                             <ul>
@@ -296,7 +419,7 @@ export default class Header extends Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div className="hover-item-news col-lg-2" style={{ float: 'right' }}>
+                                        <div className="hover-item-news col-lg-2 tu-hao-sinh-ra-hidden" style={{ float: 'right' }}>
                                             <div className="news-container container-for-abu" style={{ float: 'right' }}>
                                                 <h3 className="title-for-abu">
                                                     <a href="#">thương hiệu bắt nguồn từ cà phê Việt!</a>
@@ -313,7 +436,6 @@ export default class Header extends Component {
                                 <NavLink to="/contact" className="menu-li-a">liên hệ</NavLink>
                             </li>
                             <li className="menu-li menu-li-search-display-none">
-                            <span className="none-for-dropdown"></span>
                                 <a className="menu-li-a">
                                     <i className="fa fa-search f-search" aria-hidden="true"></i>
                                 </a>
