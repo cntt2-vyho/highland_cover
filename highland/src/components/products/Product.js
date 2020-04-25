@@ -2,41 +2,60 @@ import React, { Component } from 'react';
 import classes from './Product.css';
 import Slider from "react-slick";
 import { NavLink } from 'react-router-dom';
+
 import { db } from '../../firebase/FirebaseConfig';
 
-export default class Product extends Component {
+
+class Product extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            category: {},
-            arrayProducts: []
+            category: [],
+
+            arrayProducts: [],
+
+
+            id: '',
+            name: '',
+            image: '',
+            des: '',
+            slug: '',
+            matchId: ''
+
         }
     }
 
+    componentWillUpdate(nextProps, nextState) {
+        if (nextProps.match.params.id !== nextState.matchId) {
+            this.componentDidMount();
+        }
+        // console.log('---------------------------');
+        // console.log(nextProps.match.params.id);
+        // console.log(nextState.matchId);
+    }
+
+
     componentDidMount() {
-        var list = [];
-        var object = {};
-        db.collection("categories").doc(this.props.match.params.id)
-            .get()
+        this.setState({
+            matchId: this.props.match.params.id
+        })
+
+
+        var list1 = [];
+        db.collection("categories").doc(this.props.match.params.id).get()
             .then(function (doc) {
-                if (doc.exists) {
-                    console.log(doc.data());
-                    object = doc.data();
-                    console.log(object);
-                }
-                else {
-                    console.log("No such document!");// doc.data() will be undefined in this case
-                }
+                list1.push(doc.data());
             })
             .catch(function (error) {
                 console.log("Error getting document:", error);
             });
 
         this.setState({
-            category: object
+            category: list1
         })
 
 
+        var list = [];
         db.collection('categories').doc(this.props.match.params.id).collection('products').get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
@@ -50,17 +69,11 @@ export default class Product extends Component {
     }
 
     limitText = (text, maxLength) => {
-
-       // var temp = text;
-
-        if(text.length > maxLength) {
-            text = text.substr(0,maxLength) + '...';
+        if (text.length > maxLength) {
+            text = text.substr(0, maxLength) + '...';
         }
         return text;
-        
     }
-    
-    
 
 
     render() {
@@ -74,90 +87,47 @@ export default class Product extends Component {
             arrows: true
         };
 
+        // console.log(this.props.match.params.slug);
+
         const products = this.state.arrayProducts.map((value, key) => {
-            if(this.state.arrayProducts.length <2 ) {
-                return (
-                <li>
+            return (
+                <li key={key}>
                     <div className="li-img">
-                        <a href="#">
+                        <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >
                             <img src={value.image} alt={value.product_name} />
-                        </a>
+                        </NavLink>
                     </div>
                     <div className="li-detail">
                         <h3>
-                            <a href="#">{value.product_name}</a>
+                            <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >{value.product_name}</NavLink>
                         </h3>
                         <p>{this.limitText(value.description, 100)}</p>
                     </div>
                 </li>
             )
-            }
-            else {
-                return (
-                    // <div>
-                    //     chưa làm khúc này
-                    // </div>
-                    <li>
-                        <div className="li-img">
-                            <a href="#">
-                                <img src={value.image} alt={value.product_name} />
-                            </a>
-                        </div>
-                        <div className="li-detail">
-                            <h3>
-                                <a href="#">{value.product_name}</a>
-                            </h3>
-                            <p>{this.limitText(value.description, 100)}</p>
-                        </div>
-                    </li>
-                )
-            }
-            
         })
 
-
+        const category = this.state.category.map((value, key) => {
+            return (
+                <div className="main-tain col-lg-8 col-md-12 col-sm-12 col-12" key={key}>
+                    <h2 className="main-title">{value.category_name}</h2>
+                    <a href="#">
+                        <img src={value.image} alt={value.category_name} />
+                    </a>
+                    <p>{value.description}</p>
+                    <a href="../trasenvang/ProductDetails.html" className="xemsanpham">xem sản phẩm</a>
+                </div>
+            )
+        })
 
         return (
             <div className="content">
                 <div className="main">
 
                     <div className="container-prd">
-                        <div className="main-tain col-lg-8 col-md-12 col-sm-12 col-12">
-                            <h2 className="main-title">trà</h2>
-                            <a href="#">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA-inside.jpg" alt="none" />
-                            </a>
-                            <p>Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm giác thật khoan khoái, tươi mới.</p>
-                            <a href="../trasenvang/ProductDetails.html" className="xemsanpham">xem sản phẩm</a>
-                        </div>
+                        {category}
                         <div className="vertical-list col-lg-4 col-md-12 col-sm-12 col-12">
                             <ul>
-                                {/* <li>
-                                    <div className="li-img">
-                                        <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png" alt="none" />
-                                        </a>
-                                    </div>
-                                    <div className="li-detail">
-                                        <h3>
-                                            <a href="#">trà sen vàng</a>
-                                        </h3>
-                                        <p>Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long,</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="li-img">
-                                        <a href="#">
-                                            <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png" alt="none" />
-                                        </a>
-                                    </div>
-                                    <div className="li-detail">
-                                        <h3>
-                                            <a href="#">trà thạch đào</a>
-                                        </h3>
-                                        <p>Vị trà đậm đà kết hợp cùng những miếng đào thơm ngon mọng nước cùng thạch đào</p>
-                                    </div>
-                                </li> */}
                                 {products}
                             </ul>
                         </div>
@@ -214,3 +184,4 @@ export default class Product extends Component {
         )
     }
 }
+export default Product;

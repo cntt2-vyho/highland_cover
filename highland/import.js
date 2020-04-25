@@ -9,7 +9,7 @@ const jsonToFirestore = async () => {
     await firestoreService.initializeApp(serviceAccount, firebaseConfig.databaseURL);
     console.log('Firebase Initialized');
 
-    await firestoreService.restore('./data-clean/firebase/data.json');
+    await firestoreService.restore('./src/data-clean/firebase/data.json');
     console.log('Upload Success');
   }
   catch (error) {

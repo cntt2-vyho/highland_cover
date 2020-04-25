@@ -54,7 +54,7 @@
   outline: none;
 }
 .main-tain img {
-  width: 100%;
+  width: 50%;
 
 }
 .main-tain, .vertical-list {
@@ -131,10 +131,10 @@
 .prd-div-img {
   border: .1px solid #ccc;
 }
-.slick-prev:before {
+.slick-product .slick-prev:before {
   content: '\f104' !important;
 }
-.slick-prev , .slick-next {
+.slick-product .slick-prev , .slick-product .slick-next {
   position: absolute;
   top: 0;
   width: 40px;
@@ -148,37 +148,37 @@
   transition: all 0.5s linear;
   color: #333333;
 }
-.slick-next:before {
+.slick-product .slick-next:before {
   content: '\f105' !important;
 }
-.slick-prev:hover {
+.slick-product .slick-prev:hover {
   background: #b22830;
     color: #ffffff;
 }
-.slick-next:hover {
+.slick-product .slick-next:hover {
   background: #b22830;
     color: #ffffff;
 }
-.slick-list {
+.slick-product .slick-list {
   margin: 0 -15px;
   padding-top: 30px;
 }
-.slick-next {
+.slick-product.slick-next {
   right: 0 !important;
 }
-.slick-prev {
+.slick-product .slick-prev {
   top: 0;
     right: 45px !important;
     left: inherit;
 }
-.slick-next:before, .slick-prev:before {
+.slick-product .slick-next:before, .slick-product .slick-prev:before {
   font-family: fontAwesome;
   font-size: 20px;
   line-height: 1;
   opacity: 1 !important;
   color: #000;
 }
-.slick-prev:hover .slick-prev:before {
+.slick-product .slick-prev:hover .slick-product .slick-prev:before {
   color: #fff !important;
 }
 .prd-div-img {
@@ -192,7 +192,7 @@
   transform: translate(-50%, -50%);
   transition: 1s;
 }
-.slick-slide div {
+.slick-product .slick-slide div {
   outline: none;
 }
 .prd-div-img:hover img {

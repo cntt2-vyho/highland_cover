@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import classes from './Order.css';
 import { NavLink } from 'react-router-dom';
-import Axios from 'axios';
-import Product from './../products/Product';
-import Modal from '../modal/Modal';
+
 import { db } from '../../firebase/FirebaseConfig';
 
+import { data } from '../../data-clean/firebase/data.json'
 export default class Order extends Component {
     constructor(props) {
         super(props)
@@ -18,27 +17,41 @@ export default class Order extends Component {
         }
     }
     componentDidMount() {
-        this.getCate();
-        // this.state.arrayCategory? this.getProducts():this.getCate();
-
-
-    }
-    getCate = () => {
         var list1 = [];
         db.collection("categories").get()
             .then((querySnapshot) => {
-                console.log(querySnapshot);
-
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.products);
+                    console.log();
 
-                    list1.push(doc.data());
+                    list1.push(doc.id);
 
                 });
-                this.setState({
-                    arrayCategory: list1
-                })
+
             });
+
+        this.setState({
+            arrayCategory: list1
+        })
+
+        var list = [];
+
+        var query = db.collection('categories');
+        query.get().then((querySnapshot) => {
+            querySnapshot.forEach((document) => {
+                document.ref.collection('products').get().then((querySnapshot) => {
+
+                    querySnapshot.forEach(function (doc) {
+                        list.push(doc.data());
+                    })
+
+                    this.setState({
+                        arrayProduct: list
+                    })
+
+                });
+            });
+        });
+
     }
 
 
@@ -150,34 +163,6 @@ export default class Order extends Component {
         return str;
     }
 
-
-    getProducts = () => {
-        var list = [];
-        console.log(this.state.arrayCategory);
-
-        this.state.arrayCategory.map(value => {
-            console.log(value);
-
-            db.collection('categories').doc(value).collection('products').get().then((querySnapshot) => {
-                querySnapshot.forEach(function (doc) {
-                    // console.log(doc.data());
-
-                    list.push(doc.data())
-
-
-                })
-                this.setState({
-                    arrayProduct: list
-                })
-                // console.log(this.state.arrayProduct);
-            })
-        })
-
-
-    }
-
-
-
     pushData = () => {
 
         this.state.arrayProduct.map(value => {
@@ -195,18 +180,9 @@ export default class Order extends Component {
 
     }
 
-
     render() {
 
-        // console.log(this.state.arrayCategory);
-
-
-        //    this.getProducts();
-        console.log(this.state.arrayCategory);
-
-
-
-
+        console.log(this.state.arrayProduct);
 
         var result = [];
         this.state.arrayProduct.forEach((item) => {
@@ -221,7 +197,7 @@ export default class Order extends Component {
         })
 
 
-        const product = this.state.arrayProduct.map((values, key) => {
+        const product = result.map((values, key) => {
             return (
                 <li key={key} >
                     <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">

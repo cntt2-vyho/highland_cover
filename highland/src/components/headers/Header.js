@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import classes from './Header.css';
 import { NavLink } from 'react-router-dom';
-
-
+import Slider from "react-slick";
 import { db } from '../../firebase/FirebaseConfig';
 
-export default class Header extends Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,79 +13,92 @@ export default class Header extends Component {
         }
     }
     componentDidMount() {
-        var list = [];
+        var list1 = [];
         db.collection("categories").get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
+                    console.log();
 
-                    list.push(doc.data());
-                    this.setState({
-                        arrayCategory: list
+                    list1.push(doc.data());
+
+                });
+
+            });
+
+        this.setState({
+            arrayCategory: list1
+        })
+
+        var list = [];
+
+        var query = db.collection('categories');
+        query.get().then((querySnapshot) => {
+            querySnapshot.forEach((document) => {
+                document.ref.collection('products').get().then((querySnapshot) => {
+
+                    querySnapshot.forEach(function (doc) {
+                        list.push(doc.data());
                     })
+
+                    this.setState({
+                        arrayProducts: list
+                    })
+
                 });
             });
+        });
             
     }
 
+    getData() {
 
-    getProductItem = () => {
-        db.collection('categories').doc().collection('products').get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                console.log(doc.data());
-            })
-        })
     }
 
+
     render() {
-        this.getProductItem();
+
+        
+
+        const settings = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+        };
       
-        var database = db.collection('categories').doc();
+        //var database = db.collection('categories').doc();
 
         const item = this.state.arrayCategory.map((value, key) => {
             return (
-                <li className="hover-item  hover-item-test col-lg-2 " key = {key}>
-                    <a href="#"  className="title">{value.category_name}</a>
+                    <li className="hover-item  hover-item-test col-lg-2 " key = {key}>
+                    <NavLink  to={`/menu/${value.slug}/${value.category_id}.html`} className="title">
+                        {value.category_name}
+                        </NavLink>
                     <button className="none-for-dropdown1">
                         <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
                         <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
                     </button>
                     <ul className="hidden-small-active">
-                        {/* {
-                            db.collection('categories').doc(value.category_id).collection('products').get()
-                            .then(querySnapshot => {
-                                querySnapshot.forEach(function(doc) {
-                                    return (
-                                    <li className="small-item">
+                        {
+                        this.state.arrayProducts.map((values, key) => {
+                            if(values.product_category_id==value.category_id) {
+                                return (
+                                    <li className="small-item" key={key}>
                                         <i className="fa fa-caret-right" aria-hidden="true" />
-                                        <NavLink to="/menu/products/product-details">{doc.data().product_name}</NavLink>
+                                        <NavLink  to={`/menu/${value.slug}/${value.category_id}/${values.slug}/${values._id}.html`} >{values.product_name}</NavLink>
+                                        
                                     </li>
-                                    )
-                                    })
-                                })
-                            })
-                        } */}
+                                )
+                            }
+                        })
+                        }
                     </ul>
                 </li>
             )
             
         })
-        
-
-        // {
-        //     db.collection('categories').doc(value.category_id).collection('products').get()
-        //     .then((querySnapshot) => {
-        //         querySnapshot.forEach(function(doc) {
-        //             return (
-        //             <li className="small-item">
-        //                 <i className="fa fa-caret-right" aria-hidden="true" />
-        //                 <NavLink to="/menu/products/product-details">{doc.data().category_name}</NavLink>
-        //             </li>
-        //         )
-        //         //console.log(doc.id, " => ", doc.data());
-        //         })
-                
-        //     })
-        // }
         
         return (
             <header id="header">
@@ -139,7 +151,9 @@ export default class Header extends Component {
                             </div>
 
                         </div>
-                        <div className="menu-li-resp">Menu</div>
+                        <div className="menu-li-resp">
+                            {/* <span>Menu</span> */}
+                            </div>
                         <div className="header-menu-small">
                             <button className="btnX">
                                 <i className="fa fa-times" aria-hidden="true"></i>
@@ -151,8 +165,6 @@ export default class Header extends Component {
                                 <NavLink to="/cafe" className="menu-li-a">quán cà phê</NavLink>
                             </li>
                             <li className="menu-li li-menu-dr">
-                                    {/* <span className=" ">
-                                    </span> */}
                                     <button className="none-for-dropdown">
                                     <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
                                     <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
@@ -163,140 +175,10 @@ export default class Header extends Component {
                                 </NavLink>
                                 <div className="menu-li-content hien-ra-di">
                                     <ul className="menu-li-content-ul">
-                                        {item}
-                                        {/* <li className="cafe hover-item  hover-item-test col-lg-2 ">
-                                        <a href="#"  className="title">cà phê</a>
-                                                        <button className="none-for-dropdown1">
-                                                <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
-                                                <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
-
-                                                </button>
-                                            <ul className="hidden-small-active">
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">cà phê phin</NavLink>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">cà phê espresso</NavLink>
-                                                   
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="freeze  hover-item  hover-item-test col-lg-2">
-                                        <a href="#"  className="title">freeze</a>
-                                            <button className="none-for-dropdown1">
-                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
-                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
-
-                                    </button>
-                                            <ul className="hidden-small-active">
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">freeze cà phê phin</NavLink>
-                                                 
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">freeze không cà phê</NavLink>
-                                                   
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="tea hover-item  hover-item-test col-lg-2">
-                                            <a href="#"  className="title">trà</a>
-                                            <button className="none-for-dropdown1">
-                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
-                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
-
-                                    </button>
-                                            <ul className="hidden-small-active">
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">
-                                                        trà sen vàng
-                                                    </NavLink>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">
-                                                        trà thạch đào
-                                                    </NavLink>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">trà thanh đào</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <NavLink to="/menu/products/product-details">
-                                                        trà thạch vải
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="bread  hover-item  hover-item-test col-lg-2">
-                                        <a href="#"  className="title">bánh mì</a>
-                                            <button className="none-for-dropdown1">
-                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
-                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
-
-                                    </button>
-                                            <ul className="hidden-small-active">
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">thịt nướng</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">xíu mại</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">chả lụa xá xíu</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">gà xé nước tương</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="other hover-item  hover-item-test col-lg-2">
-                                        <a href="#"  className="title">khác</a>
-                                            <button className="none-for-dropdown1">
-                                    <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
-                                    <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
-
-                                    </button>
-                                            <ul className="hidden-small-active">
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">bánh ngọt</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">merchandise</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">cà phê đóng gói</a>
-                                                </li>
-                                                <li className="small-item">
-                                                    <i className="fa fa-caret-right" aria-hidden="true" />
-                                                    <a href="#">thực đơn giao hàng</a>
-                                                </li>
-                                            </ul>
-                                        </li> */}
-                                        {/* <li className="div hover-item phin col-lg-2">
-                                            <div className="phin-container">
-                                                <h3 className="title" id="phin_sua_da">
-                                                    <a href="#">phin sữa  đá đậm đà chất phim! 29. 000 &#8363;</a>
-                                                </h3>
-                                                <a href="#">
-                                                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/z1.jpg" id="phin-sua-da-img" alt="phin sữa đá đậm đà chất phim 29k" />
-                                                </a>
-                                            </div>
-                                        </li> */}
+                                        <Slider {...settings}>
+                                            {item}
+                                        </Slider>
+                                        
                                     </ul>
                                 </div>
                             </li>
@@ -467,3 +349,4 @@ export default class Header extends Component {
         )
     }
 }
+export default Header;
