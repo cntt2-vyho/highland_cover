@@ -436,6 +436,163 @@
       "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d92fbc89e12b47db8cabbd7_CPG%20ARABICA%201.jpg"
     },
     {
+      "_id": "5e92fd7dc788bc0011abaa06",
+      "localize": {
+        "en": "Trà Sữa Mắc Ca Trân Châu Trắng",
+        "vi": "Trà Sữa Mắc Ca Trân Châu Trắng"
+      },
+      "description": "Đổi vị tươi mới - Vừa ngon vừa khoẻ\nMỗi ngày với Nhà sẽ là điều tươi mới hơn với sữa hạt mắc ca thơm ngon, bổ dưỡng quyện cùng nền trà Oolong cho vị cân bằng, ngọt dịu. Trân châu trắng giòn dai được thêm sẵn, mang lại cho bạn cảm giác \"đã\" trong từng ngụm, thoả cơn thèm trà sữa ngay.",
+      "product_odoo": {
+        "product_tmpl_id": 3952,
+        "variants": [
+          {
+            "code": "10010091",
+            "price": 55000,
+            "product_id": 2216,
+            "val": "Lớn"
+          },
+          {
+            "code": "10010092",
+            "price": 49000,
+            "product_id": 2215,
+            "val": "Vừa",
+            "localize": {
+              "en": null,
+              "vi": "Size Vừa"
+            }
+          },
+          {
+            "code": "10010093",
+            "price": 45000,
+            "product_id": 2214,
+            "val": "Nhỏ",
+            "localize": {
+              "en": null,
+              "vi": "Size Nhỏ"
+            }
+          }
+        ]
+      },
+      "categ_id": [
+        9,
+        4
+      ],
+      "topping_list": [
+        {
+          "product_id": 1667,
+          "product_name": "Trân châu trắng",
+          "code": "10100016",
+          "price": 10000
+        }
+      ],
+      "variants": [
+        {
+          "code": "10010091",
+          "price": 55000,
+          "product_id": 2216,
+          "localize": {
+            "en": "Lớn",
+            "vi": "Lớn"
+          },
+          "val": "Lớn"
+        },
+        {
+          "code": "10010092",
+          "price": 49000,
+          "product_id": 2215,
+          "val": "Vừa",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          }
+        },
+        {
+          "code": "10010093",
+          "price": 45000,
+          "product_id": 2214,
+          "val": "Nhỏ",
+          "localize": {
+            "en": "Nhỏ",
+            "vi": "Nhỏ"
+          }
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10010091",
+              "price": 10000,
+              "product_id": 2216,
+              "localize": {
+                "en": "Lớn",
+                "vi": "Lớn"
+              },
+              "val": "Lớn",
+              "is_main": true
+            },
+            {
+              "code": "10010092",
+              "price": 4000,
+              "product_id": 2215,
+              "val": "Vừa",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "is_main": true
+            },
+            {
+              "code": "10010093",
+              "price": 0,
+              "product_id": 2214,
+              "val": "Nhỏ",
+              "localize": {
+                "en": "Nhỏ",
+                "vi": "Nhỏ"
+              },
+              "is_main": true
+            }
+          ]
+        },
+        {
+          "name": "Topping",
+          "desciption": "Chọn tối đa 2 loại",
+          "min": 0,
+          "max": 2,
+          "default_index": -1,
+          "items": [
+            {
+              "product_id": 1667,
+              "product_name": "Trân châu trắng",
+              "code": "10100016",
+              "price": 10000,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "codes": [],
+      "product_category_id": "5d71dc6dad2aba2980db0af2",
+      "product_name": "Trà Sữa Mắc Ca Trân Châu Trắng",
+      "price": 45000,
+      "base_price": 45000,
+      "active": true,
+      "branch": "TCH",
+      "slug": "tra-sua-mac-ca-tran-chau-trang",
+      "created_at": "2020-04-12 11:37:33",
+      "updated_at": "2020-04-18 07:45:57",
+      "__v": 2,
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5e92fd7dc788bc0011abaa06_product_Macca_app.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5e92fd7dc788bc0011abaa06_product_Macca_app.jpg"
+    },
+    {
       "_id": "5b03966a1acd4d5bbd6723a3",
       "product_name": "Cà Phê Sữa Đá",
       "base_price": 29000,
@@ -3652,10 +3809,10 @@
           "val": "Lớn"
         }
       ],
-      "updated_at": "2019-10-31 10:30:54",
+      "updated_at": "2020-04-14 10:28:56",
       "created_at": "2019-01-17 03:17:25",
-      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/uiOVoSu9wpmGgttxPbcM0TYPcnwXQhUYhr63kVUZ.png",
-      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/OOLONG_VAI_NHU_Y.png",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5c3ff3c5acf0d338d22adbac_2020-04-14%2017.27.35.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5c3ff3c5acf0d338d22adbac_2020-04-14%2017.27.35.jpg",
       "localize": {
         "en": "Ice Oolong Tea With Lychee",
         "vi": "Oolong Vải - Đá"
@@ -5554,7 +5711,7 @@
       ],
       "price": 45000,
       "type": [],
-      "slug": " ",
+      "slug": "espresso-da",
       "__v": 5,
       "codes": [],
       "product_category_id": "5d71dc6fad2aba2980db0b24",
@@ -6503,6 +6660,104 @@
           }
         ]
       }
+    },
+    {
+      "_id": "5d43bfed073b26003161b693",
+      "product_name": "Cold Brew Phúc Bồn Tử",
+      "localize": {
+        "en": "Cold Brew With Raspberry",
+        "vi": "Cold Brew Phúc Bồn Tử"
+      },
+      "base_price": 50000,
+      "price": 50000,
+      "categ_id": [
+        1
+      ],
+      "topping_list": [],
+      "description": "Vị chua ngọt của trái phúc bồn tử, làm dậy lên hương vị trái cây tự nhiên vốn sẵn có trong hạt cà phê, hòa quyện thêm vị đăng đắng, ngọt dịu nhẹ nhàng của Cold Brew mang đến cách thưởng thức cà phê hoàn toàn mới và đầy thú vị.",
+      "variants": [
+        {
+          "code": "10120002",
+          "localize": {
+            "en": "Vừa",
+            "vi": "Vừa"
+          },
+          "price": 50000,
+          "product_id": 10120002,
+          "val": "Vừa"
+        },
+        {
+          "code": "10120001",
+          "localize": {
+            "en": "\bLớn",
+            "vi": "\bLớn"
+          },
+          "price": 55000,
+          "product_id": 10120001,
+          "val": "Lớn"
+        }
+      ],
+      "type": [],
+      "options": [
+        {
+          "name": "Size",
+          "desciption": "Chọn 1 loại size",
+          "min": 1,
+          "max": 1,
+          "default_index": 0,
+          "items": [
+            {
+              "code": "10120002",
+              "localize": {
+                "en": "Vừa",
+                "vi": "Vừa"
+              },
+              "price": 0,
+              "product_id": 10120002,
+              "val": "Vừa",
+              "is_main": true
+            },
+            {
+              "code": "10120001",
+              "localize": {
+                "en": "\bLớn",
+                "vi": "\bLớn"
+              },
+              "price": 5000,
+              "product_id": 10120001,
+              "val": "Lớn",
+              "is_main": true
+            }
+          ]
+        }
+      ],
+      "branch": "TCH",
+      "slug": "cold-brew-phuc-bon-tu",
+      "updated_at": "2020-03-18 12:27:58",
+      "created_at": "2019-08-02 04:45:33",
+      "high_res_image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/high_res_image/5d43bfed073b26003161b693_IMAGE%202019-08-02%2011%3A45%3A20.jpg",
+      "image": "https://tchmobileapp.s3.ap-southeast-1.amazonaws.com/menufrontend/5d43bfed073b26003161b693_IMAGE%202019-08-02%2011%3A45%3A20.jpg",
+      "__v": 7,
+      "codes": [],
+      "product_category_id": "5d71dc6ead2aba2980db0b0e",
+      "product_odoo": {
+        "product_tmpl_id": 2700,
+        "variants": [
+          {
+            "code": "10120001",
+            "price": 55000,
+            "product_id": 2035,
+            "val": "Lớn"
+          },
+          {
+            "code": "10120002",
+            "price": 50000,
+            "product_id": 2034,
+            "val": "Vừa"
+          }
+        ]
+      },
+      "active": true
     }
   ]
 }

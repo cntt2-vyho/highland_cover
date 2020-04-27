@@ -1,50 +1,61 @@
 .news-content-container {
   margin: 45px 10%;
 }
+
 .news-content {
   overflow: hidden;
 }
+
 .news-title {
   overflow: hidden;
   display: block;
 }
+
 .news-title h1 {
   text-transform: uppercase;
   color: #53382c;
   font-size: 45px;
 }
+
 .div-title a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
   transition: all .3s linear;
 }
+
 .div-title a:hover {
   color: #b22830;
   transition: all .3s linear;
 }
+
 .div-img {
   overflow: hidden;
   width: 100%;
 }
+
 .div-img img {
   width: 100%;
   height: 100%;
   transition: 1s;
   backface-visibility: hidden;
 }
+
 .div-img:hover img {
   transform: scale(1.1);
 }
+
 .div-title {
   padding: 10px 0;
 }
+
 .view-more {
   text-align: center;
   display: block;
   padding: 30px 0;
   overflow: hidden;
 }
+
 .view-more-btn {
   color: #b22830;
   background-color: #fff;
@@ -60,15 +71,18 @@
   width: 250px;
   outline: none;
 }
+
 .view-more-btn:hover {
   background-color: #b22830;
   color: #ffffff;
   transition: all 0.5s linear;
 }
+
 .div-calendar {
   position: relative;
   display: block;
 }
+
 .div-calendar i {
   position: absolute;
   top: 50%;
@@ -76,9 +90,11 @@
   color: #b22830;
   transform: translateY(-50%);
 }
+
 .div-calendar span {
   padding-left: 20px;
 }
+
 .news-item {
   padding: 15px;
 }

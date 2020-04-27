@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom';
 
 import { db } from '../../firebase/FirebaseConfig';
 
-import { data } from '../../data-clean/firebase/data.json'
-export default class Order extends Component {
+import Modal from '../modal/Modal';
+import { connect } from 'react-redux';
+
+
+class Order extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -13,7 +16,9 @@ export default class Order extends Component {
             product: '',
             searchText: '',
             arrayCategory: [],
-            array: []
+            array: [],
+
+            showPopup: false,
         }
     }
     componentDidMount() {
@@ -21,7 +26,6 @@ export default class Order extends Component {
         db.collection("categories").get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    console.log();
 
                     list1.push(doc.id);
 
@@ -165,14 +169,14 @@ export default class Order extends Component {
 
     pushData = () => {
 
-        this.state.arrayProduct.map(value => {
-            // db.collection("categories").doc(value.product_category_id).collection("products").doc(value._id).set(value, { merge: true });
+        this.state.temp.map(value => {
+            // db.collection("category").doc(value.product_category_id).collection("products").doc(value._id).set(value, { merge: true });
 
-            db.collection("categories").doc(value.product_category_id).set({
-                // category_name: this.getCategoryName(value.product_category_id),
-                // description: value.description,
-                // image: value.image
-                //category_id: value.product_category_id
+            db.collection("category").doc(value.product_category_id).set({
+                category_name: this.getCategoryName(value.product_category_id),
+                description: value.description,
+                image: value.image,
+                category_id: value.product_category_id,
                 slug: ''
             }, { merge: true })
         })
@@ -180,9 +184,26 @@ export default class Order extends Component {
 
     }
 
-    render() {
 
-        console.log(this.state.arrayProduct);
+    showModal = () => {
+        if (this.props.isEdit == true) {
+            return <Modal />
+        }
+    }
+
+    getOrderData(values) {
+        this.props.changeEditStatus();
+        //console.log(values);
+        this.props.getEditData(values);
+    }
+
+    changPrice(x) {
+        return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+        
+    }
+
+    render() {
+        //this.pushData();
 
         var result = [];
         this.state.arrayProduct.forEach((item) => {
@@ -195,20 +216,20 @@ export default class Order extends Component {
             }
 
         })
-
-
         const product = result.map((values, key) => {
             return (
-                <li key={key} >
-                    <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12">
+                <li key={key} className="product-order-page-container-ul-li-item">
+                    <div className="div-img-order col-lg-3 col-md-3 col-sm-12 col-12" onClick={() => this.getOrderData(values)}>
                         <img src={values.image} alt={values.product_name} />
                     </div>
-                    <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12">
+                    <div className="div-product-details col-lg-9 col-md-9 col-sm-12 col-12" onClick={() => this.getOrderData(values)}>
                         <div className="name-size">
                             <h4>{values.product_name}</h4>
-                            <p>{values.description}</p>
+                            <p className="p-for-description">{values.description}</p>
+                            <p><strong>{this.changPrice(values.base_price)}</strong></p>
                         </div>
                     </div>
+                    {this.showModal()}
                 </li>
             )
         });
@@ -372,3 +393,19 @@ export default class Order extends Component {
         )
     }
 }
+const mapStateToProps = (state, ownProps) => {
+    return {
+        isEdit: state.isEdit
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changeEditStatus: () => {
+            dispatch({ type: "CHANGE_EDIT_STATUS" })
+        },
+        getEditData: (editItem) => {
+            dispatch({ type: "GET_EDIT_DATA", editItem })
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Order);

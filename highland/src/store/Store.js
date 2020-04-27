@@ -1,14 +1,19 @@
 var redux = require('redux');
 
 const noteInitialState = {
-  categoryId : ''
+    isEdit: false,
+    editItem: {}
 }
 //function push idForOrderPage into arrayIdForOrderPage
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
 
-        case "GET_CATEGORY_ID":
-            return { ...state, categoryId: action.categoryId }
+        case "CHANGE_EDIT_STATUS":
+            return { ...state, isEdit: !state.isEdit };
+
+        case "GET_EDIT_DATA":
+            return { ...state, editItem: action.editItem }
+
         default:
             return state
     }

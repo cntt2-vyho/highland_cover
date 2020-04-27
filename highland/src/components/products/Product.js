@@ -87,24 +87,26 @@ class Product extends Component {
             arrows: true
         };
 
-        // console.log(this.props.match.params.slug);
 
         const products = this.state.arrayProducts.map((value, key) => {
-            return (
-                <li key={key}>
-                    <div className="li-img">
-                        <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >
-                            <img src={value.image} alt={value.product_name} />
-                        </NavLink>
-                    </div>
-                    <div className="li-detail">
-                        <h3>
-                            <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >{value.product_name}</NavLink>
-                        </h3>
-                        <p>{this.limitText(value.description, 100)}</p>
-                    </div>
-                </li>
-            )
+            if(key<2) {
+                return (
+                    <li key={key}>
+                        <div className="li-img">
+                            <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >
+                                <img src={value.image} alt={value.product_name} />
+                            </NavLink>
+                        </div>
+                        <div className="li-detail">
+                            <h3>
+                                <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >{value.product_name}</NavLink>
+                            </h3>
+                            <p>{this.limitText(value.description, 100)}</p>
+                        </div>
+                    </li>
+                )
+            }
+            else return null;
         })
 
         const category = this.state.category.map((value, key) => {
