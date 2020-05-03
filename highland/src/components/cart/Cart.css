@@ -1,0 +1,227 @@
+.cart-detail {
+  overflow: hidden;
+  float: right;
+}
+
+.card-detail-container {
+  margin: 15px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.div-xemgiohang {
+  display: block;
+  overflow: hidden;
+  border: solid .1px #ccc;
+  text-align: center;
+  background-color: #b22830;
+}
+
+.div-xemgiohang h3 {
+  color: #fff;
+  padding: 15px 0;
+}
+.ship {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ship-fee {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.div-ship {
+  overflow: hidden;
+  /* padding: 15px 0; */
+}
+
+.div-voucher {
+  display: block;
+  overflow: hidden;
+  min-height: 40px;
+  width: 100%;
+}
+
+.div-voucher input {
+  display: inline-block;
+  height: 40px;
+  padding: 0 15px;
+  outline: none;
+  border: solid 1px #000;
+  width: calc(100% - 100px);
+}
+
+.btn-voucher {
+  display: inline-block;
+  height: 40px;
+  border: solid 1px #b22830;
+  background-color: #b22830;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all .3s linear;
+  outline: none;
+  width: 100px;
+}
+
+.div-ship, .div-voucher {
+  margin: 10px 0;
+}
+
+.total {
+  display: block;
+  width: 100%;
+}
+
+.div-total {
+  display: inline-block;
+  width: 50%;
+}
+
+.total-small {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.total-fee {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.totall, .total {
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+.btn-voucher:hover {
+  cursor: pointer;
+  border: solid .1px #53382c;
+  background-color: #53382c;
+  transition: all .3s linear;
+}
+
+.paypaypay {
+  border: solid .1px #ccc;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.pay-container {
+  display: block;
+  padding: 5px 0;
+}
+
+.quantity {
+  display: inline-block;
+  padding: 0;
+  text-align: right;
+}
+
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s linear;
+}
+
+.quantity i {
+  margin-top: 2px;
+  color: #b3b3b3;
+}
+
+.input-count {
+  outline: none;
+}
+
+.quantity button:hover {
+  background-color: #b22830;
+  transition: all .3s linear;
+}
+
+.quantity button:hover i {
+  color: #fff;
+  transition: all .3s linear;
+}
+
+.name-size-right p {
+  font-style: italic;
+  padding: 5px 0;
+}
+
+.name-size-right h3 a {
+  text-transform: uppercase;
+  color: #b22830;
+  text-decoration: none;
+}
+
+.name-size-right h4 {
+  text-transform: uppercase;
+  color: #b22830;
+  text-decoration: none;
+}
+
+.product-order-page-container ul li a .name-size-right p {
+  color: #000;
+}
+
+.div-product-details-right-count {
+  display: inline-block;
+  width: 25px;
+  background-color: #b22830;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0 10px;
+}
+
+.name-size .p-for-description {
+  font-style: italic;
+  padding: 5px 0;
+}
+
+.name-size h3 a {
+  text-transform: uppercase;
+  color: #b22830;
+  text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+  .div-img-order-right, .div-product-details-right, .name-size-right, .quantity {
+    width: 100%;
+  }
+  .quantity {
+    text-align: unset;
+  }
+}
+
+@media (max-width: 1023px) {
+  .div-img-order-right img {
+    width: 50%;
+  }
+}

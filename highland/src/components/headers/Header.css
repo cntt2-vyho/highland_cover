@@ -899,6 +899,15 @@ header {
   .none-for-dropdown {
     display: inline-block;
   }
+  .menu-ul {
+    overflow-y: auto;
+  }
+  .menu-ul::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
 }
 
 .active-v .tu-hao-sinh-ra-hidden {

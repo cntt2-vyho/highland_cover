@@ -28,7 +28,7 @@ export default class Contact extends Component {
                                 <label htmlFor="content" className="label">nội dung liên lạc:</label>
                                 <div className="input-container">
                                     <i className="fa fa-pencil-square-o input-icon" aria-hidden="true" />
-                                    <textarea name id cols={30} rows={10} className="input-item textarea" defaultValue={""} />
+                                    <textarea cols={30} rows={10} className="input-item textarea"  />
                                 </div>
                             </div>
                             <div className="form-group-for-contact">

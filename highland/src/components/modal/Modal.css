@@ -1,7 +1,6 @@
 .content-for-modal {
   display: block;
   overflow: hidden;
-
   position: fixed;
   width: 100%;
   height: 100%;
@@ -10,9 +9,18 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100000;
+  overflow-y: auto;
 }
+
+.content-for-modal::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
 .modal-container-button {
   position: absolute;
   top: 0;
@@ -22,50 +30,56 @@
   font-size: 20px;
   opacity: .5;
   outline: none;
-
 }
+
 .modal-container-button:hover {
   cursor: pointer;
   opacity: 1;
 }
+
 .modal-container {
-  width: 500px;
+  width: 700px;
   overflow: hidden;
   display: block;
   margin: 45px 10%;
   background-color: #fff;
-  
-
+  max-width: 700px;
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   margin: auto;
   background: white;
 }
+
 .modal-container-small {
   padding: 20px;
 }
+
 .modal-div-img img {
   width: 100%;
-  
 }
+
 .modal-title {
   display: block;
   border-bottom: .5px solid #ccc;
 }
+
 .modal-title h2 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .modal-div-loai {
   display: block;
 }
+
 .btn-plus, .btn-minus {
   position: relative;
   border: none;
 }
+
 .btn-plus::before {
   content: "\f067";
   font-family: fontawesome;
@@ -74,6 +88,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .btn-minus::before {
   content: "\f068";
   font-family: fontawesome;
@@ -82,33 +97,33 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .modal-product-detail-container {
   overflow: hidden;
-
 }
+
 .modal-product-detail {
   display: block;
-  
 }
+
 .modal-div-img, .modal-div-name {
   display: inline-block;
   padding: 0 15px;
   list-style: none;
 }
+
 .modal-product-detail ul {
   padding: 0;
   margin: 0 -15px;
 }
+
 .modal-size-container label, .modal-topping-container label {
   padding: 0 20px;
 }
 
-
-
-
-
-
-
+.modal-size-container {
+  float: right;
+}
 
 .modal-size-container label {
   display: inline-block;
@@ -120,6 +135,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 .modal-size-container label input {
   position: absolute;
   opacity: 0;
@@ -127,6 +143,7 @@
   height: 0;
   width: 0;
 }
+
 .checkmark {
   position: absolute;
   top: 50%;
@@ -136,17 +153,21 @@
   background-color: #eee;
   transform: translateY(-50%);
 }
+
 /* On mouse-over, add a grey background color */
-.modal-size-container label:hover input ~ .checkmark {
+
+.modal-size-container label:hover input~.checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.modal-size-container label input:checked ~ .checkmark {
+
+.modal-size-container label input:checked~.checkmark {
   background-color: #b22830;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .checkmark:after {
   content: "";
   position: absolute;
@@ -154,11 +175,13 @@
 }
 
 /* Show the checkmark when checked */
-.modal-size-container label input:checked ~ .checkmark:after {
+
+.modal-size-container label input:checked~.checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
+
 .modal-size-container label .checkmark:after {
   content: '\f00c';
   font-family: fontawesome;
@@ -168,16 +191,14 @@
   color: #fff;
 }
 
-
-
-
-
 .modal-size-containner label span, .modal-topping-container label span {
   padding-left: 10px;
 }
+
 .modal-div-notes span {
   position: relative;
 }
+
 .modal-div-notes span::before {
   content: "\f040";
   font-family: fontawesome;
@@ -187,10 +208,12 @@
   color: #b22830;
   transform: translate(-50%, -50%);
 }
+
 .modal-div-notes {
   display: block;
   overflow: hidden;
 }
+
 .modal-div-notes input {
   outline: none;
   border: 1px solid #000;
@@ -199,6 +222,7 @@
   padding-left: 40px;
   height: 40px;
 }
+
 .modal-div-notes span {
   width: 40px;
   height: 40px;
@@ -208,13 +232,16 @@
   bottom: 0;
   left: 0;
 }
+
 .modal-title h2 {
   padding: 10px 15px;
 }
+
 .modal-div-count-add {
   overflow: hidden;
   display: block;
 }
+
 /* .modal-input-radio:after {
   width: 10px;
   height: 10px;
@@ -245,61 +272,65 @@
   visibility: visible;
   border: 2px solid white;
 } */
+
 .modal-size-containner input, .modal-topping-container input {
   position: relative;
 }
+
 .modal-product-detail, .modal-div-loai, .modal-div-size, .modal-div-topping, .modal-div-notes {
   border-bottom: .5px solid #ccc;
 }
+
 .modal-product-detail, .modal-div-loai, .modal-div-size, .modal-div-topping, .modal-div-notes, .modal-div-count-add {
   padding: 15px 0;
   overflow: hidden;
 }
+
 .modal-div-notes-container {
   position: relative;
 }
+
 .modal-div-notes input:focus {
   outline: none;
   border-color: #b22830;
 }
+
 label span {
   text-transform: capitalize;
 }
+
 [class*="modal-div-"] h3 {
   text-transform: capitalize;
 }
+
 .btn-plus, .btn-minus {
   width: 30px;
   height: 30px;
 }
-.btn-minus, .btn-plus, .modal-div-count span {
-  padding: 0 5px;
-}
+
 .modal-div-count-container {
   position: relative;
   height: 30px;
+  display: flex;
 }
+
 .modal-div-count span {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  margin-left: 35px;
+  padding: 0 10px;
 }
-.modal-div-count .btn-plus {
-  margin-left: 30px;
-}
+
 .modal-div-add {
   background-color: #b22830;
   color: #fff;
   padding: 15px;
   display: flex;
-  opacity: .85;
+  opacity: .5;
 }
+
 .modal-div-add:hover {
   cursor: pointer;
   opacity: 1;
 }
+
 .modal-div-add button {
   border: none;
   background-color: transparent;
@@ -307,12 +338,21 @@ label span {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .modal-div-add button:hover {
   cursor: pointer;
 }
-.modal-div-add span {
+
+.modal-div-add input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
   text-align: right;
+  font-style: italic;
+  font-weight: bold;
 }
+
 .btn-plus, .btn-minus {
   outline: none;
   background-color: #b22830;
@@ -320,39 +360,73 @@ label span {
   border: none;
   color: #fff;
 }
+
 .btn-minus:hover, .btn-plus:hover {
   cursor: pointer;
   opacity: 1;
 }
+
 .modal-div-count-container {
   margin: 10px;
 }
-.modal-div-size h3 ,  .modal-div-topping h3, .modal-size-containner, .modal-topping-container, .modal-div-loai h3, .modal-div-loai-container {
+
+.modal-div-count-container input {
+  max-width: 30px;
+  outline: none;
+  border: none;
+  padding: 0 5px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.modal-div-size h3, .modal-div-topping h3, .modal-size-containner, .modal-topping-container, .modal-div-loai h3, .modal-div-loai-container {
   display: inline-block;
 }
+
 .modal-div-loai-container {
   float: right;
 }
 
-.popup-close:before { 
+.popup-close:before {
   content: '\f00d';
   font-family: fontawesome;
-  
 }
+
 .popup-close {
   position: absolute;
   top: 0;
   right: 0;
 }
+
 .popup-close:hover {
   cursor: pointer;
   opacity: .8;
 }
+
 .modal-div-name:hover {
   background: #fff;
 }
+
 .modal-div-img {
   border-bottom: none !important;
+}
+
+@media(max-width: 500px) {
+  .modal-div-img img {
+    width: 50%;
+  }
+  .modal-container {
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+.modal-div-add button {
+  outline: none;
+}
+.modal-div-add span {
+  text-align: right;
+  font-style: italic;
 }
 /* 
 .popup {

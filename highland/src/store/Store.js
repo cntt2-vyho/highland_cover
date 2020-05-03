@@ -2,7 +2,8 @@ var redux = require('redux');
 
 const noteInitialState = {
     isEdit: false,
-    editItem: {}
+    editItem: {},
+    size: {}
 }
 //function push idForOrderPage into arrayIdForOrderPage
 const allReducer = (state = noteInitialState, action) => {
@@ -13,6 +14,9 @@ const allReducer = (state = noteInitialState, action) => {
 
         case "GET_EDIT_DATA":
             return { ...state, editItem: action.editItem }
+
+        case "GET_SIZE":
+            return { ...state, size: action.size }
 
         default:
             return state
