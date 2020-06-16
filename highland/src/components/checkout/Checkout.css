@@ -1,0 +1,15 @@
+.content-for-card {
+  background-color: #f2f2f2;
+  display: block;
+  overflow: hidden;
+  margin-top: 101.4px;
+}
+
+.order-container {
+  margin: 45px 5%;
+  overflow: hidden;
+}
+
+.grid-layout {
+  overflow: hidden;
+}

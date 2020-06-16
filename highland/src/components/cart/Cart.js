@@ -2,67 +2,156 @@ import React, { Component } from 'react';
 import classes from './Cart.css';
 
 import { NavLink } from 'react-router-dom';
+import Modal from 'react-modal';
+import { connect } from 'react-redux';
+import ReactModal from './../modal/react-modal/ReactModal';
+
 
 class Cart extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            array: [],
+            total: 0,
+            shipfee: 0,
 
-    changPrice(x) {
-        return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-        
+            modalIsOpen: false
+        }
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+    componentDidMount() {
+        const array1 = JSON.parse(localStorage.getItem('data')) || [];
+        const array2 = this.props.modalData;
+
+        // console.log('local', array1);
+        // console.log('modal', array2);
+        // if(array2.object ) {
+        //     console.log('co');
+        // }
+        // else {
+        //     console.log('khong');
+        // }
+
+        this.setState({
+            array: array1
+        })
+        var total = 0;
+        array1.map(value => {
+            total += value.total
+
+        })
+        this.setState({ total: total })
     }
 
+    // componentWillUpdate(nextProps, nextState) {
+    //     // if (nextProps.match.params.id !== nextState.matchId) {
+    //     //     this.componentDidMount();
+    //     // }
+    //     console.log('---------------------------');
+    //     console.log(nextProps);
+    //     console.log(nextState);
+    // }
+
+
+    changPrice(x) {
+        if (x) {
+            return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+        }
+
+
+    }
+    printArrayTopping(array) {
+        var text = array.join(' + ');
+        if (array == null) {
+            return null;
+        }
+        else {
+            return <p>{text}</p>
+        }
+    }
+
+    openModal = (values, key) => {
+        this.setState({ modalIsOpen: true });
+        this.props.getEditData(values);
+        this.props.getKey(key);
+    }
+
+    closeModal() {
+        this.setState({ modalIsOpen: false });
+    }
+
+
+
     render() {
+        const item = this.state.array.map((values, key) => {
+            return (
+                <li key={key} onClick={() => this.openModal(values, key)} className="cart-item">
+                    <div className="div-product-details-right">
+                        <div className="div-product-details-right-count">
+                            {values.count}
+                        </div>
+                        <div className="name-size-right-container">
+                            <div className="name-size-right">
+                                <p className="this-is-name">
+                                    {values.name}
+                                </p>
+                                <p>{values.size.val}</p>
+                                {this.printArrayTopping(values.topping)}
+
+                            </div>
+                            <div className="quantity">
+                                {this.changPrice(values.total)}
+                            </div>
+                        </div>
+                        {/* <div className="div-product-details-right-remove">
+                            <i className="fa fa-times" aria-hidden="true"></i>
+                        </div> */}
+                    </div>
+
+                </li>
+            )
+        })
         return (
             <div className="cart-detail col-lg-4 col-md-12 col-sm-12 col-12">
 
                 <div className="card-detail-container">
                     <NavLink to="/payment">
                         <div className="div-xemgiohang">
-                            <h3>Xem giỏ hàng</h3>
+                            <h3>Xem giỏ hàng ( + {this.state.array.length} món )</h3>
                         </div>
                     </NavLink>
 
                     <ul className="force-overflow-order" style={{ display: 'block' }}>
-                        <li>
-                            <div className="div-img-order-right col-lg-3 col-md-3 col-sm-3 col-3">
-                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png" alt="none" />
-                            </div>
-                            <div className="div-product-details-right col-lg-9 col-md-9 col-sm-9 col-9">
-                                <div className="div-product-details-right-count col-lg-2 col-md-2 col-sm-2 col-2">
-                                    4
-                                            </div>
-                                <div className="name-size-right col-lg-5 col-md-5 col-sm-5 col-5">
-                                    <h3>
-                                        <a href="../trasenvang/ProductDetails.html">
-                                            trà sen vàng</a>
-                                    </h3>
-                                    <p>Vừa</p>
-                                    <p>Extra foam + Trân châu trắng</p>
+                        {item}
+                        <div>
+                            <Modal onRequestClose={this.closeModal} isOpen={this.state.modalIsOpen}>
+                                <div className="modal-container">
+                                    <button className="modal-container-button" onClick={this.closeModal}>
+                                        <i className="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                    <ReactModal />
                                 </div>
-                                <div className="quantity col-lg-5 col-md-5 col-sm-5 col-5">
-                                    {this.changPrice(236000)}
-                                </div>
-                            </div>
-                        </li>
 
-
-
+                            </Modal>
+                        </div>
                     </ul>
                     <div className="totall" style={{ display: 'block' }}>
                         <div className="div-voucher">
-                            <input type="text" placeholder="Nhập mã giảm giá tại đây"/>
+                            <input type="text" placeholder="Nhập mã giảm giá tại đây" />
                             <button className="btn-voucher">áp dụng</button>
                         </div>
                         <div className="div-ship">
                             <h3 className="ship">vận chuyển </h3>
                             <h3 className="ship-fee">
-                                <strong>15.000 Đ</strong>
+                                <strong>{this.changPrice(this.state.shipfee)}</strong>
                             </h3>
                         </div>
                     </div>
                     <div className="total">
                         <h2 className="total-small">thành tiền</h2>
                         <h2 className="total-fee">
-                            <strong>666.000 Đ</strong>
+                            <strong>{this.changPrice(this.state.total)}</strong>
                         </h2>
                     </div>
 
@@ -73,4 +162,22 @@ class Cart extends Component {
         )
     }
 }
-export default Cart;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        modalData: state.modalData
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        getEditData: (editItem) => {
+            dispatch({ type: "GET_EDIT_DATA", editItem })
+        },
+        getKey: (index) => {
+            dispatch({ type: "GET_KEY", index })
+        },
+        turnOffAll: () => {
+            dispatch({ type: "TURN_OFF_ALL" })
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

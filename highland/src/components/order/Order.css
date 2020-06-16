@@ -1,14 +1,3 @@
-.content-for-card {
-  background-color: #f2f2f2;
-  display: block;
-  overflow: hidden;
-  margin-top: 101.4px;
-}
-
-.order-container {
-  margin: 45px 5%;
-  overflow: hidden;
-}
 
 
 .cart-detail li {
@@ -24,11 +13,6 @@
 .cart-detail li:last-child {
   border-bottom: none
 }
-
-.grid-layout {
-  overflow: hidden;
-}
-
 
 .force-overflow-order {
   padding: 0;
@@ -153,9 +137,6 @@
   /* Optional: just make scrollbar invisible */
 }
 
-.force-overflow-order li {
-  margin: 0 15px;
-}
 
 .div-img-order {
   text-align: center;

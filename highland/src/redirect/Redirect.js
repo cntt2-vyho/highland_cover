@@ -19,54 +19,57 @@ import Navbar from './../admin/navbar/Navbar';
 import Form from '../admin/form/Form';
 import Sidebar from './../admin/sidebar/Sidebar';
 import Table from './../admin/table/Table';
-import Modal from './../components/modal/Modal';
+
 import Payment from './../components/payment/Payment';
 import SizeForm from './../admin/form/sizeform/SizeForm';
 import CategoryForm from './../admin/form/categoryform/CategoryForm';
 import CategoriesDetailForm from '../admin/form/categoriesDetailForm/CategoriesDetailForm';
+import ReactModal from './../components/modal/react-modal/ReactModal';
+import Cart from './../components/cart/Cart';
+import Checkout from './../components/checkout/Checkout';
 
 
 export default class Redirect extends Component {
-  render() {
-    return (
-      <Fragment>
+    render() {
+        return (
+            <Fragment>
 
 
-        <Route path="/" component={Header} />
-
-
-
-        <Route exact path="/" component={Content} />
-        <Route exact path="/cafe" component={Cafe} />
-        <Route exact path="/menu" component={Menu} />
-        <Route exact path="/news" component={News} />
-        <Route exact path="/responsibility" component={SocialResponsibility} />
-        <Route exact path="/about" component={AboutUs} />
-        <Route exact path="/contact" component={Contact} />
-
-
-        <Route exact path="/about/origin" component={Origin} />
-        <Route exact path="/about/customer-service" component={CustomerService} />
-        <Route exact path="/about/career" component={Career} />
-
-        <Route exact path="/order" component={Order} />
-
-        <Route exact path="/menu/:slug/:id.html" component={Product} />
-        <Route exact path="/menu/:slugCategory/:idCategory/:slug/:id.html" component={ProductDetails} />
-
-        <Route exact path="/modal" component={Modal} />
-        <Route exact path="/payment" component={Payment} />
-        
-        
-        
-        
-        <Route path="/" component={Footer} />
-
-        
+                <Route path="/" component={Header} />
 
 
 
-        {/* <Route path="/admin" component={Sidebar} />
+                <Route exact path="/" component={Content} />
+                <Route exact path="/cafe" component={Cafe} />
+                <Route exact path="/menu" component={Menu} />
+                <Route exact path="/news" component={News} />
+                <Route exact path="/responsibility" component={SocialResponsibility} />
+                <Route exact path="/about" component={AboutUs} />
+                <Route exact path="/contact" component={Contact} />
+
+
+                <Route exact path="/about/origin" component={Origin} />
+                <Route exact path="/about/customer-service" component={CustomerService} />
+                <Route exact path="/about/career" component={Career} />
+
+                <Route exact path="/order" component={Checkout} />
+
+                <Route exact path="/menu/:slug/:id.html" component={Product} />
+                <Route exact path="/menu/:slugCategory/:idCategory/:slug/:id.html" component={ProductDetails} />
+
+                <Route exact path="/payment" component={Payment} />
+
+
+
+                <Route path="/" component={Footer} />
+
+
+
+
+
+
+
+                {/* <Route path="/admin" component={Sidebar} />
         
         <div className="content-for-admin col-lg-10 col-md-10 col-sm-10 col-10">
           <Route path="/admin" component={Navbar} />
@@ -78,8 +81,8 @@ export default class Redirect extends Component {
         <Route path="/admin/form/detail-categories" component={CategoriesDetailForm} />
         </div> */}
 
-        
-      </Fragment>
-    )
-  }
+
+            </Fragment>
+        )
+    }
 }

@@ -26,11 +26,6 @@ export default class ProductDetails extends Component {
 
     componentDidMount() {
 
-        // this.setState({
-        //     idProduct: this.props.match.params.id,
-        //     idCategory: this.props.match.params.idCategory
-        // })
-
         var list = [];
 
         var query = db.collection('categories');

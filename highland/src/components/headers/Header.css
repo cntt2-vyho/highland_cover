@@ -114,7 +114,12 @@ header {
   padding: 45px 0;
   margin: 0;
 }
-
+.menu-li-content-ul::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
 .hover-item .title {
   margin: 0;
 }
@@ -568,7 +573,7 @@ header {
   top: unset;
   transform: unset;
   bottom: 0;
-  height: 40px;
+  height: 45px;
   width: 40px;
   background-color: #fff;
 }
@@ -601,7 +606,7 @@ header {
 }
 
 .menu-li-content-ul .slick-list {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 /* Responsive icon */
@@ -834,6 +839,7 @@ header {
   }
   .active-v .none-for-dropdown1 {
     display: inline-block;
+    top: 0;
   }
   .active-v .hover-item {
     position: relative;
@@ -907,6 +913,11 @@ header {
     /* Remove scrollbar space */
     background: transparent;
     /* Optional: just make scrollbar invisible */
+  }
+  .menu-li-content-ul {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
