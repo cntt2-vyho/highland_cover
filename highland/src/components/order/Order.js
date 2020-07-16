@@ -28,14 +28,6 @@ class Order extends Component {
     openModal = (values) => {
         this.setState({ modalIsOpen: true });
 
-        values.options.map(temp => {
-            temp.items.map((temps, keys) => {
-                if (temp.default_index === keys) {
-                    this.props.getSize(temps);
-                }
-            })
-        });
-
         this.props.getAddData(values);
     }
 
@@ -46,38 +38,6 @@ class Order extends Component {
     }
 
     componentDidMount() {
-
-        // var list = [];
-
-        // var query = db.collection('categories');
-        // query.get().then((querySnapshot) => {
-        //     querySnapshot.forEach((document) => {
-        //         document.ref.collection('products').get().then((querySnapshot) => {
-
-        //             querySnapshot.forEach(function (doc) {
-        //                 list.push(doc.data());
-        //             })
-
-        //             this.setState({
-        //                 arrayProduct: list
-        //             })
-
-        //         });
-        //     });
-        // });
-
-        // var list1 = [];
-
-        // db.collection("data").get()
-        //     .then(function (querySnapshot) {
-        //         querySnapshot.forEach(function (doc) {
-        //             // doc.data() is never undefined for query doc snapshots
-        //             list1.push(doc.data())
-        //         });
-        //     });
-        // this.setState({
-        //     arrayProduct: list1
-        // })
 
         var list = [];
 
@@ -145,19 +105,6 @@ class Order extends Component {
         return str;
     }
 
-
-    getOrderData(values) {
-        values.options.map(temp => {
-            temp.items.map((temps, keys) => {
-                if (temp.default_index === keys) {
-                    this.props.getSize(temps);
-                }
-            })
-        });
-
-        this.props.getAddData(values);
-    }
-
     changPrice(x) {
         return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
 
@@ -171,7 +118,7 @@ class Order extends Component {
     }
 
     render() {
-        
+
         // var result = [];
         // this.state.arrayProduct.forEach((item) => {
 
@@ -243,9 +190,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         getAddData: (addItem) => {
             dispatch({ type: "GET_ADD_DATA", addItem })
-        },
-        getSize: (size) => {
-            dispatch({ type: "GET_SIZE", size })
         },
         turnOffAll: () => {
             dispatch({ type: "TURN_OFF_ALL" })

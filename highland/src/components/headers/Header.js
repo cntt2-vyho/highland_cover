@@ -28,7 +28,7 @@ class Header extends Component {
     }
     componentDidMount() {
         var list1 = [];
-        db.collection("categories").get()
+        db.collection("data").get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     console.log();
@@ -45,10 +45,10 @@ class Header extends Component {
 
         var list = [];
 
-        var query = db.collection('categories');
+        var query = db.collection('data');
         query.get().then((querySnapshot) => {
             querySnapshot.forEach((document) => {
-                document.ref.collection('products').get().then((querySnapshot) => {
+                document.ref.collection('dishes').get().then((querySnapshot) => {
 
                     querySnapshot.forEach(function (doc) {
                         list.push(doc.data());
@@ -93,44 +93,40 @@ class Header extends Component {
         
         const {width,openCategoryId} = this.state;
         
-        const settings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: true,
-        };
-      
-        //var database = db.collection('categories').doc();
-        
         const item = this.state.arrayCategory.map((value, key) => {
+            var products = [];
+            db.collection('data').doc(value.dish_type_id).collection('dishes').get()
+            .then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    products.push(doc.data())
+                })
+            })
+            
             return (
-                    <li className="hover-item  hover-item-test col-lg-2 " key = {key}>
-                    <NavLink  to={`/menu/${value.slug}/${value.category_id}.html`} className="title">
-                        {value.category_name} 
-                        </NavLink>
-                    <button onClick={()=>{this.onClickCategory(key)}} className="none-for-dropdown1">
-                        <i className="fa fa-chevron-right fa-right"  aria-hidden="true"></i>
+                <li className="hover-item  hover-item-test col-lg-2" key={key}>
+                    <NavLink to={`/menu/${value.slug}/${value.dish_type_id}.html`} className="title">
+                        {value.dish_type_name.split("/")[0]}
+                    </NavLink>
+                    <button onClick={() => { this.onClickCategory(key) }} className="none-for-dropdown1">
+                        <i className="fa fa-chevron-right fa-right" aria-hidden="true"></i>
                         <i className="fa fa-chevron-down fa-down" aria-hidden="true"></i>
                     </button>
-                    <ul className={(key == openCategoryId)?"hidden-small-active active-x":"hidden-small-active"}>
+                    {/* <ul className={(key == openCategoryId)?"hidden-small-active active-x":"hidden-small-active"}> */}
+                    <ul className="hidden-small-active">
                         {
-                        this.state.arrayProducts.map((values, key) => {
-                            if(values.product_category_id==value.category_id) {
+                            products.map(values => {
                                 return (
-                                    <li className="small-item" key={key}>
-                                        <i className="fa fa-caret-right" aria-hidden="true" />
-                                        <NavLink  to={`/menu/${value.slug}/${value.category_id}/${values.slug}/${values._id}.html`} >{values.product_name}</NavLink>
-                                    </li>
+                                <li className="small-item">
+                                    <i className="fa fa-caret-right" aria-hidden="true" />
+                                    <NavLink to={`/menu/${value.slug}/${value.dish_type_id}/${values.slug}/${values.id}.html`} >{values.name}</NavLink>
+                                </li>
                                 )
-                            }
-                        })
+                            })                                
                         }
                     </ul>
                 </li>
             )
-            
+        
         })
         
         return (
@@ -208,18 +204,10 @@ class Header extends Component {
                                 </NavLink>
                                 <div className="menu-li-content hien-ra-di">
                                     <ul className="menu-li-content-ul">
-                                        {
-                                            width> 1380?(<Slider {...settings}>
-                                                {item}
-                                            </Slider>):(
                                                 <div>
                                                 {item}
                                                 
                                                 </div>
-                                            )
-                                        }
-                                        
-                                        
                                     </ul>
                                 </div>
                             </li>

@@ -11,68 +11,125 @@ class ReactModal extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            object: {},
-            options: [],
-
-            name: '',
-            id: '',
-            base_price: '',
-            note: '',
-            size: {},
+            modalIsOpen: false,
+            product: {},
+            arrayOption: [],
 
             toppingList: [], topping: [],
             count: 1,
             total: 0,
-            type: [],
 
             priceForSize: 0,
-            priceForTopping: 0,
-
-            index: ''
+            priceForTopping: 0
         }
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
 
     }
 
+    // componentDidMount() {
+    //     if (this.props.isIced == true) {
+    //         this.setState({
+    //             isIced: true
+    //         })
+    //     }
+
+    //     this.props.addItem.options.map(value1 => {
+    //         value1.option_items.items.map(value2 => {
+    //             if (value2.price.value == 0 && value1.name == "Chọn Size") {
+    //                 this.setState({
+    //                     size: value2
+    //                 });
+    //             }
+    //             else if (value2.is_default == true && value1.name == 'Chọn Đá/Nóng - Iced/Hot') {
+    //                 this.setState({
+    //                     isIced: true
+    //                 });
+    //             }
+
+    //         })
+    //     })
+
+    //     if (this.props.editItem.object) {
+    //         this.setState({
+    //             status: 'edit',
+    //             object: this.props.editItem.object,
+    //             name: this.props.editItem.name,
+    //             id: this.props.editItem.id,
+    //             type: this.props.editItem.type,
+    //             options: this.props.editItem.options,
+    //             priceForSize: this.props.editItem.priceForSize,
+    //             image: this.props.editItem.object.photos[1].value,
+    //             total: this.props.editItem.total,
+    //             base_price: this.props.editItem.object.base_price,
+    //             priceForTopping: this.props.editItem.priceForTopping,
+    //             topping: this.props.editItem.topping,
+    //             toppingList: this.props.editItem.toppingList,
+    //             price: this.props.editItem.object.price.value,
+    //             size: this.props.editItem.size,
+
+    //             index: this.props.index,
+
+    //             isIced: this.props.isIced ? this.props.isIced : null
+
+    //         });
+    //     }
+
+    //     else {
+
+
+
+    //         this.setState({
+    //             status: 'add',
+    //             object: this.props.addItem,
+    //             name: this.props.addItem.product_name,
+    //             id: this.props.addItem._id,
+
+    //             options: this.props.addItem.options,
+    //             price: this.props.addItem.price.value,
+    //             priceForSize: 0,
+    //             size: this.props.size,
+    //             image: this.props.addItem.photos[1].value
+    //         })
+
+
+
+    //     }
+    // }
+
     componentDidMount() {
+        
+        this.setState({
+            product: this.props.addItem,
+            image: this.props.addItem.photos[1].value,
+            priceText: this.props.addItem.price.text,
+            arrayOption: this.props.addItem.options,
+        });
 
-        if (this.props.editItem.object) {
-            this.setState({
-                object: this.props.editItem.object,
-                name: this.props.editItem.name,
-                id: this.props.editItem.id,
-                type: this.props.editItem.type,
-                options: this.props.editItem.options,
-                base_price: this.props.editItem.base_price,
-                size: this.props.editItem.size,
-                priceForSize: this.props.editItem.priceForSize,
-                image: this.props.editItem.object.image,
-                total: this.props.editItem.total,
-                base_price: this.props.editItem.object.base_price,
-                priceForTopping: this.props.editItem.priceForTopping,
-                topping: this.props.editItem.topping,
-                toppingList: this.props.editItem.toppingList,
+        this.props.addItem.options.map(value1 => {
+            value1.option_items.items.map(value2 => {
+                if (value2.price.value == 0 && value1.name == "Chọn Size") {
+                    this.setState({
+                        size : value2,
+                        priceForSize : value2.price.value
+                    });
+                }
+                else if (value2.is_default == true && value1.name == 'Chọn Đá/Nóng (Iced/Hot)') {
+                   this.setState({
+                    isIced: true
+                   });
+                }
 
-                index: this.props.index
-
-            });
-        }
-
-        else {
-            var price = this.props.size.price;
-
-            this.setState({
-                object: this.props.addItem,
-                name: this.props.addItem.product_name,
-                id: this.props.addItem._id,
-                type: this.props.addItem.type,
-                options: this.props.addItem.options,
-                base_price: this.props.addItem.base_price,
-                size: this.props.size,
-                priceForSize: price,
-                image: this.props.addItem.image
             })
+        })
+    }
 
+    changPrice(x) {
+        if (x) {
+            return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
         }
+
+
     }
 
     isChange = (event) => {
@@ -104,19 +161,17 @@ class ReactModal extends Component {
         return count;
     }
 
-    changPrice(x) {
-        return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-
-    }
-
     total() {
-        var total = (this.state.base_price + this.state.priceForSize + this.state.priceForTopping) * this.state.count;
-        return total;
+        var total;
+
+        total = (this.state.price + this.state.priceForSize + (this.state.priceForTopping ? this.state.priceForTopping : 0)) * this.state.count;
+        return total
     }
 
     isChangeArray = (event, values) => {
+        //console.log(this.state.toppingList)
 
-        var list1 = this.state.topping;
+        var list1 = this.state.topping ? this.state.topping : [];
         if (event.target.checked == true) {
             list1.push(event.target.value)
         }
@@ -129,18 +184,18 @@ class ReactModal extends Component {
 
 
 
-        var list = this.state.toppingList;
-        var price = this.state.priceForTopping
+        var list = this.state.toppingList ? this.state.toppingList : [];
+        var price = this.state.priceForTopping ? this.state.priceForTopping : 0;
 
         if (event.target.checked == true) {
             list.push(values);
-            price += parseInt(values.price)
+            price += parseInt(values.price.value)
         }
         else {
             for (var i = 0; i < list.length; i++) {
-                if (list[i].product_id === values.product_id) { // nếu là sinh viên cần xóa
+                if (list[i].id === values.id) { // nếu là sinh viên cần xóa
                     list.splice(i, 1); // thì xóa
-                    price -= parseInt(values.price)
+                    price -= parseInt(values.price.value)
                 }
             }
         }
@@ -148,12 +203,30 @@ class ReactModal extends Component {
     }
 
     isChangeSize(values) {
-        console.log(values);
+
         this.setState({
             size: values,
-            priceForSize: values.price
+            priceForSize: values.price.value
 
         })
+
+    }
+
+    isChangeIced(event) {
+
+
+        if (event.target.value == 'Đá/Iced') {
+            this.setState({
+                isIced: true
+            })
+        }
+        else {
+            this.setState({
+                isIced: false
+            })
+        }
+
+
 
     }
 
@@ -162,31 +235,24 @@ class ReactModal extends Component {
         return text;
     }
 
+    openModal() {
+        this.setState({ modalIsOpen: true });
+    }
+
+    closeModal() {
+        this.setState({ modalIsOpen: false });
+    }
+
     addToCart() {
-        let data = {
-            name: this.state.name,
-            id: this.state.id,
-            note: this.state.note,
-            size: this.state.size,
-            toppingList: this.state.toppingList,
-            count: this.state.count,
+        let data = this.state;
+        data.total = this.total()
 
-            object: this.state.object,
-            options: this.state.options,
-
-            total: this.total(),
-            type: this.state.type,
-            topping: this.state.topping,
-            priceForSize: this.state.priceForSize,
-            priceForTopping: this.state.priceForTopping
-
-        }
 
         const arr = JSON.parse(localStorage.getItem('data')) || [];
         var datas = [...arr];
 
         if (this.props.editItem.object) {
-            if(data.count == 0) {
+            if (data.count == 0) {
 
             }
             else {
@@ -212,7 +278,7 @@ class ReactModal extends Component {
         }
         localStorage.setItem('data', JSON.stringify(datas));
 
-        this.props.getModalData(datas);
+        this.props.getModalData(data);
 
 
     }
@@ -226,21 +292,25 @@ class ReactModal extends Component {
 
 
     render() {
+        console.log(this.state);
 
-        const item = this.state.options.map((value, key) => {
-            if (value.name == 'Size') {
+        const { product, image, priceText, arrayOption, count } = this.state;
+
+
+        const item = arrayOption.map((value, key) => {
+            if (value.name == 'Chọn Size') {
                 return (
                     <div className="modal-div-size" key={key}>
-                        <h3 style={{ display: 'block' }}> {value.name}</h3>
+                        <h3 style={{ display: 'block', padding: '10px 0' }}> {value.name}</h3>
                         <div className="modal-size-container">
-                            {value.items.map((values, keys) => {
+                            {value.option_items.items.map((values, keys) => {
                                 return (
-                                    <label key={keys}>
-                                        {values.val}
-                                        {values.price ? ' (+' + this.changPrice(values.price) + ')' : null}
+                                    <label key={keys} className="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        {values.name}
+                                        {values.price.value ? ' (+' + this.changPrice(values.price.value) + ')' : null}
                                         <input type="radio" name="size" className="modal-input-radio" onChange={() => this.isChangeSize(values)}
-                                            defaultChecked={(_.isEqual(this.state.size, values)) ? (_.isEqual(this.state.size, values)) : (keys == value.default_index)}
-                                            value={values.val} />
+                                            defaultChecked={values.is_default}
+                                            value={values.price.value} />
                                         <span className="checkmark"></span>
                                     </label>
                                 )
@@ -249,30 +319,51 @@ class ReactModal extends Component {
                     </div>
                 )
             }
-            if (value.name == 'Topping') {
-                return (
-                    <div className="modal-div-size">
-                        <h3 style={{ display: 'block' }}> {value.name}</h3>
-                        <div className="modal-size-container">
-                            {value.items.map((values, key) => {
-                                return (
-                                    <label key={key}>
-                                        {values.product_name}
-                                        {values.price ? ' (+' + this.changPrice(values.price) + ')' : null}
-                                        <input type="checkbox" name="topping" className="modal-input-radio"
-                                            //checked={_.isEqual(value)}
-                                            onChange={(event) => this.isChangeArray(event, values)}
-                                            defaultChecked={this.isContain(values)}
-                                            value={values.product_name} />
-                                        <span className="checkmark"></span>
+            else
+                if (value.name == 'Thêm/Extra') {
+                    return (
+                        <div className="modal-div-size">
+                            <h3 style={{ display: 'block' }}> {value.name}</h3>
+                            <div className="modal-size-container">
+                                {value.option_items.items.map((values, key) => {
+                                    return (
+                                        <label key={key}>
+                                            {values.name}
+                                            {values.price ? ' (+' + this.changPrice(values.price.value) + ')' : null}
+                                            <input type="checkbox" name="topping" className="modal-input-radio"
+                                                onChange={(event) => this.isChangeArray(event, values)}
+                                                value={values.name} />
+                                            <span className="checkmark"></span>
 
-                                    </label>
-                                )
-                            })}
+                                        </label>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                )
-            }
+                    )
+                }
+                else
+                    if (value.name == 'Chọn Đá/Nóng (Iced/Hot)') {
+                        return (
+                            <div className="modal-div-size" key={key}>
+                                <h3 style={{ display: 'block', padding: '10px 0' }}> {value.name}</h3>
+                                <div className="modal-size-container">
+                                    {value.option_items.items.map((values, keys) => {
+                                        return (
+                                            <label key={keys} className="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                {values.name}
+                                                {values.price.value ? ' (+' + this.changPrice(values.price.value) + ')' : null}
+                                                <input type="radio" name="isIced" className="modal-input-radio" onChange={(event) => this.isChangeIced(event)}
+                                                value={values.name} 
+                                                defaultChecked={values.is_default}/>
+                                                <span className="checkmark"></span>
+                                            </label>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        )
+                    }
         })
         return (
             <div className="modal-container-small" >
@@ -282,21 +373,17 @@ class ReactModal extends Component {
                 <div className="modal-product-detail-container">
                     <div className="modal-product-detail">
                         <div className="modal-div-img col-lg-3 col-md-3 col-sm-6 col-6">
-                            <img src={this.state.image} alt={this.state.name} />
+                            <img src={image} alt={product.name} />
                         </div>
                         <div className="modal-div-name col-lg-9 col-md-9 col-sm-6 col-6">
-                            <h3>{this.state.name}</h3>
+                            <h3>{product.name}</h3>
                             <p>
-                                {this.state.size.val}
+                                Giá mặc định : {priceText}
+                            </p>
+                            <p>
+                                {product.name}
                             </p>
                             <p>{this.printArrayTopping(this.state.topping)}</p>
-                        </div>
-                    </div>
-                    <div className="modal-div-loai">
-                        <h3>loại</h3>
-                        <div className="modal-div-loai-container">
-                            <p>người ta để trống nên mình cũng để trống</p>
-
                         </div>
                     </div>
                     {item}
@@ -309,10 +396,10 @@ class ReactModal extends Component {
                     <div className="modal-div-count-add">
                         <div className="modal-div-count col-lg-6 col-md-6 col-sm-6 col-6">
                             <div className="modal-div-count-container">
-                                <button className="btn-minus" onClick={() => this.minus(this.state.count)}></button>
+                                <button className="btn-minus" onClick={() => this.minus(count)}></button>
 
-                                <input name="count" value={this.state.count} onChange={(event) => this.isChange(event)} />
-                                <button className="btn-plus" onClick={() => this.plus(this.state.count)}></button>
+                                <input name="count" value={count} onChange={(event) => this.isChange(event)} />
+                                <button className="btn-plus" onClick={() => this.plus(count)}></button>
                             </div>
 
                         </div>
@@ -338,9 +425,8 @@ class ReactModal extends Component {
 const mapStateToProps = (state, ownProps) => {
     return {
         addItem: state.addItem,
-        size: state.size,
         editItem: state.editItem,
-        index: state.index
+        index: state.index,
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

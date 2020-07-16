@@ -29,8 +29,6 @@ export default class Menu extends Component {
 
     render() {
 
-        console.log(this.state.arrayCategory);
-
         const item = this.state.arrayCategory.map((value, key) => {
             return (
                 <div className="section1" key={key}>
@@ -41,7 +39,9 @@ export default class Menu extends Component {
                         </div>
                         <div className="content1 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="content-container1">
-                                <h1><NavLink to={`/menu/${value.slug}/${value.dish_type_id}.html`}>{value.dish_type_name}</NavLink>
+                                <h1><NavLink to={`/menu/${value.slug}/${value.dish_type_id}.html`}>
+                                    {value.dish_type_name.split("/")[0]}
+                                    </NavLink>
                                 </h1>
                                 <p>{value.description}</p>
                                 <NavLink to={`/menu/${value.slug}/${value.dish_type_id}.html`} id="khamphathem1">

@@ -26,63 +26,75 @@ export default class ProductDetails extends Component {
 
     componentDidMount() {
 
-        var list = [];
+        // var list = [];
 
-        var query = db.collection('categories');
-        query.get().then((querySnapshot) => {
-            querySnapshot.forEach((document) => {
-                document.ref.collection('products').get().then((querySnapshot) => {
+        // var query = db.collection('data');
+        // query.get().then((querySnapshot) => {
+        //     querySnapshot.forEach((document) => {
+        //         document.ref.collection('dishes').get().then((querySnapshot) => {
 
-                    querySnapshot.forEach(function (doc) {
-                        list.push(doc.data());
-                    })
+        //             querySnapshot.forEach(function (doc) {
+        //                 list.push(doc.data());
+        //             })
 
-                    this.setState({
-                        arrayProduct: list
-                    })
+        //             this.setState({
+        //                 arrayProduct: list
+        //             })
 
-                });
+        //         });
+        //     });
+        // });
+
+
+
+
+        var ahihi=this;
+        db.collection("data").doc(this.props.match.params.idCategory).collection('dishes').doc(this.props.match.params.id)
+            .get()
+            .then(function (doc) {
+                ahihi.setState({
+                    product: doc.data()
+                })
+
             });
-        });
-
     }
 
     changPrice(x) {
         return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-        
+
     }
-    
-    
+
+
 
     render() {
 
+        console.log('this.state.arrayProduct : ', this.state.arrayProduct);
+        console.log('product : ', this.state.product);
 
         const item = this.state.arrayProduct.map((value, key) => {
-            if(value._id == this.props.match.params.id) {
-                return (
-                    <div className="details" key={key}>
-                        <div className="div-title-prddtl">
-                            <h3 className="main-title-prddtl">{value.product_name}</h3>
+            return (
+                <div className="details" key={key}>
+                    <div className="div-title-prddtl">
+                        <h3 className="main-title-prddtl">{value.name}</h3>
+                    </div>
+                    <div className="details-container">
+                        <div className="details-img col-lg-6 col-md-6 col-sm-6 col-6">
+                            <img src={value.photos[1].value} alt={value.name} />
                         </div>
-                        <div className="details-container">
-                            <div className="details-img col-lg-6 col-md-6 col-sm-6 col-6">
-                                <img src={value.image} alt={value.product_name} />
-                            </div>
-                            <div className="details-content col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div className="details-content-container">
-                                    <p>{value.description}</p>
-                                    <span className="price">giá : <strong>{this.changPrice(value.base_price)}</strong></span>
-                                    <div className="wrapper-inner-tab-backgrounds-second">
-                                        <div className="sim-button">
-                                            <span>tìm hiểu thêm</span>
-                                        </div>
+                        <div className="details-content col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div className="details-content-container">
+                                <p>{value.description}</p>
+                                <span className="price">giá : <strong>{this.changPrice(value.price.value)}</strong></span>
+                                <div className="wrapper-inner-tab-backgrounds-second">
+                                    <div className="sim-button">
+                                        <span>tìm hiểu thêm</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                )
-            }
+                </div>
+            )
         })
 
         return (

@@ -1,156 +1,202 @@
 import React, { Component } from 'react';
 import classes from './Payment.css';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Cart from './../cart/Cart';
 
-export default class Payment extends Component {
+import 'react-phone-number-input/style.css'
+
+class Payment extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            arrayProduct: [],
+            name: '',
+            phone: '',
+            address: '',
+            payment_method: 'Thanh toán khi nhận hàng'
+
+
+        }
+    }
+
+    componentDidMount() {
+        const array1 = JSON.parse(localStorage.getItem('data')) || [];
+        this.setState({
+            arrayProduct: array1
+        })
+    }
+
+    isChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+
+        this.setState({
+            [name]: value
+        })
+
+    }
 
     orderSuccess = () => {
+
         alert('Order success')
     }
+    printArrayTopping(array) {
+
+        var text = array.join(' + ');
+        if (array.length != 0) {
+            return <p>{text}</p>
+        }
+    }
+    printIced(values) {
+        //console.log(values);
+        if (values.isIced == true) {
+            return <p>Đá/Iced</p>
+        }
+        else if (values.isIced == false) {
+            return <p>Nóng/Hot</p>
+        }
+    }
+    changPrice(x) {
+        if (x) {
+            return x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+        }
+
+
+    }
     render() {
-        return (
-            <div className="content-for-payment">
-                <div className="payment-container">
-                    <div className="cart-detail cart-detail-payment col-lg-5 col-md-5 col-sm-12 col-12">
+        //console.log("ahihi ",this.state);
+        const item = this.state.arrayProduct.map((values, key) => {
+            return (
+                <li key={key} onClick={() => this.openModal(values, key)} className="cart-item">
+                    <div className="div-product-details-right">
+                        <div className="div-product-details-right-count">
+                            {values.count}
+                        </div>
+                        <div className="name-size-right-container">
+                            <div className="name-size-right">
+                                <p className="this-is-name">
+                                    {values.object.name}
+                                </p>
+                                <p>{values.size.name}</p>
+                                {/* {values.toppingList ? this.printArrayTopping(values.topping) : null} */}
+                                {this.printArrayTopping(values.topping)}
+                                {this.printIced(values)}
 
-                        <div className="card-detail-container">
-                            <NavLink to="/" className="div-xemgiohang div-xemgiohang-payment">
-                                <h3 onClick={() => this.orderSuccess()}>đặt hàng</h3>
-                            </NavLink>
-                            <div>
-                                <ul className="force-overflow-payment" style={{ display: 'block' }}>
-                                    <li>
-                                        <div className="div-product-details">
-                                            <div className="name-size name-size-payment col-lg-10 col-md-10 col-sm-10 col-10">
-                                                <h3>
-                                                    <a href="../trasenvang/ProductDetails.html">
-                                                        trà sen vàng</a>
-                                                </h3>
-                                                <p>Vừa</p>
-                                                <span>35.000 Đ</span>
-                                            </div>
-                                            <div className="quantity quantity-payment col-lg-2 col-md-2 col-sm-2 col-2">
-                                                <span>1</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
-                            <div className="totall" style={{ display: 'block' }}>
-                                <div className="div-voucher">
-                                    <input type="text" placeholder="Nhập mã giảm giá tại đây" />
-                                    <button className="btn-voucher">áp dụng</button>
-                                </div>
-                                <div className="div-ship">
-                                    <h3 className="ship">
-                                        vận chuyển
-</h3>
-                                    <h3 className="ship-fee">
-                                        <strong>
-                                            15.000 Đ
-</strong>
-                                    </h3>
-                                </div>
+                            <div className="quantity">
+                                {this.changPrice(values.total)}
                             </div>
-                            <div className="total">
-                                <h2 className="total-small">
-                                    thành tiền
-</h2>
-                                <h2 className="total-fee">
-                                    <strong>
-                                        666.000 Đ
-</strong>
-                                </h2>
-                            </div>
-
                         </div>
                     </div>
 
+                </li>
+            )
+        })
+        return (
+            <div className="content-for-card">
+                <div className="order-container">
+                    <div className="grid-layout">
 
+                        <div className="cart-detail col-lg-4 col-md-12 col-sm-12 col-12">
 
-                    <div className="giaohang col-lg-7 col-md-7 col-sm-12 col-12">
-                        <div className="giaohang-container">
-                        <div className="confirm-order">
-                            <h3>Xác nhận giao hàng</h3>
+                            <div className="card-detail-container">
+                                <NavLink to="/" className="div-xemgiohang div-xemgiohang-payment">
+                                    <h3 onClick={() => this.orderSuccess()}>đặt hàng</h3>
+                                </NavLink>
 
-                        </div>
-                        <div className="giaohang-content">
-                            <form>
-                                <div className="form-group-payment">
-                                    <span className="span-for-name"></span>
-                                    <input type="text" name="name" placeholder="Tên người nhận" />
-                                </div>
-                                <div className="form-group-payment">
-                                <span className="span-for-phone"></span>
-                                    <input type="text" name="phone" placeholder="Số điện thoại giao hàng" />
-                                    
-                                </div>
-                                <div className="form-group-payment">
-                                <span className="span-for-address"></span>
-                                    <input type="text" name="address" placeholder="Nhập địa chỉ giao hàng" />
-                                    
-                                </div>
-                                <div className="form-group-payment">
-                                <span className="span-for-note"></span>
-                                    <input type="text" name="note" placeholder="Ghi chú (nếu có)" />
-                                    
-                                </div>
-                            </form>
-
+                                <Cart />
+                            </div>
                         </div>
 
-                        <div className="confirm-order">
-                            <h3>Xác nhận thanh toán</h3>
 
-                        </div>
-                        <div className="giaohang-content">
-                            <form>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio"  defaultChecked="checked" name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        Thanh toán khi nhận hàng
-                                    </span>
-                                </label>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio"  name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        Thẻ ATM nội địa
-                                    </span>
-                                </label>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio"  name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        ZaloPay
-                                    </span>
-                                </label>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio" name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        Airpay
-                                    </span>
-                                </label>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio"  name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        VISA/Master/JCB
-                                    </span>
-                                </label>
-                                <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
-                                    <input type="radio" name="payment" className="modal-input-radio"/>
-                                    <span>
-                                        Momo
-                                    </span>
-                                </label>
-                            </form>
 
-                        </div>
+                        <div className="product-order-page" className=" col-lg-8 col-md-12 col-sm-12 col-12">
+
+                            <div className="product-order-page-container">
+                                <div className="confirm-order">
+                                    <h3>Xác nhận giao hàng</h3>
+
+                                </div>
+                                <div className="giaohang-content">
+                                    <form>
+                                        <div className="form-group-payment">
+                                            <span className="span-for-name"></span>
+                                            <input type="text" name="name" placeholder="Tên người nhận" onChange={(event) => this.isChange(event)} />
+                                        </div>
+                                        <div className="form-group-payment">
+                                            <span className="span-for-phone"></span>
+                                            <input type="text" name="phone" placeholder="Số điện thoại giao hàng" onChange={(event) => this.isChange(event)} />
+
+                                        </div>
+                                        <div className="form-group-payment">
+                                            <span className="span-for-address"></span>
+                                            <input type="text" name="address" placeholder="Nhập địa chỉ giao hàng" onChange={(event) => this.isChange(event)} />
+
+                                        </div>
+                                        <div className="form-group-payment">
+                                            <span className="span-for-note"></span>
+                                            <input type="text" name="note" placeholder="Ghi chú (nếu có)" onChange={(event) => this.isChange(event)} />
+
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                                <div className="confirm-order">
+                                    <h3>Xác nhận thanh toán</h3>
+
+                                </div>
+                                <div className="giaohang-content">
+                                    <form>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" defaultChecked="checked" name="payment_method" className="modal-input-radio" value="Thanh toán khi nhận hàng" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                Thanh toán khi nhận hàng
+                                    </span>
+                                        </label>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" name="payment_method" className="modal-input-radio" value="Thẻ ATM nội địa" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                Thẻ ATM nội địa
+                                    </span>
+                                        </label>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" name="payment_method" className="modal-input-radio" value="ZaloPay" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                ZaloPay
+                                    </span>
+                                        </label>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" name="payment_method" className="modal-input-radio" value="Airpay" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                Airpay
+                                    </span>
+                                        </label>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" name="paymenpayment_methodt" className="modal-input-radio" value="VISA/Master/JCB" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                VISA/Master/JCB
+                                    </span>
+                                        </label>
+                                        <label className="label-input-for-payment col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <input type="radio" name="payment_method" className="modal-input-radio" value="Momo" onChange={(event) => this.isChange(event)} />
+                                            <span>
+                                                Momo
+                                    </span>
+                                        </label>
+                                    </form>
+
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
         )
     }
 }
+export default Payment

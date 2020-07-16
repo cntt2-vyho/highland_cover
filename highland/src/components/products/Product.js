@@ -42,7 +42,7 @@ class Product extends Component {
 
 
         var list1 = [];
-        db.collection("categories").doc(this.props.match.params.id).get()
+        db.collection("data").doc(this.props.match.params.id).get()
             .then(function (doc) {
                 list1.push(doc.data());
             })
@@ -56,7 +56,7 @@ class Product extends Component {
 
 
         var list = [];
-        db.collection('categories').doc(this.props.match.params.id).collection('products').get()
+        db.collection('data').doc(this.props.match.params.id).collection('dishes').get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
 
@@ -87,19 +87,23 @@ class Product extends Component {
             arrows: true
         };
 
+        // console.log(this.props.match.params.slug);
+        // console.log(this.props.match.params.id);
+        // console.log(this.state.arrayProducts);
+
 
         const products = this.state.arrayProducts.map((value, key) => {
             if(key<2) {
                 return (
                     <li key={key}>
                         <div className="li-img">
-                            <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >
-                                <img src={value.image} alt={value.product_name} />
+                            <NavLink to={`/menu/${this.props.match.params.slug}/${this.props.match.params.id}/${value.slug}/${value.id}.html`} >
+                                <img src={value.photos[1].value} alt={value.name} />
                             </NavLink>
                         </div>
                         <div className="li-detail">
                             <h3>
-                                <NavLink to={`/menu/${this.props.match.params.slug}/${value.product_category_id}/${value.slug}/${value._id}.html`} >{value.product_name}</NavLink>
+                                <NavLink to={`/menu/${this.props.match.params.slug}/${this.props.match.params.id}/${value.slug}/${value.id}.html`} >{value.name}</NavLink>
                             </h3>
                             <p>{this.limitText(value.description, 100)}</p>
                         </div>
@@ -112,12 +116,12 @@ class Product extends Component {
         const category = this.state.category.map((value, key) => {
             return (
                 <div className="main-tain col-lg-8 col-md-12 col-sm-12 col-12" key={key}>
-                    <h2 className="main-title">{value.category_name}</h2>
+                    <h2 className="main-title">{value.dish_type_name.split("/")[0]}</h2>
                     <a href="#">
-                        <img src={value.image} alt={value.category_name} />
+                        <img src={value.image} alt={value.dish_type_name} />
                     </a>
                     <p>{value.description}</p>
-                    <a href="../trasenvang/ProductDetails.html" className="xemsanpham">xem sản phẩm</a>
+                    {/* <a href="../trasenvang/ProductDetails.html" className="xemsanpham">xem sản phẩm</a> */}
                 </div>
             )
         })

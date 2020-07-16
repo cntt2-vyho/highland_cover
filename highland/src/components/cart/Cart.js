@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import classes from './Cart.css';
 
 import { NavLink } from 'react-router-dom';
@@ -20,38 +20,29 @@ class Cart extends Component {
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
-    componentDidMount() {
-        const array1 = JSON.parse(localStorage.getItem('data')) || [];
-        const array2 = this.props.modalData;
 
-        // console.log('local', array1);
-        // console.log('modal', array2);
-        // if(array2.object ) {
-        //     console.log('co');
-        // }
-        // else {
-        //     console.log('khong');
-        // }
+    componentDidMount() {
+        const array = JSON.parse(localStorage.getItem('data')) || [];
 
         this.setState({
-            array: array1
+            array: array
         })
         var total = 0;
-        array1.map(value => {
+        array.map(value => {
             total += value.total
 
         })
         this.setState({ total: total })
     }
 
-    // componentWillUpdate(nextProps, nextState) {
-    //     // if (nextProps.match.params.id !== nextState.matchId) {
-    //     //     this.componentDidMount();
-    //     // }
-    //     console.log('---------------------------');
-    //     console.log(nextProps);
-    //     console.log(nextState);
-    // }
+    componentWillUpdate(nextProps, nextState) {
+        // if (nextProps.match.params.id !== nextState.matchId) {
+        //     this.componentDidMount();
+        // }
+        // if(this.props.modalData) {
+        //     this.componentDidMount()
+        // }
+    }
 
 
     changPrice(x) {
@@ -62,11 +53,9 @@ class Cart extends Component {
 
     }
     printArrayTopping(array) {
+
         var text = array.join(' + ');
-        if (array == null) {
-            return null;
-        }
-        else {
+        if (array.length != 0) {
             return <p>{text}</p>
         }
     }
@@ -75,16 +64,31 @@ class Cart extends Component {
         this.setState({ modalIsOpen: true });
         this.props.getEditData(values);
         this.props.getKey(key);
+        this.props.isIced(values.isIced)
+        //console.log('Cart : ', values);
+        this.props.status('edit')
     }
 
     closeModal() {
         this.setState({ modalIsOpen: false });
     }
 
+    printIced(values) {
+        //console.log(values);
+        if (values.isIced == true) {
+            return <p>Đá/Iced</p>
+        }
+        else if (values.isIced == false) {
+            return <p>Nóng/Hot</p>
+        }
+    }
+
 
 
     render() {
-        const item = this.state.array.map((values, key) => {
+        const {array} = this.state
+        
+        const item = array.map((values, key) => {
             return (
                 <li key={key} onClick={() => this.openModal(values, key)} className="cart-item">
                     <div className="div-product-details-right">
@@ -94,71 +98,60 @@ class Cart extends Component {
                         <div className="name-size-right-container">
                             <div className="name-size-right">
                                 <p className="this-is-name">
-                                    {values.name}
+                                    {values.product.name}
                                 </p>
-                                <p>{values.size.val}</p>
+                                <p>{values.size.name}</p>
+                                {/* {values.toppingList ? this.printArrayTopping(values.topping) : null} */}
                                 {this.printArrayTopping(values.topping)}
+                                {this.printIced(values)}
 
                             </div>
                             <div className="quantity">
                                 {this.changPrice(values.total)}
                             </div>
                         </div>
-                        {/* <div className="div-product-details-right-remove">
-                            <i className="fa fa-times" aria-hidden="true"></i>
-                        </div> */}
                     </div>
 
                 </li>
             )
         })
         return (
-            <div className="cart-detail col-lg-4 col-md-12 col-sm-12 col-12">
+            <Fragment>
+                <ul className="force-overflow-order" style={{ display: 'block' }}>
+                    {item}
+                    <div>
+                        <Modal onRequestClose={this.closeModal} isOpen={this.state.modalIsOpen}>
+                            <div className="modal-container">
+                                <button className="modal-container-button" onClick={this.closeModal}>
+                                    <i className="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                                <ReactModal />
+                            </div>
 
-                <div className="card-detail-container">
-                    <NavLink to="/payment">
-                        <div className="div-xemgiohang">
-                            <h3>Xem giỏ hàng ( + {this.state.array.length} món )</h3>
-                        </div>
-                    </NavLink>
-
-                    <ul className="force-overflow-order" style={{ display: 'block' }}>
-                        {item}
-                        <div>
-                            <Modal onRequestClose={this.closeModal} isOpen={this.state.modalIsOpen}>
-                                <div className="modal-container">
-                                    <button className="modal-container-button" onClick={this.closeModal}>
-                                        <i className="fa fa-times" aria-hidden="true"></i>
-                                    </button>
-                                    <ReactModal />
-                                </div>
-
-                            </Modal>
-                        </div>
-                    </ul>
-                    <div className="totall" style={{ display: 'block' }}>
-                        <div className="div-voucher">
-                            <input type="text" placeholder="Nhập mã giảm giá tại đây" />
-                            <button className="btn-voucher">áp dụng</button>
-                        </div>
-                        <div className="div-ship">
-                            <h3 className="ship">vận chuyển </h3>
-                            <h3 className="ship-fee">
-                                <strong>{this.changPrice(this.state.shipfee)}</strong>
-                            </h3>
-                        </div>
+                        </Modal>
                     </div>
-                    <div className="total">
-                        <h2 className="total-small">thành tiền</h2>
-                        <h2 className="total-fee">
-                            <strong>{this.changPrice(this.state.total)}</strong>
-                        </h2>
+                </ul>
+                <div className="totall" style={{ display: 'block' }}>
+                    <div className="div-voucher">
+                        <input type="text" placeholder="Nhập mã giảm giá tại đây" />
+                        <button className="btn-voucher">áp dụng</button>
                     </div>
-
-
-
+                    <div className="div-ship">
+                        <h3 className="ship">vận chuyển </h3>
+                        <h3 className="ship-fee">
+                            <strong>{this.changPrice(this.state.shipfee)}</strong>
+                        </h3>
+                    </div>
                 </div>
-            </div>
+                <div className="total">
+                    <h2 className="total-small">thành tiền</h2>
+                    <h2 className="total-fee">
+                        <strong>{this.changPrice(this.state.total)}</strong>
+                    </h2>
+                </div>
+            </Fragment>
+
+
         )
     }
 }
@@ -177,6 +170,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         turnOffAll: () => {
             dispatch({ type: "TURN_OFF_ALL" })
+        },
+        isIced: (isIced) => {
+            dispatch({ type: "IS_ICED", isIced })
+        },
+        status: (status) => {
+            dispatch({ type: "STATUS" , status})
         }
     }
 }
