@@ -1,0 +1,344 @@
+.ReactModal__Content.ReactModal__Content--after-open {
+  border: unset !important;
+  background-color: unset !important;
+  display: block;
+  overflow: hidden;
+  position: fixed !important;
+  width: 100%;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 100000 !important;
+  overflow-y: auto !important;
+  padding: 0 !important;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: unset !important;
+  z-index: 99999;
+}
+
+.ReactModal__Body--open::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible*/
+}
+
+.modal-container-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999999;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  opacity: 0.5;
+  outline: none;
+}
+
+.modal-container-button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.modal-container {
+  width: 700px;
+  overflow: hidden;
+  display: block;
+  background-color: #fff;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+
+  .modal-container-small {
+    padding: 20px;
+    .modal-title {
+      display: block;
+      border-bottom: 0.5px solid #ccc;
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 15px;
+      }
+    }
+    .modal-product-detail-container {
+      overflow: hidden;
+      .modal-product-detail {
+        display: flex;
+        border-bottom: 0.5px solid #ccc;
+        padding: 15px 0;
+        overflow: hidden;
+        .modal-div-img {
+          padding: 0 15px;
+          list-style: none;
+          img {
+            width: 70%;
+          }
+        }
+        .modal-div-name {
+          padding: 0 15px;
+          list-style: none;
+          &:hover {
+            background: #fff;
+          }
+        }
+      }
+      .modal-div-size {
+        border-bottom: 0.5px solid #ccc;
+        padding: 15px 0;
+        overflow: hidden;
+        h3 {
+          display: inline-block;
+        }
+        .modal-size-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          label {
+            padding: 5px 30px;
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            &:hover input ~ .checkmark {
+              background-color: #ccc;
+            }
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+              &:checked ~ .checkmark {
+                background-color: #b22830;
+              }
+              &:checked ~ .checkmark:after {
+                display: block;
+              }
+            }
+
+            .checkmark {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              height: 20px;
+              width: 20px;
+              background-color: #eee;
+              transform: translateY(-50%);
+              &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                content: "\f00c";
+                font-family: fontawesome;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .modal-div-count-add {
+        overflow: hidden;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .modal-div-count {
+          .modal-div-count-container {
+            position: relative;
+            height: 30px;
+            display: flex;
+            margin: 10px;
+            input {
+              max-width: 30px;
+              outline: none;
+              border: none;
+              padding: 0 5px;
+              margin: 0 5px;
+              text-align: center;
+            }
+            .btn-plus {
+              position: relative;
+              border: none;
+              width: 30px;
+              height: 30px;
+              outline: none;
+              background-color: #b22830;
+              border: none;
+              color: #fff;
+              &:before {
+                content: "\f067";
+                font-family: fontawesome;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            .btn-minus {
+              position: relative;
+              border: none;
+              width: 30px;
+              height: 30px;
+              outline: none;
+              background-color: #b22830;
+              border: none;
+              color: #fff;
+              &:before {
+                content: "\f068";
+                font-family: fontawesome;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .modal-div-add {
+          background-color: #b22830;
+          color: #fff;
+          padding: 15px;
+          display: flex;
+          outline: none;
+          span {
+            text-align: right;
+            font-style: italic;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            text-align: right;
+            font-style: italic;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-div-loai {
+  display: block;
+}
+
+.modal-product-detail ul {
+  padding: 0;
+  margin: 0 -15px;
+}
+
+.modal-topping-container label {
+  padding: 0 20px;
+}
+
+
+.modal-size-containner label span,
+.modal-topping-container label span {
+  padding-left: 10px;
+}
+
+
+
+
+.modal-size-containner input,
+.modal-topping-container input {
+  position: relative;
+}
+
+.modal-div-loai,
+.modal-div-topping {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.modal-div-loai,
+.modal-div-topping {
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+label span {
+  text-transform: capitalize;
+}
+
+[class*="modal-div-"] h3 {
+  text-transform: capitalize;
+}
+
+.modal-div-topping h3,
+.modal-size-containner,
+.modal-topping-container,
+.modal-div-loai h3,
+.modal-div-loai-container {
+  display: inline-block;
+}
+
+.modal-div-loai-container {
+  float: right;
+}
+
+.popup-close:before {
+  content: "\f00d";
+  font-family: fontawesome;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.popup-close:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal-div-img {
+  border-bottom: none !important;
+}
+
+@media (max-width: 500px) {
+  .modal-div-img img {
+    width: 50%;
+  }
+  .modal-container {
+    width: 450px;
+    max-width: 450px;
+  }
+}
